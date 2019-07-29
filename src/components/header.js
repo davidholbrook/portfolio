@@ -25,7 +25,6 @@ const Heading = styled.h1`
     left: 0;
   }
 `
-const MenuStyled = styled(Menu)`
-  background: #bada55;
-  outline: #bada55 3px solid;
-`
+
+// TODO: add menu text on hover
+const MenuStyled = styled(Menu)``
