@@ -8,11 +8,13 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Welcome" />
-    <MainHeading>Hi I'm Dave</MainHeading>
-    <SmallerHeading>
-      web developer for
-      <br /> <strong>Wiha Tools USA</strong>
-    </SmallerHeading>
+    <Intro>
+      <h2>Hi I'm Dave</h2>
+      <h3>
+        web developer for
+        <br /> <strong>Wiha Tools USA</strong>
+      </h3>
+    </Intro>
     <Side>
       <h2>Side Stuff</h2>
       <Button>
@@ -31,20 +33,44 @@ export default IndexPage
 //    Main Styles
 // =========================================
 
-const MainHeading = styled.h2`
-  font-family: "Varela Round", sans-serif;
-  text-transform: uppercase;
-  font-size: 25vw;
-  text-align: center;
-`
+const Intro = styled.div`
+  display: block;
+  @media (min-width: 900px) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  h2 {
+    font-family: "Varela Round", sans-serif;
+    font-size: 5rem;
 
-const SmallerHeading = styled.h3`
-  font-family: "Work Sans", sans-serif;
-  font-weight: 300;
+    @media (max-width: 600px) {
+      text-transform: uppercase;
+      font-size: 25vw;
+      text-align: center;
+    }
+  }
 
-  font-size: 9vw;
-  line-height: 3.5rem;
-  text-align: center;
+  h3 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+
+    @media (min-width: 900px) {
+      margin-left: 1.5rem;
+      /* hack to align the word blocks */
+      padding-bottom: 0.5rem;
+    }
+    @media (min-width: 600px) {
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 9vw;
+      line-height: 3.5rem;
+      text-align: center;
+    }
+  }
 `
 
 // =========================================
