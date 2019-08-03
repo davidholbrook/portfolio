@@ -2,6 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
+// temp image links
+import CGOS from "../images/projects/CGOS--normal.png"
+import unplan from "../images/projects/unplan--normal.png"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -17,12 +21,16 @@ const IndexPage = () => (
     </Intro>
     <Side>
       <h2>Side Stuff</h2>
-      <Button>
-        <h3>unplan</h3>
-      </Button>
-      <Button>
-        <h3>COGS</h3>
-      </Button>
+      <ButtonWrapper>
+        <Button>
+          <img src={unplan} alt="unplan logo" />
+          <h3>unplan</h3>
+        </Button>
+        <Button>
+          <img src={CGOS} alt="unplan logo" />
+          <h3>COGS</h3>
+        </Button>
+      </ButtonWrapper>
     </Side>
   </Layout>
 )
@@ -87,6 +95,12 @@ const Side = styled.main`
 
   border-radius: 17px;
 `
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  align-items: stretch;
+`
+
 const Button = styled.button`
   background: none;
   color: #718093;
@@ -96,4 +110,8 @@ const Button = styled.button`
   padding: 1rem;
 
   border: #718093 1px solid;
+
+  img {
+    height: 50px;
+  }
 `
