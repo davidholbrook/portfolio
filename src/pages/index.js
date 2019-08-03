@@ -87,6 +87,11 @@ const Side = styled.main`
 `
 const Button = styled.button`
   background: none;
-  border: #718093;
+  color: #718093;
   text-transform: uppercase;
+
+  margin: 0 0.5rem;
+  padding: 1rem;
+
+  border: #718093 1px solid;
 `
