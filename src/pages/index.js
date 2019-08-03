@@ -79,11 +79,13 @@ const Intro = styled.div`
 
 const Side = styled.main`
   background: #fbc7ba;
-
-  padding: 1rem;
-  border-radius: 17px;
-
   text-align: center;
+
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1rem;
+
+  border-radius: 17px;
 `
 const Button = styled.button`
   background: none;
