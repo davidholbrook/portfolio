@@ -45,7 +45,6 @@ const Intro = styled.div`
   display: block;
   @media (min-width: 900px) {
     display: flex;
-    justify-content: center;
     align-items: flex-end;
   }
   h2 {
@@ -90,7 +89,6 @@ const Side = styled.main`
   text-align: center;
 
   max-width: 44rem;
-  margin: 0 auto;
   padding: 1rem;
 
   border-radius: 17px;

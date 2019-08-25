@@ -33,16 +33,15 @@ const MainContent = styled.main`
 
   @media (min-width: 1280px) {
     margin: 10vh 30vw;
-    width: 65vw;
+    width: 60vw;
   }
 `
 
 const Footer = styled.footer`
   font-family: "Work Sans", sans-serif;
   line-height: 1.8rem;
-  text-align: center;
 
-  margin: 1rem 0 0 0;
+  margin: 1rem 0 0 5rem;
 
   a {
     color: #e84118;
