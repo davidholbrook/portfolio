@@ -94,6 +94,13 @@ const Side = styled.main`
   padding: 1rem;
 
   border-radius: 17px;
+
+  h2 {
+    font-family: "Varela Round", sans-serif;
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+  }
 `
 
 const ButtonWrapper = styled.div`
@@ -109,6 +116,8 @@ const Button = styled.button`
 
   margin: 0 0.5rem;
   padding: 1rem;
+
+  max-width: 8rem;
 
   border: #333333 1px solid;
 
