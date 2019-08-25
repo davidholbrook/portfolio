@@ -99,17 +99,18 @@ const Side = styled.main`
 const ButtonWrapper = styled.div`
   display: flex;
   align-items: stretch;
+  justify-content: center;
 `
 
 const Button = styled.button`
   background: none;
-  color: #718093;
+  color: #333333;
   text-transform: uppercase;
 
   margin: 0 0.5rem;
   padding: 1rem;
 
-  border: #718093 1px solid;
+  border: #333333 1px solid;
 
   img {
     height: 50px;
