@@ -3,8 +3,8 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 // temp image links
-import CGOS from "../images/projects/CGOS--normal.png"
-import unplan from "../images/projects/unplan--normal.png"
+import CGOS from "../images/projects/CGOS.svg"
+import unplan from "../images/projects/unplan.svg"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
