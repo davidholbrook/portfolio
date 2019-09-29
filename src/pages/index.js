@@ -15,10 +15,7 @@ const IndexPage = () => (
     <SEO title="Welcome" />
     <Intro>
       <h2>Hi I'm Dave</h2>
-      <h3>
-        web developer for
-        <br /> <strong>Wiha Tools USA</strong>
-      </h3>
+      <h3>Developer for Wiha Tools USA</h3>
     </Intro>
     <Side>
       <h2>Side Stuff</h2>
@@ -44,10 +41,6 @@ export default IndexPage
 
 const Intro = styled.div`
   display: block;
-  @media (min-width: 900px) {
-    display: flex;
-    align-items: flex-end;
-  }
   h2 {
     font-family: "Nobile", sans-serif;
     font-size: 5rem;

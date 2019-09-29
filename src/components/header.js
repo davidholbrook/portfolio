@@ -24,4 +24,8 @@ const Heading = styled.div`
 
   /* hack fix */
   margin: -2rem 0;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `

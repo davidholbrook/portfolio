@@ -31,7 +31,7 @@ const MainContent = styled.main`
   width: 90vw;
   margin: 0 auto;
 
-  @media (min-width: 1280px) {
+  @media (min-width: 900px) {
     margin: 2rem 20vw 0;
     width: 60vw;
   }
