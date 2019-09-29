@@ -1,16 +1,11 @@
 import React from "react"
+// eslint-disable-next-line
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import Logo from "../images/logo.js"
-import Menu from "../images/menu.js"
-
 const Header = () => (
   <header>
-    <Heading>
-      <Logo />
-      <MenuStyled />
-    </Heading>
+    <Heading></Heading>
   </header>
 )
 
@@ -25,6 +20,3 @@ const Heading = styled.h1`
     left: 0;
   }
 `
-
-// TODO: add menu text on hover
-const MenuStyled = styled(Menu)``
