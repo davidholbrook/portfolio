@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+// eslint-disable-next-line
 import { Link } from "gatsby"
 
 // temp image links
@@ -48,7 +49,7 @@ const Intro = styled.div`
     align-items: flex-end;
   }
   h2 {
-    font-family: "Varela Round", sans-serif;
+    font-family: "Nobile", sans-serif;
     font-size: 5rem;
 
     @media (max-width: 600px) {
@@ -94,7 +95,7 @@ const Side = styled.main`
   border-radius: 17px;
 
   h2 {
-    font-family: "Varela Round", sans-serif;
+    font-family: "Nobile", sans-serif;
     text-transform: uppercase;
 
     letter-spacing: 1.5px;

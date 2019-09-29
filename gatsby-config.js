@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Varela Round`, `Work Sans\:300,400,600`, `Merriweather`],
+        fonts: [`Nobile`, `Work Sans\:300,400,600`, `Merriweather`],
         display: "swap",
       },
     },
