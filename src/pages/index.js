@@ -16,6 +16,11 @@ const IndexPage = () => (
     <Intro>
       <h2>Hi I'm Dave</h2>
       <h3>Developer for Wiha Tools USA</h3>
+      <p>
+        I am a Front-End Developer from Minnesota. I love Comic Books, Video
+        Games and Star Wars, but most of all I have a passion for web
+        development. Currently I am a website developer for Wiha Tools USA.
+      </p>
     </Intro>
     <Side>
       <h2>Side Stuff</h2>
@@ -56,15 +61,10 @@ const Intro = styled.div`
     font-family: "Work Sans", sans-serif;
     font-weight: 300;
     line-height: 1.5;
-
-    @media (min-width: 900px) {
-      margin-left: 1.5rem;
-      /* hack to align the word blocks */
-      padding-bottom: 0.5rem;
-    }
-    @media (min-width: 600px) {
-      text-transform: uppercase;
-    }
+    text-transform: uppercase;
+    margin-top: -2rem;
+    // evil I know
+    letter-spacing: 2.5px;
 
     @media (max-width: 600px) {
       font-size: 9vw;
