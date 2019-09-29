@@ -3,6 +3,8 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+import Background from "../images/background.jpg"
+
 const Header = () => (
   <header>
     <Heading></Heading>
@@ -11,12 +13,15 @@ const Header = () => (
 
 export default Header
 
-const Heading = styled.h1`
-  display: flex;
-  margin: 5vh 0;
-  @media (min-width: 1280px) {
-    position: absolute;
-    top: 0.5vh;
-    left: 0;
-  }
+const Heading = styled.div`
+  background: url(${Background}) no-repeat;
+  background-size: cover;
+
+  height: 100vh;
+  width: 10vw;
+
+  position: fixed;
+
+  /* hack fix */
+  margin: -2rem 0;
 `

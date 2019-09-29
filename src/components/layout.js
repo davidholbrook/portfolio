@@ -32,7 +32,7 @@ const MainContent = styled.main`
   margin: 0 auto;
 
   @media (min-width: 1280px) {
-    margin: 10vh 30vw;
+    margin: 2rem 20vw 0;
     width: 60vw;
   }
 `
