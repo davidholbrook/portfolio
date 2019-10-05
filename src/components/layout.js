@@ -6,7 +6,7 @@ import "./layout.css"
 
 const GlobalStyle = createGlobalStyle`
   body {
-    color: #333333
+    color: #333333;
     font-size: 18px;
     line-height: 1.7rem;
   }
