@@ -3,12 +3,10 @@ import styled from "styled-components"
 // eslint-disable-next-line
 import { Link } from "gatsby"
 
-// temp image links
-import CGOS from "../images/projects/CGOS.svg"
-import unplan from "../images/projects/unplan.svg"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+import SubProjects from "../subcomponents/subprojects"
 
 const IndexPage = () => (
   <Layout>
@@ -22,19 +20,7 @@ const IndexPage = () => (
         development. Currently I am a website developer for Wiha Tools USA.
       </p>
     </Intro>
-    <Side>
-      <h2>Side Stuff</h2>
-      <ButtonWrapper>
-        <Button>
-          <img src={unplan} alt="unplan logo" />
-          <h3>unplan</h3>
-        </Button>
-        <Button>
-          <img src={CGOS} alt="unplan logo" />
-          <h3>COGS</h3>
-        </Button>
-      </ButtonWrapper>
-    </Side>
+    <SubProjects />
   </Layout>
 )
 
