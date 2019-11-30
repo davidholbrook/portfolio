@@ -13,7 +13,6 @@ const IndexPage = () => (
     <SEO title="Welcome" />
     <Intro>
       <h2>Hi I'm Dave</h2>
-      <h3>Developer for Wiha Tools USA</h3>
       <p>
         I am a Front-End Developer from Minnesota. I love Comic Books, Video
         Games and Star Wars, but most of all I have a passion for web
