@@ -12,11 +12,13 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Welcome" />
     <Intro>
-      <h2>Hi I'm Dave</h2>
+      <h2>David Holbrook</h2>
+      <h3>Web Developer for Wiha Tools USA</h3>
       <p>
-        I am a Front-End Developer from Minnesota. I love Comic Books, Video
+        Hi I'm Dave, a Web Developer from Minnesota. I love Comic Books, Video
         Games and Star Wars, but most of all I have a passion for web
-        development. Currently I am a website developer for Wiha Tools USA.
+        development. Currently I work as a website developer for{" "}
+        <a href="https://wihatools.com">Wiha Tools USA</a>.
       </p>
     </Intro>
     <SubProjects />
@@ -31,6 +33,9 @@ export default IndexPage
 
 const Intro = styled.div`
   display: block;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+
   h2 {
     font-family: "Nobile", sans-serif;
     font-size: 5rem;

@@ -10,6 +10,10 @@ const GlobalStyle = createGlobalStyle`
     font-size: 18px;
     line-height: 1.7rem;
   }
+
+  a{
+    color: #E84118;
+  }
 `
 
 const Layout = ({ children }) => {
