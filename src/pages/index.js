@@ -35,6 +35,11 @@ const Intro = styled.div`
   font-size: 1.5rem;
   line-height: 2.3rem;
 
+  @media (prefers-color-scheme: dark) {
+    color: #cccccc;
+    line-height: 2.7rem;
+  }
+
   h2 {
     font-family: "Nobile", sans-serif;
     font-size: 5rem;

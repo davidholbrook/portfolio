@@ -9,10 +9,19 @@ const GlobalStyle = createGlobalStyle`
     color: #333333;
     font-size: 18px;
     line-height: 1.7rem;
+
+    @media (prefers-color-scheme: dark) {
+      background: #333333;
+      color: #ffffff;
+    }
   }
 
   a{
     color: #E84118;
+
+    @media (prefers-color-scheme: dark) {
+      color: #d96649;
+    }
   }
 `
 
@@ -45,7 +54,7 @@ const MainContent = styled.main`
   margin: 0 auto;
 
   @media (min-width: 900px) {
-    margin: 2rem 20vw 0;
+    margin: 2rem 15vw 0;
     width: 60vw;
   }
 `
@@ -54,9 +63,9 @@ const Footer = styled.footer`
   font-family: "Work Sans", sans-serif;
   line-height: 1.8rem;
 
-  margin: 1rem 0 0 5rem;
+  margin: 0;
 
-  a {
-    color: #e84118;
+  @media (prefers-color-scheme: dark) {
+    color: #eeeeee;
   }
 `
