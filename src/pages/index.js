@@ -21,7 +21,6 @@ const IndexPage = () => (
         <a href="https://wihatools.com">Wiha Tools USA</a>.
       </p>
     </Intro>
-    <SubProjects />
   </Layout>
 )
 
