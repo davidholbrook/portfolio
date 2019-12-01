@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import SubProjects from "../subcomponents/subprojects"
+import Blog from "../subcomponents/blog"
 
 const IndexPage = () => (
   <Layout>
@@ -21,6 +21,14 @@ const IndexPage = () => (
         <a href="https://wihatools.com">Wiha Tools USA</a>.
       </p>
     </Intro>
+    <h3>My Thoughts</h3>
+    <Blog />
+    <Blog />
+    <Blog />
+    <Blog />
+    <Blog />
+    <Blog />
+    <Blog />
   </Layout>
 )
 
