@@ -12,8 +12,6 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Welcome" />
     <Intro>
-      <h2>David Holbrook</h2>
-      <h3>Web Developer for Wiha Tools USA</h3>
       <p>
         Hi I'm Dave, a Web Developer from Minnesota. I love Comic Books, Video
         Games and Star Wars, but most of all I have a passion for web
@@ -34,37 +32,11 @@ const Intro = styled.div`
   display: block;
   font-size: 1.5rem;
   line-height: 2.3rem;
+  text-align: center;
 
   @media (prefers-color-scheme: dark) {
     color: #cccccc;
     line-height: 2.7rem;
-  }
-
-  h2 {
-    font-family: "Nobile", sans-serif;
-    font-size: 5rem;
-
-    @media (max-width: 600px) {
-      text-transform: uppercase;
-      font-size: 25vw;
-      text-align: center;
-    }
-  }
-
-  h3 {
-    font-family: "Work Sans", sans-serif;
-    font-weight: 300;
-    line-height: 1.5;
-    text-transform: uppercase;
-    margin-top: -2rem;
-    // evil I know
-    letter-spacing: 2.5px;
-
-    @media (max-width: 600px) {
-      font-size: 9vw;
-      line-height: 3.5rem;
-      text-align: center;
-    }
   }
 `
 

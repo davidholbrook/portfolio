@@ -29,8 +29,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <Header />
       <MainContent>
+        <Header />
         {children}
         <Footer>
           <p>
@@ -54,7 +54,7 @@ const MainContent = styled.main`
   margin: 0 auto;
 
   @media (min-width: 900px) {
-    margin: 2rem 15vw 0;
+    margin: 2rem 15vw;
     width: 60vw;
   }
 `
