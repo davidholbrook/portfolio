@@ -63,6 +63,8 @@ const Footer = styled.footer`
   font-family: "Work Sans", sans-serif;
   line-height: 1.8rem;
 
+  text-align: center;
+
   margin: 0;
 
   @media (prefers-color-scheme: dark) {
