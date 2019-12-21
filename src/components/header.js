@@ -8,6 +8,7 @@ import Icon from "../images/icons"
 const Header = () => (
   <header>
     <Heading>
+      {console.log(window.matchMedia("(prefers-color-scheme: dark)").matches)}
       {window.matchMedia("(prefers-color-scheme: dark)").matches ? (
         <Icon name="logo--dark" />
       ) : (
