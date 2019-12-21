@@ -13,19 +13,4 @@ const Header = () => (
 
 export default Header
 
-const Heading = styled.div`
-  background: url(${Background}) no-repeat;
-  background-size: cover;
-
-  height: 100vh;
-  width: 10vw;
-
-  position: fixed;
-
-  /* hack fix */
-  margin: -2rem 0;
-
-  @media (max-width: 900px) {
-    display: none;
-  }
-`
+const Heading = styled.div``
