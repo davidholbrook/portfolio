@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import styled from "styled-components"
 
 export default ({ data }) => {
@@ -9,6 +10,7 @@ export default ({ data }) => {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
+      <SEO title={frontmatter.title} />
       <div>
         <Title>{frontmatter.title}</Title>
         <Post dangerouslySetInnerHTML={{ __html: html }} />
