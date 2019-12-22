@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `David Holbrook`,
-    description: `Web developer for Wihatools USA, also designs things.`,
+    description: `Web developer for Wiha Tools, also designs things.`,
     author: `@davidholbrook`,
   },
   plugins: [
@@ -10,10 +10,11 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
