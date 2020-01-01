@@ -27,7 +27,7 @@ const Heading = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem;
+  margin: 2rem 2rem 3rem 2rem;
 
   @media (prefers-color-scheme: dark) {
     color: #cccccc;
