@@ -6,9 +6,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import Blog from "../subcomponents/blog"
-
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Welcome" />
     <Intro>
@@ -19,8 +17,35 @@ const IndexPage = () => (
         <a href="https://wihatools.com">Wiha Tools USA</a>.
       </p>
     </Intro>
+
+    <SectionTitle>My Thoughts</SectionTitle>
+    {data.allMarkdownRemark.edges.map(({ node }) => (
+      <>
+        <Link to={`thoughts/${node.frontmatter.path}`}>
+          <Title>{node.frontmatter.title}</Title>
+        </Link>
+        <p>{node.excerpt}</p>
+      </>
+    ))}
   </Layout>
 )
+
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
 
@@ -38,6 +63,21 @@ const Intro = styled.div`
     color: #cccccc;
     line-height: 2.7rem;
   }
+`
+
+const Title = styled.h3`
+  font-family: "Nobile", sans-serif;
+  font-size: 1rem;
+`
+
+const SectionTitle = styled.h2`
+  font-family: "Nobile", sans-serif;
+  font-size: 3rem;
+
+  /* text-transform: uppercase; */
+  text-align: center;
+
+  margin: 4rem 0;
 `
 
 // =========================================
