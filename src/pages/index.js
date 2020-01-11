@@ -17,16 +17,17 @@ const IndexPage = ({ data }) => (
         <a href="https://wihatools.com">Wiha Tools USA</a>.
       </p>
     </Intro>
-
-    <SectionTitle>My Thoughts</SectionTitle>
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <>
-        <Link to={`thoughts/${node.frontmatter.path}`}>
-          <Title>{node.frontmatter.title}</Title>
-        </Link>
-        <p>{node.excerpt}</p>
-      </>
-    ))}
+    <Blog>
+      <SectionTitle>My Thoughts</SectionTitle>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <>
+          <Link to={`thoughts/${node.frontmatter.path}`}>
+            <Title>{node.frontmatter.title}</Title>
+          </Link>
+          <p>{node.excerpt}</p>
+        </>
+      ))}
+    </Blog>
   </Layout>
 )
 
@@ -55,7 +56,7 @@ export default IndexPage
 
 const Intro = styled.div`
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 2.3rem;
   text-align: center;
 
@@ -70,14 +71,24 @@ const Title = styled.h3`
   font-size: 1rem;
 `
 
+// ==========================================
+//  Blog Styles
+// =========================================
+
 const SectionTitle = styled.h2`
   font-family: "Nobile", sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
 
   /* text-transform: uppercase; */
   text-align: center;
-
   margin: 4rem 0;
+`
+
+const Blog = styled.div`
+  text-align: center;
+
+  margin: 0 auto;
+  width: 80%;
 `
 
 // =========================================
