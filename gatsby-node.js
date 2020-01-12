@@ -1,7 +1,9 @@
 const path = require(`path`)
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
-  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
+  const dipage = path.resolve(`src/templates/dipage.js`)
+  const blogTemplate = path.resolve(`src/templates/blog-post.js`)
+  const projectTemplate = path.resolve(`src/templates/project.js`)
   const result = await graphql(`
     {
       allMarkdownRemark(
@@ -13,6 +15,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             frontmatter {
               title
               path
+              template
             }
           }
         }
@@ -25,10 +28,25 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: `thoughts/${node.frontmatter.path}`,
-      component: blogPostTemplate,
-      context: {},
-    })
+    if (node.frontmatter.template === "blog") {
+      createPage({
+        path: `${node.frontmatter.path}`,
+        component: blogTemplate,
+        context: {},
+      })
+    }
+    if (node.frontmatter.template === "project") {
+      createPage({
+        path: `${node.frontmatter.path}`,
+        component: projectTemplate,
+        context: {},
+      })
+    } else {
+      createPage({
+        path: `${node.frontmatter.path}`,
+        component: dipage,
+        context: {},
+      })
+    }
   })
 }
