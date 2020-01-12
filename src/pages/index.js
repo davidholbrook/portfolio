@@ -19,14 +19,31 @@ const IndexPage = ({ data }) => (
     </Intro>
     <Blog>
       <SectionTitle>My Thoughts</SectionTitle>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <>
-          <Link to={`thoughts/${node.frontmatter.path}`}>
-            <Title>{node.frontmatter.title}</Title>
-          </Link>
-          <p>{node.excerpt}</p>
-        </>
-      ))}
+      {data.allMarkdownRemark.edges.map(
+        ({ node }) =>
+          node.frontmatter.template === "blog" && (
+            <>
+              <Link to={node.frontmatter.path}>
+                <Title>{node.frontmatter.title}</Title>
+              </Link>
+              <p>{node.excerpt}</p>
+            </>
+          )
+      )}
+    </Blog>
+    <Blog>
+      <SectionTitle>Working On</SectionTitle>
+      {data.allMarkdownRemark.edges.map(
+        ({ node }) =>
+          node.frontmatter.template === "project" && (
+            <>
+              <Link to={node.frontmatter.path}>
+                <Title>{node.frontmatter.title}</Title>
+              </Link>
+              <p>{node.excerpt}</p>
+            </>
+          )
+      )}
     </Blog>
   </Layout>
 )
@@ -40,6 +57,7 @@ export const query = graphql`
           frontmatter {
             title
             path
+            template
           }
           excerpt
         }
