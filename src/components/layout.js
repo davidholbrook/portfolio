@@ -17,11 +17,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a{
-    color: #E84118;
-
-    @media (prefers-color-scheme: dark) {
-      color: #d96649;
-    }
+    text-transform: uppercase;
   }
 `
 
