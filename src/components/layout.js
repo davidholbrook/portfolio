@@ -50,11 +50,20 @@ export default Layout
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 8rem 1fr;
+
+  @media (max-width: 55rem) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const MainContent = styled.main`
   width: 50rem;
   margin-left: 1rem;
+
+  @media (max-width: 50rem) {
+    width: 100%;
+    margin: 0;
+  }
 `
 
 const Footer = styled.footer`
