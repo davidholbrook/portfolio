@@ -20,16 +20,16 @@ export default Header
 const HeadBG = styled.header`
   background: #2d3436;
   height: 100vh;
+
+  padding: 1.5rem 1rem;
+
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 
   @media (max-width: 55rem) {
     height: inherit;
     width: 100vw;
     margin-bottom: 1rem;
-  }
-
-  svg {
-    margin: 1rem auto;
   }
 `
