@@ -9,6 +9,7 @@ import SEO from "../components/seo"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Welcome" />
+    <Banner>David Holbrook</Banner>
     <Intro>
       <p>
         I am a Developer working for{" "}
@@ -88,9 +89,23 @@ const Intro = styled.div`
   }
 `
 
+const Banner = styled.h1`
+  font-family: "Work Sans", sans-serif;
+  font-size: 7vw;
+  margin: 3.2rem 0 3rem 0;
+
+  @media (min-width: 82rem) {
+    font-size: 6rem;
+  }
+
+  @media (max-width: 55rem) {
+    font-size: 12vw;
+  }
+`
+
 const Title = styled.h3`
   font-family: "Work Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 1em;
 `
 
 // ==========================================
