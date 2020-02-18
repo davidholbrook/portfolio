@@ -5,6 +5,10 @@ import "./normalize.css"
 import Header from "./header"
 
 const GlobalStyle = createGlobalStyle`
+  *{
+    box-sizing: border-box
+  }
+
   body {
     font-size: 18px;
     line-height: 1.7rem;
