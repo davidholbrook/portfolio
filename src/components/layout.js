@@ -1,12 +1,15 @@
 import React from "react"
 import styled, { createGlobalStyle } from "styled-components"
 
+import "./normalize.css"
 import Header from "./header"
 
 const GlobalStyle = createGlobalStyle`
   body {
     font-size: 18px;
     line-height: 1.7rem;
+
+    margin: 0; padding: 0;
 
     font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
     font-weight: 400;
