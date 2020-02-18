@@ -2,13 +2,14 @@ import React from "react"
 import styled, { createGlobalStyle } from "styled-components"
 
 import Header from "./header"
-import "./layout.css"
 
 const GlobalStyle = createGlobalStyle`
   body {
-    color: #333333;
     font-size: 18px;
     line-height: 1.7rem;
+
+    font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+    font-weight: 400;
 
     @media (prefers-color-scheme: dark) {
       background: #333333;

@@ -76,7 +76,6 @@ const Intro = styled.div`
   display: block;
   font-size: 1.3rem;
   line-height: 2.3rem;
-  text-align: center;
 
   @media (prefers-color-scheme: dark) {
     color: #cccccc;
@@ -85,7 +84,7 @@ const Intro = styled.div`
 `
 
 const Title = styled.h3`
-  font-family: "Nobile", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 1rem;
 `
 
@@ -94,7 +93,7 @@ const Title = styled.h3`
 // =========================================
 
 const SectionTitle = styled.h2`
-  font-family: "Nobile", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 2.5rem;
 
   /* text-transform: uppercase; */
@@ -123,7 +122,6 @@ const Side = styled.main`
   border-radius: 17px;
 
   h2 {
-    font-family: "Nobile", sans-serif;
     text-transform: uppercase;
 
     letter-spacing: 1.5px;
