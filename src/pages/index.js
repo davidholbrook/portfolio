@@ -11,10 +11,15 @@ const IndexPage = ({ data }) => (
     <SEO title="Welcome" />
     <Intro>
       <p>
-        Hi I'm Dave, a Web Developer from Minnesota. I love Comic Books, Video
-        Games and Star Wars, but most of all I have a passion for web
-        development. Currently I work as a website developer for{" "}
-        <a href="https://wihatools.com">Wiha Tools USA</a>.
+        I am a Developer working for{" "}
+        <a
+          href="https://www.wihatools.com/about-wiha-tools"
+          alt="Wiha Tools USA, website"
+        >
+          Wiha Tools USA
+        </a>
+        . I love Comic Books, Video Games and Star Wars, but most of all I have
+        a passion for web development and making cool useful things..
       </p>
     </Intro>
     <Blog>
