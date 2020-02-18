@@ -8,9 +8,9 @@ import Icon from "../images/icons"
 const Header = () => (
   <HeadBG>
     {window.matchMedia("(prefers-color-scheme: dark)").matches ? (
-      <Icon name="logo--light" />
-    ) : (
       <Icon name="logo--dark" />
+    ) : (
+      <Icon name="logo--light" />
     )}
   </HeadBG>
 )
@@ -18,7 +18,8 @@ const Header = () => (
 export default Header
 
 const HeadBG = styled.header`
-  background: #2d3436;
+  background: #b2bec3;
+  border-right: 3px solid rgba(45, 52, 54, 0.5);
   height: 100vh;
 
   padding: 1.5rem 1rem;
@@ -26,6 +27,10 @@ const HeadBG = styled.header`
   display: flex;
   justify-content: center;
   align-items: flex-start;
+
+  @media (prefers-color-scheme: dark) {
+    background: #666;
+  }
 
   @media (max-width: 55rem) {
     height: inherit;
