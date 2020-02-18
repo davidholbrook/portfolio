@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => (
         a passion for web development and making cool useful things..
       </p>
     </Intro>
-    <Blog>
+    <>
       <SectionTitle>My Thoughts</SectionTitle>
       {data.allMarkdownRemark.edges.map(
         ({ node }) =>
@@ -36,8 +36,8 @@ const IndexPage = ({ data }) => (
             </>
           )
       )}
-    </Blog>
-    <Blog>
+    </>
+    <>
       <SectionTitle>Working On</SectionTitle>
       {data.allMarkdownRemark.edges.map(
         ({ node }) =>
@@ -50,7 +50,7 @@ const IndexPage = ({ data }) => (
             </>
           )
       )}
-    </Blog>
+    </>
   </Layout>
 )
 
@@ -109,7 +109,7 @@ const Title = styled.h3`
 `
 
 // ==========================================
-//  Blog Styles
+//   Blog Styles
 // =========================================
 
 const SectionTitle = styled.h2`
@@ -117,15 +117,8 @@ const SectionTitle = styled.h2`
   font-size: 2.5rem;
 
   /* text-transform: uppercase; */
-  text-align: center;
+
   margin: 4rem 0;
-`
-
-const Blog = styled.div`
-  text-align: center;
-
-  margin: 0 auto;
-  width: 80%;
 `
 
 // =========================================
