@@ -29,7 +29,13 @@ const IndexPage = ({ data }) => (
         ({ node }) =>
           node.frontmatter.template === "blog" && (
             <>
-              <Link to={node.frontmatter.path}>
+              <Link
+                to={node.frontmatter.path}
+                style={{
+                  color: node.frontmatter.color || "#555",
+                  borderColor: node.frontmatter.color || "#555",
+                }}
+              >
                 <Title>{node.frontmatter.title}</Title>
               </Link>
               <p>{node.excerpt}</p>
@@ -43,7 +49,13 @@ const IndexPage = ({ data }) => (
         ({ node }) =>
           node.frontmatter.template === "project" && (
             <>
-              <Link to={node.frontmatter.path}>
+              <Link
+                to={node.frontmatter.path}
+                style={{
+                  color: node.frontmatter.color || "#555",
+                  borderColor: node.frontmatter.color || "#555",
+                }}
+              >
                 <Title>{node.frontmatter.title}</Title>
               </Link>
               <p>{node.excerpt}</p>
@@ -64,6 +76,7 @@ export const query = graphql`
             title
             path
             template
+            color
           }
           excerpt
         }
@@ -82,6 +95,11 @@ const Intro = styled.div`
   display: block;
   font-size: 1.3rem;
   line-height: 2.3rem;
+
+  a {
+    color: #d2091e;
+    border-color: #d2091e;
+  }
 
   @media (prefers-color-scheme: dark) {
     color: #cccccc;

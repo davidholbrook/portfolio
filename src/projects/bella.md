@@ -3,6 +3,7 @@ path: "/projects/bellagala"
 date: "2019-1-12"
 title: "Bellagala"
 template: "project"
+color: "#6C5CE7"
 ---
 
 ## Overview:

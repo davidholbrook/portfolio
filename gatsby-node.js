@@ -16,6 +16,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               title
               path
               template
+              color
             }
           }
         }

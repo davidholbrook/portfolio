@@ -26,6 +26,9 @@ const GlobalStyle = createGlobalStyle`
 
   a{
     text-transform: uppercase;
+    text-decoration: none;
+
+    border-bottom: 1px solid #555;
   }
 `
 
