@@ -52,8 +52,8 @@ const IndexPage = ({ data }) => (
               <Link
                 to={node.frontmatter.path}
                 style={{
-                  color: node.frontmatter.color || "#555",
-                  borderColor: node.frontmatter.color || "#555",
+                  color: node.frontmatter.color | "#555",
+                  borderColor: node.frontmatter.color | "#555",
                 }}
               >
                 <Title>{node.frontmatter.title}</Title>

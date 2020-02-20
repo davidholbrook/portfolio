@@ -2,7 +2,6 @@ const path = require(`path`)
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const dipage = path.resolve(`src/templates/dipage.js`)
-  const blogTemplate = path.resolve(`src/templates/blog-post.js`)
   const projectTemplate = path.resolve(`src/templates/project.js`)
   const result = await graphql(`
     {
@@ -29,13 +28,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    if (node.frontmatter.template === "blog") {
-      createPage({
-        path: `${node.frontmatter.path}`,
-        component: blogTemplate,
-        context: {},
-      })
-    }
     if (node.frontmatter.template === "project") {
       createPage({
         path: `${node.frontmatter.path}`,
