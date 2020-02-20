@@ -37,4 +37,9 @@ const HeadBG = styled.header`
     width: 100vw;
     margin-bottom: 1rem;
   }
+
+  @media (min-width: 55rem) {
+    position: sticky;
+    top: 0;
+  }
 `
