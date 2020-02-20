@@ -7,11 +7,13 @@ import Icon from "../images/icons"
 
 const Header = () => (
   <HeadBG>
-    {window.matchMedia("(prefers-color-scheme: dark)").matches ? (
-      <Icon name="logo--dark" />
-    ) : (
-      <Icon name="logo--light" />
-    )}
+    <Link to="/">
+      {window.matchMedia("(prefers-color-scheme: dark)").matches ? (
+        <Icon name="logo--dark" />
+      ) : (
+        <Icon name="logo--light" />
+      )}
+    </Link>
   </HeadBG>
 )
 
@@ -27,6 +29,10 @@ const HeadBG = styled.header`
   display: flex;
   justify-content: center;
   align-items: flex-start;
+
+  a {
+    border-bottom: none;
+  }
 
   @media (prefers-color-scheme: dark) {
     background: #666;
