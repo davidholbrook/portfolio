@@ -5,17 +5,13 @@ import { useSpring, animated } from "react-spring"
 // eslint-disable-next-line
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../layout/layout"
+import SEO from "../layout/seo"
 
 import Background from "../images/background.png"
+import Navagation from "../components/Navagation"
 
 const IndexPage = () => {
-  const props = useSpring({
-    transform: "translate3d(0,0,0)",
-    from: { transform: "translate3d(0,60px,50px)" },
-    config: { duration: 1000 },
-  })
   return (
     <Layout>
       <SEO title="Minneapolis Developer" />
@@ -23,15 +19,7 @@ const IndexPage = () => {
         <h1>David Holbrook</h1>
         <h2>Generating Websites. Star Wars Trivia, and Comic Book Love.</h2>
       </Intro>
-      <animated.div style={props}>
-        <Nav>
-          <ul>
-            <li>About</li>
-            <li>Thoughts</li>
-            <li>Projects</li>
-          </ul>
-        </Nav>
-      </animated.div>
+      <Navagation />
     </Layout>
   )
 }
