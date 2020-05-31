@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { useSpring, animated } from "react-spring"
 import styled from "styled-components"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 export const Navagation = props => {
   let onum = `0.${Math.round(props.scrollPosition)}`
-  console.log(onum)
   if (onum > 0.7) {
     onum = `1`
   }

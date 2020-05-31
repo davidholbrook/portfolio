@@ -5,7 +5,7 @@ import Background from "../images/background.png"
 import Logo from "../images/logo.svg"
 
 const Header = props => {
-  if (props.homepage == true) {
+  if (props.homepage === true) {
     return (
       <div>
         <Intro>
@@ -14,16 +14,10 @@ const Header = props => {
         </Intro>
       </div>
     )
-  } else if (props.homepage == "sticky") {
-    return (
-      <Sticky>
-        <img src={Logo} height="50" />
-      </Sticky>
-    )
   } else {
     return (
       <Default>
-        <img src={Logo} height="50" />
+        <img src={Logo} height="50" alt="website logo" />
       </Default>
     )
   }
@@ -67,13 +61,4 @@ const Default = styled.div`
 
   display: flex;
   justify-content: center;
-`
-
-// Sticky styles
-const Sticky = styled.div`
-  background: #000;
-  padding: 0;
-
-  width: 100%;
-  position: fixed;
 `
