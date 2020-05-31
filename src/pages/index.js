@@ -8,18 +8,15 @@ import styled from "styled-components"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 
-import Background from "../images/background.png"
-import Navagation from "../components/Navagation"
+import Navagation from "../components/navagation"
+import Header from "../components/header"
 
 const IndexPage = () => {
   return (
     <Layout>
       <Rid>
         <SEO title="Minneapolis Developer" />
-        <Intro>
-          <h1>David Holbrook</h1>
-          <h2>Generating Websites. Star Wars Trivia, and Comic Book Love.</h2>
-        </Intro>
+        <Header />
         <Navagation />
       </Rid>
     </Layout>
@@ -32,64 +29,4 @@ export default IndexPage
 // TODO remove this
 const Rid = styled.div`
   height: 1700px;
-`
-
-const Intro = styled.div`
-  color: #999;
-
-  background: #333 url('${Background}') no-repeat;
-  background-size: cover;
-
-  width: 100vw;
-  height: 100vh;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  h1 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-
-    text-transform: uppercase;
-
-    font-size: 4rem;
-  }
-
-  h2{
-    font-weight: 200px;
-  }
-`
-
-const Nav = styled.nav`
-  background: #ffffff;
-
-  padding: 0.5rem;
-  padding-top: 0;
-
-  max-width: 80%;
-  margin: -4rem auto 0 auto;
-
-  border-top: 5px solid orange;
-
-  opacity: 0.6;
-
-  transition: opacity 320ms ease-in-out;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  ul {
-    list-style: none;
-
-    display: flex;
-    justify-content: center;
-
-    li {
-      margin: 0 1rem;
-      font-size: 1.2rem;
-    }
-  }
 `
