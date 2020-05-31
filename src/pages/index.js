@@ -18,6 +18,7 @@ const IndexPage = () => {
     if (position > 600) {
       setHomPag(false)
       window.scrollTo(0, 0)
+      window.removeEventListener("scroll", handleScroll)
     }
   }
   useEffect(() => {
