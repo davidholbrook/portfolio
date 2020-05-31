@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { useSpring, animated } from "react-spring"
+// import { useSpring, animated } from "react-spring"
 
 // eslint-disable-next-line
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
@@ -14,17 +14,25 @@ import Navagation from "../components/Navagation"
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Minneapolis Developer" />
-      <Intro>
-        <h1>David Holbrook</h1>
-        <h2>Generating Websites. Star Wars Trivia, and Comic Book Love.</h2>
-      </Intro>
-      <Navagation />
+      <Rid>
+        <SEO title="Minneapolis Developer" />
+        <Intro>
+          <h1>David Holbrook</h1>
+          <h2>Generating Websites. Star Wars Trivia, and Comic Book Love.</h2>
+        </Intro>
+        <Navagation />
+      </Rid>
     </Layout>
   )
 }
 
 export default IndexPage
+
+//temp height ajustment
+// TODO remove this
+const Rid = styled.div`
+  height: 1700px;
+`
 
 const Intro = styled.div`
   color: #999;
