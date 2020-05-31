@@ -1,9 +1,5 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
-// import { useSpring, animated } from "react-spring"
-
-// eslint-disable-next-line
-// import { Link } from "gatsby"
 
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
@@ -12,12 +8,31 @@ import Navagation from "../components/navagation"
 import Header from "../components/header"
 
 const IndexPage = () => {
+  const [scrollPosition, setSrollPosition] = useState(0)
+  const [HomPag, setHomPag] = useState(true)
+
+  const handleScroll = () => {
+    const position = window.pageYOffset
+    setSrollPosition(position)
+
+    if (position > 600) {
+      setHomPag(false)
+      window.scrollTo(0, 0)
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
     <Layout>
       <Rid>
         <SEO title="Minneapolis Developer" />
-        <Header />
-        <Navagation />
+        <Header homepage={HomPag} />
+        <Navagation homepage={HomPag} scrollPosition={scrollPosition} />
       </Rid>
     </Layout>
   )

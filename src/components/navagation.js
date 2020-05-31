@@ -1,34 +1,22 @@
 import React, { useState, useEffect } from "react"
 import { useSpring, animated } from "react-spring"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
-export const Navagation = () => {
-  const [scrollPosition, setSrollPosition] = useState(0)
-  const handleScroll = () => {
-    const position = window.pageYOffset
-    setSrollPosition(position)
-  }
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
-
-  let onum = `0.${Math.round(scrollPosition) * 1}`
+export const Navagation = props => {
+  let onum = `0.${Math.round(props.scrollPosition)}`
+  console.log(onum)
   if (onum > 0.7) {
     onum = `1`
   }
-  const props = useSpring({
+  const intro = useSpring({
     opacity: onum,
     config: { duration: 320 },
   })
 
-  console.log(onum)
-
-  return (
-    <div>
-      <animated.div style={props}>
+  if (props.homepage === true) {
+    return (
+      <animated.div style={intro}>
         <Nav>
           <ul>
             <li>About</li>
@@ -37,8 +25,20 @@ export const Navagation = () => {
           </ul>
         </Nav>
       </animated.div>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <Nav>
+        <ul>
+          <li>
+            <Highlight href="#">About</Highlight>
+          </li>
+          <li>Thoughts</li>
+          <li>Projects</li>
+        </ul>
+      </Nav>
+    )
+  }
 }
 
 export default Navagation
@@ -53,8 +53,6 @@ const Nav = styled.nav`
   margin: -4rem auto 0 auto;
 
   border-top: 5px solid orange;
-
-  transition: opacity 320ms ease-in-out;
 
   &:hover {
     opacity: 1;
@@ -71,4 +69,9 @@ const Nav = styled.nav`
       font-size: 1.2rem;
     }
   }
+`
+const Highlight = styled.a`
+  color: orange;
+  font-weight: bolder;
+  text-decoration: none;
 `
