@@ -7,6 +7,9 @@ const GlobalStyle = createGlobalStyle`
 *{
   box-sizing: content-box;
 }
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
 `
 
 const Layout = ({ children }) => {
