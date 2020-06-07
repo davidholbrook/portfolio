@@ -5,10 +5,15 @@ import "./normalize.css"
 
 const GlobalStyle = createGlobalStyle`
 *{
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  line-height: 1.5rem;
+}
+.boxed{
+  max-width: 75%;
+  margin: 0 auto;
 }
 `
 

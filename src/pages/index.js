@@ -6,6 +6,7 @@ import SEO from "../layout/seo"
 
 import Navagation from "../components/navagation"
 import Header from "../components/header"
+import About from "./about"
 
 const IndexPage = () => {
   const [scrollPosition, setSrollPosition] = useState(0)
@@ -34,6 +35,7 @@ const IndexPage = () => {
         <SEO title="Minneapolis Developer" />
         <Header homepage={HomPag} />
         <Navagation homepage={HomPag} scrollPosition={scrollPosition} />
+        <About />
       </Rid>
     </Layout>
   )
