@@ -1,58 +1,69 @@
 import React from "react"
 import styled from "styled-components"
 
+import Layout from "../layout/layout"
+import SEO from "../layout/seo"
+
+import Header from "../components/header"
+import Navagation from "../components/navagation"
+
 import Avatar from "../images/avatar.jpg"
 
 const About = () => {
   return (
-    <div className="boxed">
-      <AboutBox>
-        <Img src={Avatar} alt="My Face" />
-        <span>
-          <h2>About David Holbrook</h2>
-          <p>
-            Hey, I'm David, an e-commerce developer for Wiha Tools USA. I have
-            been working on websites for the last 15 years and have a degree in
-            Entrepreneurship Studies. I love to blog about development, the
-            state of e-commerce, video games, comic books, and sometimes even
-            Star Wars.
-          </p>
-        </span>
-      </AboutBox>
-      <Title>Some of my Favorite Things</Title>
-      <BoxWrapper>
-        <DetailBox>
-          <h4>Favorite Devtools</h4>
-          <ul>
-            <li>Node</li>
-            <li>React</li>
-            <li>Magento 2</li>
-            <li>Session Box</li>
-            <li>VS Code</li>
-          </ul>
-        </DetailBox>
-        <DetailBox>
-          <h4>Most Experenced Devtools</h4>
-          <ul>
-            <li>Node</li>
-            <li>React</li>
-            <li>Magento 2</li>
-            <li>Session Box</li>
-            <li>VS Code</li>
-          </ul>
-        </DetailBox>
-        <DetailBox>
-          <h4>Favorite Fandom</h4>
-          <ul>
-            <li>Star Wars</li>
-            <li>Nintendo</li>
-            <li>Apple</li>
-            <li>Halo</li>
-            <li>Assassin’s Creed</li>
-          </ul>
-        </DetailBox>
-      </BoxWrapper>
-    </div>
+    <Layout>
+      <SEO title="About David" />
+      <Header />
+      <Navagation />
+      <div className="boxed">
+        <AboutBox>
+          <Img src={Avatar} alt="My Face" />
+          <span>
+            <h2>About David Holbrook</h2>
+            <p>
+              Hey, I'm David, an e-commerce developer for Wiha Tools USA. I have
+              been working on websites for the last 15 years and have a degree
+              in Entrepreneurship Studies. I love to blog about development, the
+              state of e-commerce, video games, comic books, and sometimes even
+              Star Wars.
+            </p>
+          </span>
+        </AboutBox>
+        <Title>Some of my Favorite Things</Title>
+        <BoxWrapper>
+          <DetailBox>
+            <h4>Favorite Devtools</h4>
+            <ul>
+              <li>Node</li>
+              <li>React</li>
+              <li>Magento 2</li>
+              <li>Session Box</li>
+              <li>VS Code</li>
+            </ul>
+          </DetailBox>
+          <DetailBox>
+            <h4>Most Experenced Devtools</h4>
+            <ul>
+              <li>Node</li>
+              <li>React</li>
+              <li>Magento 2</li>
+              <li>Session Box</li>
+              <li>VS Code</li>
+            </ul>
+          </DetailBox>
+          <DetailBox>
+            <h4>Favorite Fandom</h4>
+            <ul>
+              <li>Star Wars</li>
+              <li>Nintendo</li>
+              <li>Apple</li>
+              <li>Halo</li>
+              <li>Assassin’s Creed</li>
+            </ul>
+          </DetailBox>
+        </BoxWrapper>
+      </div>
+    </Layout>
   )
 }
 export default About

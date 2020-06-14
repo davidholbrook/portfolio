@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
+import { navigate } from "gatsby"
 
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 
 import Navagation from "../components/navagation"
 import Header from "../components/header"
-import About from "./about"
 
 const IndexPage = () => {
   const [scrollPosition, setSrollPosition] = useState(0)
@@ -17,9 +17,7 @@ const IndexPage = () => {
     setSrollPosition(position)
 
     if (position > 600) {
-      setHomPag(false)
-      window.scrollTo(0, 0)
-      window.removeEventListener("scroll", handleScroll)
+      navigate("/about/")
     }
   }
   useEffect(() => {
@@ -35,7 +33,6 @@ const IndexPage = () => {
         <SEO title="Minneapolis Developer" />
         <Header homepage={HomPag} />
         <Navagation homepage={HomPag} scrollPosition={scrollPosition} />
-        <About />
       </Rid>
     </Layout>
   )
