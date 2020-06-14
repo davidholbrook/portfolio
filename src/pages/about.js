@@ -74,13 +74,19 @@ const About = () => {
 export default About
 
 const AboutBox = styled.div`
-  background: #edd0b7;
+  background: #a06700;
+  color: #ffffff;
+
   padding: 1rem;
   border-radius: 0.5rem;
 
   display: grid;
   grid-template-columns: 13rem 1fr;
   column-gap: 1rem;
+
+  a {
+    color: #ffffff;
+  }
 `
 
 const Img = styled.img`

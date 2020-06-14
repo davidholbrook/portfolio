@@ -63,6 +63,8 @@ const Nav = styled.nav`
 
   border-top: 5px solid #a06700;
 
+  margin-bottom: 2rem;
+
   &:hover {
     opacity: 1;
   }
