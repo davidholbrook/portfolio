@@ -10,7 +10,6 @@ import Header from "../components/header"
 
 const IndexPage = () => {
   const [scrollPosition, setSrollPosition] = useState(0)
-  const [HomPag, setHomPag] = useState(true)
 
   const handleScroll = () => {
     const position = window.pageYOffset
@@ -31,8 +30,8 @@ const IndexPage = () => {
     <Layout>
       <Rid>
         <SEO title="Minneapolis Developer" />
-        <Header homepage={HomPag} />
-        <Navagation homepage={HomPag} scrollPosition={scrollPosition} />
+        <Header homepage={true} />
+        <Navagation homepage={true} scrollPosition={scrollPosition} />
       </Rid>
     </Layout>
   )
