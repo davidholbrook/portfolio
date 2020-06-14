@@ -15,6 +15,12 @@ body {
   max-width: 75%;
   margin: 0 auto;
 }
+footer{
+  text-align: center;
+  a{
+    color: #000000;
+  }
+}
 `
 
 const Layout = ({ children }) => {
