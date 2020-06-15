@@ -12,7 +12,7 @@ body {
   line-height: 1.5rem;
 }
 .boxed{
-  max-width: 75%;
+  max-width: 70%;
   margin: 0 auto;
 }
 footer{
