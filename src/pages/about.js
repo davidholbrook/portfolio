@@ -42,8 +42,8 @@ const About = () => {
               Wars.
             </p>
             <animated.div style={readMore}>
-              <div {...bind} style={{ padding: "1rem 0 0 0" }}>
-                <p>
+              <div {...bind} style={{ margin: "0.3rem 0 0 0" }}>
+                <p style={{ margin: "0" }}>
                   As a developer, I have worked with many different kinds of
                   development languages and frameworks. Starting with WordPress
                   and ending with Gatsby I have worked with PHP, Javascript
