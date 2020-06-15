@@ -15,6 +15,9 @@ body {
   max-width: 70%;
   margin: 0 auto;
 }
+.centered{
+  text-align: center;
+}
 footer{
   text-align: center;
   a{
