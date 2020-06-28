@@ -1,8 +1,10 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 import Background from "../images/background.png"
 import Logo from "../images/logo.svg"
+
+import Arrow from "../images/arrow.svg"
 
 const Header = props => {
   if (props.homepage === true) {
@@ -11,6 +13,9 @@ const Header = props => {
         <Intro>
           <h1>David Holbrook</h1>
           <h2>Generating Websites. Star Wars Trivia, and Comic Book Love.</h2>
+          {props.scrollPosition < 80 ? (
+            <Img src={Arrow} alt="down arrow" />
+          ) : null}
         </Intro>
       </div>
     )
@@ -61,4 +66,9 @@ const Default = styled.div`
 
   display: flex;
   justify-content: center;
+`
+
+const Img = styled.img`
+  position: absolute;
+  bottom: 30px;
 `

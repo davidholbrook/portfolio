@@ -30,7 +30,7 @@ const IndexPage = () => {
     <Layout>
       <Rid>
         <SEO title="Minneapolis Developer" />
-        <Header homepage={true} />
+        <Header homepage={true} scrollPosition={scrollPosition} />
         <Navagation homepage={true} scrollPosition={scrollPosition} />
       </Rid>
     </Layout>
