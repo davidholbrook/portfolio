@@ -4,10 +4,11 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const Navagation = props => {
-  let onum = `0.${Math.round(props.scrollPosition)}`
-  if (onum > 0.7) {
-    onum = `1`
+  let onum = 0
+  if (props.scrollPosition > 80) {
+    onum = 1
   }
+
   const intro = useSpring({
     opacity: onum,
     config: { duration: 320 },
