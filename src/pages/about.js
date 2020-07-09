@@ -23,86 +23,107 @@ const About = () => {
     config: { duration: 320 },
   })
 
+  const fadeTop = useSpring({
+    to: { transform: "translateY(0)", opacity: 1 },
+    from: { transform: "translateY(-2rem)", opacity: 0 },
+    config: {
+      speed: "slow",
+    },
+  })
+
+  const fadeLeft = useSpring({
+    to: { transform: "scale(1)", opacity: 1 },
+    from: { transform: "scale(0.5)", opacity: 0 },
+    config: {
+      speed: "slow",
+      delay: "320ms",
+    },
+  })
+
   return (
     <Layout>
       <SEO title="About David" />
       <Header />
       <Navagation />
       <div className="boxed">
-        <AboutBox>
-          <Img src={Avatar} alt="My Face" />
-          <span>
-            <h2>About David Holbrook</h2>
-            <p>
-              Hey, I'm David, an e-commerce developer for{" "}
-              <a href="https://wihatools.com">Wiha Tools USA</a>. I have been
-              working on websites for the last 15 years and have a degree in
-              Entrepreneurship Studies. I love to blog about development, the
-              state of e-commerce, video games, comic books, and sometimes Star
-              Wars.
-            </p>
-            <animated.div style={readMore}>
-              <div {...bind} style={{ margin: "0.3rem 0 0 0" }}>
-                <p style={{ margin: "0" }}>
-                  As a developer, I have worked with many different kinds of
-                  development languages and frameworks. Starting with WordPress
-                  and ending with Gatsby I have worked with PHP, Javascript
-                  (including the new ECMAScript features), node, and even
-                  dabbled some in the future of development, such as GraphQL and
-                  the new headless commerce concepts.
-                </p>
-                <p>
-                  I have more than that to share in my blog (called thoughts, as
-                  they are my thoughts about the current topics on the web) and
-                  you can see how I implement these concepts both on my Github
-                  and my side projects, which are in-depth looks into
-                  side-projects I am currently working on.
-                </p>
-                <br />
-              </div>
-            </animated.div>
-            <Button onClick={() => setToggle(!toggle)}>
-              {toggle ? "Learn More" : "Less Information"}
-            </Button>
-          </span>
-        </AboutBox>
+        <animated.div style={fadeTop}>
+          <AboutBox>
+            <Img src={Avatar} alt="My Face" />
+            <span>
+              <h2>About David Holbrook</h2>
+              <p>
+                Hey, I'm David, an e-commerce developer for{" "}
+                <a href="https://wihatools.com">Wiha Tools USA</a>. I have been
+                working on websites for the last 15 years and have a degree in
+                Entrepreneurship Studies. I love to blog about development, the
+                state of e-commerce, video games, comic books, and sometimes
+                Star Wars.
+              </p>
+              <animated.div style={readMore}>
+                <div {...bind} style={{ margin: "0.3rem 0 0 0" }}>
+                  <p style={{ margin: "0" }}>
+                    As a developer, I have worked with many different kinds of
+                    development languages and frameworks. Starting with
+                    WordPress and ending with Gatsby I have worked with PHP,
+                    Javascript (including the new ECMAScript features), node,
+                    and even dabbled some in the future of development, such as
+                    GraphQL and the new headless commerce concepts.
+                  </p>
+                  <p>
+                    I have more than that to share in my blog (called thoughts,
+                    as they are my thoughts about the current topics on the web)
+                    and you can see how I implement these concepts both on my
+                    Github and my side projects, which are in-depth looks into
+                    side-projects I am currently working on.
+                  </p>
+                  <br />
+                </div>
+              </animated.div>
+              <Button onClick={() => setToggle(!toggle)}>
+                {toggle ? "Learn More" : "Less Information"}
+              </Button>
+            </span>
+          </AboutBox>
+        </animated.div>
         <Title>Some Fun Facts about Me</Title>
-        <BoxWrapper>
-          <DetailBox>
-            <h4>Favorite Devtools</h4>
-            <ul>
-              <li>Node</li>
-              <li>React</li>
-              <li>Magento 2</li>
-              <li>Session Box</li>
-              <li>VS Code</li>
-            </ul>
-          </DetailBox>
-          <DetailBox>
-            <h4>Favorite Fandoms</h4>
-            <ul>
-              <li>Star Wars</li>
-              <li>Nintendo</li>
-              <li>Apple</li>
-              <li>Halo</li>
-              <li>Assassin’s Creed</li>
-            </ul>
-          </DetailBox>
-          <DetailBox>
-            <h4>Statistics</h4>
-            <ul>
-              <li>
-                <strong>Years of Coding:</strong> 10
-              </li>
-              <li>
-                <strong>Number of Programing Languages Used:</strong> 5
-              </li>
-              <li>
-                <strong>Number of Coding Lessons:</strong> Way to many
-              </li>
-            </ul>
-          </DetailBox>
-        </BoxWrapper>
+        <animated.div style={fadeLeft}>
+          <BoxWrapper>
+            <DetailBox>
+              <h4>Favorite Devtools</h4>
+              <ul>
+                <li>Node</li>
+                <li>React</li>
+                <li>Magento 2</li>
+                <li>Session Box</li>
+                <li>VS Code</li>
+              </ul>
+            </DetailBox>
+            <DetailBox>
+              <h4>Favorite Fandoms</h4>
+              <ul>
+                <li>Star Wars</li>
+                <li>Nintendo</li>
+                <li>Apple</li>
+                <li>Halo</li>
+                <li>Assassin’s Creed</li>
+              </ul>
+            </DetailBox>
+            <DetailBox>
+              <h4>Statistics</h4>
+              <ul>
+                <li>
+                  <strong>Years of Coding:</strong> 10
+                </li>
+                <li>
+                  <strong>Number of Programing Languages Used:</strong> 5
+                </li>
+                <li>
+                  <strong>Number of Coding Lessons:</strong> Way to many
+                </li>
+              </ul>
+            </DetailBox>
+          </BoxWrapper>
+        </animated.div>
       </div>
     </Layout>
   )
