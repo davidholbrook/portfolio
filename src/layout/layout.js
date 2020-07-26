@@ -11,12 +11,17 @@ const Layout = ({ children }) => {
         {children}
         <footer>
           <p>
-            <a href="https://creativecommons.org/licenses/by-sa/4.0/">
+            <a
+              href="https://creativecommons.org/licenses/by-sa/4.0/"
+              className="footer__a"
+            >
               Attribution-ShareAlike 4.0 International
             </a>{" "}
             license | Built with
             {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <a href="https://www.gatsbyjs.org" className="footer__a">
+              Gatsby
+            </a>
           </p>
         </footer>
       </div>

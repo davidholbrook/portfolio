@@ -54,7 +54,7 @@ export const Navagation = props => {
 export default Navagation
 
 const Nav = styled.nav`
-  background: #ffffff;
+  background: var(--white);
 
   padding: 0.5rem;
   padding-top: 0;
@@ -62,7 +62,7 @@ const Nav = styled.nav`
   max-width: 80%;
   margin: -4rem auto 0 auto;
 
-  border-top: 5px solid #a06700;
+  border-top: 5px solid var(--secondary);
 
   margin-bottom: 2rem;
 
@@ -87,7 +87,7 @@ const Nav = styled.nav`
   }
 
   .active {
-    color: #a06700;
+    color: var(--accent);
     font-weight: bold;
     text-decoration: none;
   }

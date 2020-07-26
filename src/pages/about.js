@@ -42,88 +42,90 @@ const About = () => {
 
   return (
     <Layout>
-      <SEO title="About David" />
-      <Header />
-      <Navagation />
-      <div className="boxed">
-        <animated.div style={fadeTop}>
-          <AboutBox>
-            <Img src={Avatar} alt="My Face" />
-            <span>
-              <h2>About David Holbrook</h2>
-              <p>
-                Hey, I'm David, an e-commerce developer for{" "}
-                <a href="https://wihatools.com">Wiha Tools USA</a>. I have been
-                working on websites for the last 15 years and have a degree in
-                Entrepreneurship Studies. I love to blog about development, the
-                state of e-commerce, video games, comic books, and sometimes
-                Star Wars.
-              </p>
-              <animated.div style={readMore}>
-                <div {...bind} style={{ margin: "0.3rem 0 0 0" }}>
-                  <p style={{ margin: "0" }}>
-                    As a developer, I have worked with many different kinds of
-                    development languages and frameworks. Starting with
-                    WordPress and ending with Gatsby I have worked with PHP,
-                    Javascript (including the new ECMAScript features), node,
-                    and even dabbled some in the future of development, such as
-                    GraphQL and the new headless commerce concepts.
-                  </p>
-                  <p>
-                    I have more than that to share in my blog (called thoughts,
-                    as they are my thoughts about the current topics on the web)
-                    and you can see how I implement these concepts both on my
-                    Github and my side projects, which are in-depth looks into
-                    side-projects I am currently working on.
-                  </p>
-                  <br />
-                </div>
-              </animated.div>
-              <Button onClick={() => setToggle(!toggle)}>
-                {toggle ? "Learn More" : "Less Information"}
-              </Button>
-            </span>
-          </AboutBox>
-        </animated.div>
-        <Title>Some Fun Facts about Me</Title>
-        <animated.div style={fadeLeft}>
-          <BoxWrapper>
-            <DetailBox>
-              <h4>Favorite Devtools</h4>
-              <ul>
-                <li>Node</li>
-                <li>React</li>
-                <li>Magento 2</li>
-                <li>Session Box</li>
-                <li>VS Code</li>
-              </ul>
-            </DetailBox>
-            <DetailBox>
-              <h4>Favorite Fandoms</h4>
-              <ul>
-                <li>Star Wars</li>
-                <li>Nintendo</li>
-                <li>Apple</li>
-                <li>Halo</li>
-                <li>Assassin’s Creed</li>
-              </ul>
-            </DetailBox>
-            <DetailBox>
-              <h4>Statistics</h4>
-              <ul>
-                <li>
-                  <strong>Years of Coding:</strong> 10
-                </li>
-                <li>
-                  <strong>Number of Programing Languages Used:</strong> 5
-                </li>
-                <li>
-                  <strong>Number of Coding Lessons:</strong> Way to many
-                </li>
-              </ul>
-            </DetailBox>
-          </BoxWrapper>
-        </animated.div>
+      <div className="about__wrapper">
+        <SEO title="About David" />
+        <Header />
+        <Navagation />
+        <div className="boxed">
+          <animated.div style={fadeTop}>
+            <AboutBox>
+              <Img src={Avatar} alt="My Face" />
+              <span>
+                <h2>About David Holbrook</h2>
+                <p>
+                  Hey, I'm David, an e-commerce developer for{" "}
+                  <a href="https://wihatools.com">Wiha Tools USA</a>. I have
+                  been working on websites for the last 15 years and have a
+                  degree in Entrepreneurship Studies. I love to blog about
+                  development, the state of e-commerce, video games, comic
+                  books, and sometimes Star Wars.
+                </p>
+                <animated.div style={readMore}>
+                  <div {...bind} style={{ margin: "0.3rem 0 0 0" }}>
+                    <p style={{ margin: "0" }}>
+                      As a developer, I have worked with many different kinds of
+                      development languages and frameworks. Starting with
+                      WordPress and ending with Gatsby I have worked with PHP,
+                      Javascript (including the new ECMAScript features), node,
+                      and even dabbled some in the future of development, such
+                      as GraphQL and the new headless commerce concepts.
+                    </p>
+                    <p>
+                      I have more than that to share in my blog (called
+                      thoughts, as they are my thoughts about the current topics
+                      on the web) and you can see how I implement these concepts
+                      both on my Github and my side projects, which are in-depth
+                      looks into side-projects I am currently working on.
+                    </p>
+                    <br />
+                  </div>
+                </animated.div>
+                <Button onClick={() => setToggle(!toggle)}>
+                  {toggle ? "Learn More" : "Less Information"}
+                </Button>
+              </span>
+            </AboutBox>
+          </animated.div>
+          <Title>Some Fun Facts about Me</Title>
+          <animated.div style={fadeLeft}>
+            <BoxWrapper>
+              <DetailBox>
+                <h4>Favorite Devtools</h4>
+                <ul>
+                  <li>Node</li>
+                  <li>React</li>
+                  <li>Magento 2</li>
+                  <li>Session Box</li>
+                  <li>VS Code</li>
+                </ul>
+              </DetailBox>
+              <DetailBox>
+                <h4>Favorite Fandoms</h4>
+                <ul>
+                  <li>Star Wars</li>
+                  <li>Nintendo</li>
+                  <li>Apple</li>
+                  <li>Halo</li>
+                  <li>Assassin’s Creed</li>
+                </ul>
+              </DetailBox>
+              <DetailBox>
+                <h4>Statistics</h4>
+                <ul>
+                  <li>
+                    <strong>Years of Coding:</strong> 10
+                  </li>
+                  <li>
+                    <strong>Number of Programing Languages Used:</strong> 5
+                  </li>
+                  <li>
+                    <strong>Number of Coding Lessons:</strong> Way to many
+                  </li>
+                </ul>
+              </DetailBox>
+            </BoxWrapper>
+          </animated.div>
+        </div>
       </div>
     </Layout>
   )
@@ -131,8 +133,8 @@ const About = () => {
 export default About
 
 const AboutBox = styled.div`
-  background: #a06700;
-  color: #ffffff;
+  background: var(--primary);
+  color: var(--white);
 
   padding: 1rem;
   border-radius: 0.5rem;
@@ -142,13 +144,13 @@ const AboutBox = styled.div`
   column-gap: 1rem;
 
   a {
-    color: #ffffff;
+    color: var(--white);
   }
 `
 
 const Button = styled.button`
-  background: #ecf0f1;
-  color: #333333;
+  background: var(--white);
+  color: var(--black);
 
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -173,7 +175,7 @@ const BoxWrapper = styled.div`
 `
 
 const DetailBox = styled.div`
-  border: 1px #c4c4c4 solid;
+  border: 1px var(--secondary) solid;
 
   display: grid;
   justify-content: center;

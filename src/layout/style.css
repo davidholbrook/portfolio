@@ -14,19 +14,19 @@
   --success: hsl(140, 37%, 45%);
 }
 
-.about_wrapper {
+.about__wrapper {
   --primary: hsl(39, 100%, 31%);
   --secondary: hsl(29, 66%, 71%);
-  --accent: hsl(270, 12%, 90%);
+  --accent: hsl(275, 19%, 50%);
 }
 
-.thought_wrapper {
+.thought__wrapper {
   --primary: hsl(0, 66%, 33%);
-  --secondary: hsl(200, 40%, 30%);
+  --secondary: hsl(200, 40%, 50%);
   --accent: hsl(270, 100%, 10%);
 }
 
-.portfolio_wrapper {
+.portfolio__wrapper {
   --primary: hsl(263, 60%, 48%);
   --secondary: rgb(94, 133, 30);
   --accent: hsl(533, 50%, 10%);
@@ -139,6 +139,6 @@ footer {
   text-align: center;
 }
 
-.footer a {
+.footer__a {
   color: var(--black);
 }

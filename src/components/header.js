@@ -50,11 +50,13 @@ const Intro = styled.div`
 
 // Default styles
 const Default = styled.div`
-  background: #000;
+  background: var(--primary);
   padding: 1rem 1rem 5rem 1rem;
 
   display: flex;
   justify-content: center;
+
+  border-bottom: 5px var(--secondary) solid;
 `
 
 const Img = styled.img`
