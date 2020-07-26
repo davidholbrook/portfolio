@@ -11,8 +11,10 @@ const Header = props => {
     return (
       <div>
         <Intro>
-          <h1>David Holbrook</h1>
-          <h2>Generating Websites. Star Wars Trivia, and Comic Book Love.</h2>
+          <h1 className="jumbo">David Holbrook</h1>
+          <h2 className="h4">
+            Generating Websites. Star Wars Trivia, and Comic Book Love.
+          </h2>
           {props.scrollPosition < 80 ? (
             <Img src={Arrow} alt="down arrow" />
           ) : null}
@@ -44,19 +46,6 @@ const Intro = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  h1 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-
-    text-transform: uppercase;
-
-    font-size: 4rem;
-  }
-
-  h2{
-    font-weight: 200px;
-  }
 `
 
 // Default styles

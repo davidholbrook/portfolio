@@ -1,0 +1,144 @@
+/* =========================
+ Colors
+========================= */
+
+:root {
+  --black: hsl(0, 0%, 20%);
+  --white: hsl(0, 0%, 100%);
+
+  --primary: hsl(39, 100%, 50%); /* original */
+  --secondary: hsl(219, 100%, 30%); /* original + 180 */
+  --accent: hsl(309, 100%, 30%); /* original + 270 */
+
+  --danger: hsl(0, 53%, 50%);
+  --success: hsl(140, 37%, 45%);
+}
+
+.about_wrapper {
+  --primary: hsl(39, 100%, 31%);
+  --secondary: hsl(29, 66%, 71%);
+  --accent: hsl(270, 12%, 90%);
+}
+
+.thought_wrapper {
+  --primary: hsl(0, 66%, 33%);
+  --secondary: hsl(200, 40%, 30%);
+  --accent: hsl(270, 100%, 10%);
+}
+
+.portfolio_wrapper {
+  --primary: hsl(263, 60%, 48%);
+  --secondary: rgb(94, 133, 30);
+  --accent: hsl(533, 50%, 10%);
+}
+
+/* =========================
+ Type Scale
+========================= */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.65rem;
+}
+
+p {
+  margin-bottom: 1.15rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1,
+.h1 {
+  margin-top: 0;
+  font-size: 4.209em;
+}
+
+h2,
+.h2 {
+  font-size: 3.157em;
+}
+
+h3,
+.h3 {
+  font-size: 2.369em;
+}
+
+h4,
+.h4 {
+  font-size: 1.777em;
+}
+
+h5,
+.h6 {
+  font-size: 1.333em;
+}
+
+small,
+.text_small {
+  font-size: 0.75em;
+}
+
+.jumbo {
+  font-family: Gugi, sans-serif;
+  font-size: 4.209em;
+  line-height: 1rem;
+}
+
+/* =========================
+ Buttons
+========================= */
+
+.button,
+button {
+  padding: 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.button .primary,
+button {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.button .hollow,
+button {
+  background: none;
+  border: 1px solid var(--primary);
+  color: var(--white);
+}
+
+/* =========================
+    layout and util classes
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.boxed {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.centered {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+.footer a {
+  color: var(--black);
+}
