@@ -28,8 +28,8 @@ const thoughts = ({ data }) => {
                   <Link
                     to={node.frontmatter.path}
                     style={{
-                      color: node.frontmatter.color || "#555",
-                      borderColor: node.frontmatter.color || "#555",
+                      color: node.frontmatter.primary || "#555",
+                      borderColor: node.frontmatter.primary || "#555",
                     }}
                   >
                     <h2>{node.frontmatter.title}</h2>
@@ -56,7 +56,7 @@ export const query = graphql`
             title
             path
             template
-            color
+            primary
           }
           excerpt
         }
