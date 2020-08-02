@@ -97,6 +97,26 @@ small,
 }
 
 /* =========================
+  thoughts links
+========================= */
+
+/* from: https://nickymeuleman.netlify.app/blog/css-animated-wrapping-underline */
+.fancy-underline a {
+  color: #000000;
+  text-decoration: none;
+  background-image: linear-gradient(hsl(130, 90%, 84%), hsl(130, 90%, 84%)),
+    linear-gradient(hsl(0, 97%, 85%), hsl(0, 97%, 85%));
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 2s linear;
+}
+
+.fancy-underline a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+/* =========================
  Buttons
 ========================= */
 

@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import { Link } from "gatsby"
 
 import Layout from "../layout/layout"
@@ -8,6 +9,10 @@ import Header from "../components/header"
 import Navagation from "../components/navagation"
 
 const thoughts = ({ data }) => {
+  const DiColor = styled.div`
+    --primary: {node.frontmatter.primary}
+
+  `
   return (
     <Layout>
       <div className="thought__wrapper">
@@ -25,9 +30,17 @@ const thoughts = ({ data }) => {
             ({ node }) =>
               node.frontmatter.template === "blog" && (
                 <>
-                  <Link to={node.frontmatter.path}>
-                    <h2>{node.frontmatter.title}</h2>
-                  </Link>
+                  <h2 className="fancy-underline">
+                    <Link
+                      to={node.frontmatter.path}
+                      style={{
+                        color: node.frontmatter.primary,
+                        backgroundImage: `linear-gradient(${node.frontmatter.primary}, ${node.frontmatter.primary}), linear-gradient(${node.frontmatter.secondary}, ${node.frontmatter.secondary})`,
+                      }}
+                    >
+                      {node.frontmatter.title}
+                    </Link>
+                  </h2>
                   <p>{node.excerpt}</p>
                 </>
               )
@@ -51,6 +64,7 @@ export const query = graphql`
             path
             template
             primary
+            secondary
           }
           excerpt(pruneLength: 450)
         }
