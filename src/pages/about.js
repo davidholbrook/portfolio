@@ -44,7 +44,7 @@ const About = () => {
     <Layout>
       <div className="about__wrapper">
         <SEO title="About David" />
-        <Header />
+        <Header landing="/about" />
         <Navagation />
         <div className="boxed">
           <animated.div style={fadeTop}>

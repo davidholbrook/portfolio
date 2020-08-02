@@ -12,7 +12,7 @@ const thoughts = ({ data }) => {
     <Layout>
       <div className="thought__wrapper">
         <SEO title="About David" />
-        <Header />
+        <Header landing="/thoughts" />
         <Navagation />
         <div className="boxed">
           <h1>My Thoughts</h1>
@@ -25,13 +25,7 @@ const thoughts = ({ data }) => {
             ({ node }) =>
               node.frontmatter.template === "blog" && (
                 <>
-                  <Link
-                    to={node.frontmatter.path}
-                    style={{
-                      color: node.frontmatter.primary || "#555",
-                      borderColor: node.frontmatter.primary || "#555",
-                    }}
-                  >
+                  <Link to={node.frontmatter.path}>
                     <h2>{node.frontmatter.title}</h2>
                   </Link>
                   <p>{node.excerpt}</p>
@@ -58,7 +52,7 @@ export const query = graphql`
             template
             primary
           }
-          excerpt
+          excerpt(pruneLength: 450)
         }
       }
     }

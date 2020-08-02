@@ -1,5 +1,6 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
+import { Link } from "gatsby"
 
 import Background from "../images/background.png"
 import Logo from "../images/logo.svg"
@@ -24,7 +25,13 @@ const Header = props => {
   } else {
     return (
       <Default>
-        <img src={Logo} height="50" alt="website logo" />
+        {props.landing != null ? (
+          <Link to={props.landing}>
+            <img src={Logo} height="50" alt="website logo" />
+          </Link>
+        ) : (
+          <img src={Logo} height="50" alt="website logo" />
+        )}
       </Default>
     )
   }

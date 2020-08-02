@@ -46,7 +46,7 @@ export default ({ data }) => {
       <Layout>
         <SEO title={frontmatter.title} />
         <DiColor>
-          <Header />
+          <Header landing="/thoughts" />
           <Navagation />
           <div class="boxed">
             <Title>{frontmatter.title}</Title>
