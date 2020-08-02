@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { useSpring, animated } from "react-spring"
 
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
@@ -8,11 +9,21 @@ import SEO from "../layout/seo"
 import Header from "../components/header"
 import Navagation from "../components/navagation"
 
-const thoughts = ({ data }) => {
-  const DiColor = styled.div`
-    --primary: {node.frontmatter.primary}
-
-  `
+const Thoughts = ({ data }) => {
+  const FadeDown = useSpring({
+    to: { transform: "translateY(0)", opacity: 1 },
+    from: { transform: "translateY(-2rem)", opacity: 0 },
+    config: {
+      speed: "fast",
+    },
+  })
+  const FadeLeft = useSpring({
+    to: { transform: "translateY(0)", opacity: 1 },
+    from: { transform: "translateY(2rem)", opacity: 0 },
+    config: {
+      speed: "slow",
+    },
+  })
   return (
     <Layout>
       <div className="thought__wrapper">
@@ -20,28 +31,31 @@ const thoughts = ({ data }) => {
         <Header landing="/thoughts" />
         <Navagation />
         <div className="boxed">
-          <h1>My Thoughts</h1>
-          <p>
-            This a collection of my posts about life, pop culture, e-commerance,
-            and the website development industry at large.
-          </p>
-          <br />
+          <animated.div style={FadeDown}>
+            <h1>My Thoughts</h1>
+            <h2 class="h4">
+              This a collection of my posts about life, pop culture,
+              e-commerance, and the website development industry at large.
+            </h2>
+          </animated.div>
           {data.allMarkdownRemark.edges.map(
             ({ node }) =>
               node.frontmatter.template === "blog" && (
                 <>
-                  <h2 className="fancy-underline">
-                    <Link
-                      to={node.frontmatter.path}
-                      style={{
-                        color: node.frontmatter.primary,
-                        backgroundImage: `linear-gradient(${node.frontmatter.primary}, ${node.frontmatter.primary}), linear-gradient(${node.frontmatter.secondary}, ${node.frontmatter.secondary})`,
-                      }}
-                    >
-                      {node.frontmatter.title}
-                    </Link>
-                  </h2>
-                  <p>{node.excerpt}</p>
+                  <animated.div style={FadeLeft}>
+                    <h2 className="fancy-underline">
+                      <Link
+                        to={node.frontmatter.path}
+                        style={{
+                          color: node.frontmatter.primary,
+                          backgroundImage: `linear-gradient(${node.frontmatter.primary}, ${node.frontmatter.primary}), linear-gradient(${node.frontmatter.secondary}, ${node.frontmatter.secondary})`,
+                        }}
+                      >
+                        {node.frontmatter.title}
+                      </Link>
+                    </h2>
+                    <p>{node.excerpt}</p>
+                  </animated.div>
                 </>
               )
           )}
@@ -51,7 +65,7 @@ const thoughts = ({ data }) => {
   )
 }
 
-export default thoughts
+export default Thoughts
 
 export const query = graphql`
   query {
