@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import styled from "styled-components"
 import { useSpring, animated } from "react-spring"
+
+import "../layout/prism-solarizedlight.css"
 
 import Header from "../components/header"
 import Navagation from "../components/navagation"

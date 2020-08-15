@@ -26,7 +26,7 @@ After working on Magento 2 on a Windows laptop that my company suppled, it took 
 
 ### From the top
 
-For the base system, I am using (https://www.docker.com/)[Docker] with at least 4GB of ram to power the localized environment.
+For the base system, I am using [Docker](https://www.docker.com/) with at least 4GB of ram to power the localized environment.
 
 > **Update:** I am now using WSL2 version of docker which does require a `.wslconfig` a file that you can find online to limit the amount of ram that the system will dedicate to powering Docker, if you do not do this, the system _will_ run out of memory.
 
@@ -44,7 +44,7 @@ The largest change is that sudo does not work with windows (at least in Git Bash
 
 For my website, I was copying files from my live production environment into the local docker environment using [instutions on his Github page](https://github.com/markshust/docker-magento). Following his instructions I found that certain commands would just break on windows such as copying the src file over, the whole folder would copy to `/var/www/html/src` instead of `/var/www/html/`, so that would force me to enter the commands below to put the files in the correct location.
 
-```
+```shell
 bin/root bash
 mv /var/www/html/src/* /var/www/html
 rm -rf src
@@ -52,13 +52,13 @@ rm -rf src
 
 Also I would have to edit the `fixperms` script with the snippet below to get the permissions to work correctly
 
-```
+```shell
 chown -R app:app .
 ```
 
 In another situation the `vendor` files would not copy back over as docker would have conflicts, so in a WSL terminal, I would have to go to my `src` directory and enter the command below to get my files back.
 
-```
+```shell
 docker cp docker_phpfpm_1:/var/www/html/vendor ./vendor
 ```
 
@@ -68,13 +68,13 @@ This is where the fun stuff begins, Mark Shust’s Docker setup uses [MKcert](ht
 
 First go to [MKcert](https://github.com/FiloSottile/mkcert) and download it for windows (I used the choco version). Next using elevated powershell (as they showed you) go to your Docker `src` directory and type the following below (using your own website of course)
 
-```
+```shell
 mkcert -key-file key.pem -cert-file cert.pem example.com *.example.com
 ```
 
 Then use the command below to copy it to the docker image (**_Note:_** first enter .crt then .key for the .xxx below)
 
-```
+```shell
 docker cp nginx.xxx $(docker-compose ps -q phpfpm|awk '{print $1}'):/etc/nginx/certs
 ```
 
