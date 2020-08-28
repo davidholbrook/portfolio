@@ -3,9 +3,9 @@ path: "/thoughts/magento-development-on-windows"
 title: "Magento 2 development on Windows"
 date: "2020-08-09"
 template: "blog"
-primary: "HSL(325, 80%, 25%)"
-secondary: "HSL(505, 60%, 20%)"
-accent: "HSL(595, 20%, 80%)"
+primary: "hsl(28,90%,50%)"
+secondary: "HSL(208, 60%, 20%)"
+accent: "HSL(298, 20%, 90%)"
 ---
 
 ## A Introduction to Electronic Commerce
