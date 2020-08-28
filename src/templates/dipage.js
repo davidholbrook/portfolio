@@ -29,12 +29,12 @@ const DiPage = ({ data }) => {
     }
   `
 
-  const Title = styled.h2`
+  const Title = styled.h1`
     font-family: "Work Sans", sans-serif;
     text-transform: uppercase;
     text-align: center;
 
-    color: ${frontmatter.secondary};
+    color: ${frontmatter.primary};
   `
 
   const DiColor = styled.div`
