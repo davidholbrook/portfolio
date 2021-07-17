@@ -1,7 +1,7 @@
 ---
 path: "/thoughts/website-update"
 title: "Website Update"
-date: "2020-7-11"
+date: "7-11-2020"
 template: "blog"
 primary: "HSL(254, 65%, 68%)"
 secondary: "HSL(434, 90%, 20%)"

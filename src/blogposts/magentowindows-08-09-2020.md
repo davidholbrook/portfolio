@@ -1,7 +1,7 @@
 ---
 path: "/thoughts/magento-development-on-windows"
 title: "Magento 2 development on Windows"
-date: "2020-08-09"
+date: "8-27-2020"
 template: "blog"
 primary: "hsl(28,90%,50%)"
 secondary: "HSL(208, 60%, 20%)"
