@@ -10,6 +10,7 @@ export default function Layout({ children }) {
           href="https://creativecommons.org/licenses/by-sa/4.0/"
           className="text-gray-500 underline"
           target="_blank"
+          rel="noreferrer"
         >
           Attribution-ShareAlike 4.0 International
         </a>{" "}
@@ -18,6 +19,7 @@ export default function Layout({ children }) {
           href="https://www.gatsbyjs.org"
           className="text-gray-500 underline"
           target="_blank"
+          rel="noreferrer"
         >
           Gatsby
         </a>
