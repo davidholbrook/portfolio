@@ -17,6 +17,10 @@ const IndexPage = () => {
             I love to blog about development, the state of e-commerce, and
             sometimes Star Wars Nerdom.
           </p>
+
+          <MoreBtn href="#" className="button ">
+            Learn More
+          </MoreBtn>
         </div>
       </Header>
     </Layout>
@@ -29,4 +33,16 @@ const Header = styled.header`
   background: #000000 url(${bgImg}) center;
   background-size: cover;
   padding-bottom: 5rem;
+`
+
+const MoreBtn = styled.a`
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: medium;
+
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ffffff;
 `
