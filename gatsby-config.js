@@ -26,16 +26,16 @@ module.exports = {
       __key: "images",
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
           {
-            family: `STIX Two Text`,
-            variants: [`400`, `600`, `700`],
+            family: "STIX Two Text",
+            weights: ["400", "600", "700"],
           },
           {
-            family: `Open Sans`,
-            variants: [`400`, `700`, `800`],
+            family: "Open Sans",
+            weights: ["400", "700", "800"],
           },
         ],
       },
