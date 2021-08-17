@@ -4,6 +4,8 @@ import Layout from "../Layout/main"
 import Navagation from "../Components/navagation"
 import bgImg from "../images/headerbg.jpg"
 
+import HomepageWork from "../Components/HomepageWork"
+
 const IndexPage = () => {
   return (
     <Layout>
@@ -23,6 +25,7 @@ const IndexPage = () => {
           </MoreBtn>
         </div>
       </Header>
+      <HomepageWork />
     </Layout>
   )
 }
