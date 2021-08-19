@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://davidholbrook.info",
-    title: "Portfolio",
+    title: `David Holbrook`,
+    description: `Web developer for Wiha Tools, also designs things.`,
+    author: `@davidholbrook`,
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -18,12 +19,49 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
-      __key: "images",
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              languageExtensions: [
+                {
+                  language: "superscript",
+                  extend: "javascript",
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
+                  },
+                },
+              ],
+
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: false,
+              },
+              escapeEntities: {},
+            },
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-google-fonts-v2`,
