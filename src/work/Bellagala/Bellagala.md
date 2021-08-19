@@ -1,14 +1,12 @@
 ---
-logo: './bellagala.png'
-workPath: '/work/bellagala'
-title: 'Bellagala'
-role: 'Designer'
-url: 'http://bellagala.com/'
-bgColor: '#8ad3e6'
-bgSecondary: '#8b606a'
-featured: true
+logo: "./bellagala.png"
+path: "/work/bellagala"
+title: "Bellagala"
+role: "Designer"
+url: "http://bellagala.com/"
+color: "#8ad3e6"
 sd: "A multi-award-winning full-service wedding provider specializing in Photography, DJ's, Videography, and more."
-light: true
+template: "work"
 ---
 
 ## Overview:

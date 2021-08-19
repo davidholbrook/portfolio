@@ -1,14 +1,12 @@
 ---
-logo: './mcad.png'
-workPath: '/work/mcad'
-title: 'Minneapolis College of Art and Design'
-role: 'Developer'
-url: 'http://mcad.edu/'
-bgColor: '#e36e70'
-bgSecondary: '#6f8f9d'
-featured: true
-sd: 'Renown art college, specializing in fine arts, design, entrepreneurship education, and more.'
-light: true
+logo: "./mcad.png"
+path: "/work/mcad"
+title: "Minneapolis College of Art and Design"
+role: "Developer"
+url: "http://mcad.edu/"
+color: "#e36e70"
+sd: "Renown art college, specializing in fine arts, design, entrepreneurship education, and more."
+template: "project"
 ---
 
 ## Overview
