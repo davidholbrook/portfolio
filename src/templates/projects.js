@@ -16,19 +16,18 @@ export default ({ data }) => {
   `
 
   const Title = styled.h2`
-    font-family: "Work Sans", sans-serif;
-    text-transform: uppercase;
-    text-align: center;
     color: ${frontmatter.color};
   `
   return (
-    <Layout>
+    <>
       <SEO title={frontmatter.title} />
-      <div>
-        <Title>{frontmatter.title}</Title>
-        <Post dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
-    </Layout>
+      <Layout>
+        <div className="container mx-auto">
+          <Title class="text=3xl font-bold">{frontmatter.title}</Title>
+          <Post dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
+      </Layout>
+    </>
   )
 }
 

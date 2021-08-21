@@ -5,9 +5,8 @@ import SEO from "../layout/seo"
 import styled from "styled-components"
 import { useSpring, animated } from "react-spring"
 
-import "../layout/prism-solarizedlight.css"
+// import "../layout/prism-solarizedlight.css"
 
-import Header from "../components/header"
 import Navagation from "../components/navagation"
 
 const DiPage = ({ data }) => {
@@ -65,7 +64,7 @@ const DiPage = ({ data }) => {
       <Layout>
         <SEO title={frontmatter.title} />
         <DiColor>
-          <Header landing="/thoughts" />
+          {/* <Header landing="/thoughts" /> */}
           <Navagation />
           <div class="boxed">
             <animated.div style={scaleout}>
