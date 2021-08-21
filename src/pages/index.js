@@ -1,6 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
-import Layout from "../Layout/main"
+import Layout from "../layout/layout"
 import Navagation from "../Components/navagation"
 import bgImg from "../images/headerbg.jpg"
 
