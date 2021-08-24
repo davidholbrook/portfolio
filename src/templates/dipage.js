@@ -1,11 +1,13 @@
 import React, { useEffect } from "react"
 import { graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import styled from "styled-components"
 import { useSpring, animated } from "react-spring"
 
-// import "../layout/prism-solarizedlight.css"
+import "../styles/typography.css"
+import "../styles/prism.css"
 
 import Navagation from "../components/navagation"
 
@@ -14,48 +16,51 @@ const DiPage = ({ data }) => {
   const { frontmatter, html } = markdownRemark
 
   const Post = styled.div`
-    width: 50rem;
-    margin: 1rem auto;
-    a {
-      color: ${frontmatter.primary};
-      border-color: ${frontmatter.primary};
-    }
     h2,
-    h3,
-    h4,
-    h5 {
+    h3 {
       color: ${frontmatter.secondary};
     }
+    a {
+      color: ${frontmatter.secondary};
+      border-bottom: 1px solid ${frontmatter.secondary};
+    }
+  `
+
+  const ImgContainer = styled.div`
+    position: absolute;
+    top: 0;
+    height: 70vh;
+    overflow: hidden;
+    background: ${frontmatter.primary};
+    opacity: 1 !important;
+    z-index: -1;
+    img {
+      mix-blend-mode: hard-light;
+      opacity: 0.2 !important;
+    }
+  `
+
+  const CaptionContainer = styled.div`
+    position: absolute;
+    top: 68vh;
+    right: 0;
+
+    padding: 5px;
+
+    font-size: 0.6rem;
+    background: #ffffff;
   `
 
   const Title = styled.h1`
-    font-family: "Work Sans", sans-serif;
-    text-transform: uppercase;
-    text-align: center;
     color: ${frontmatter.primary};
   `
-
-  const DiColor = styled.div`
-    --primary: ${frontmatter.primary};
-    --secondary: ${frontmatter.secondary};
-    --accent: ${frontmatter.accent};
-  `
-
-  const scaleout = useSpring({
-    to: { transform: "scale(1)", opacity: 1 },
-    from: { transform: "scale(0.5)", opacity: 0 },
-    config: {
-      speed: "slow",
-      delay: "320ms",
-    },
-  })
 
   const fadeUp = useSpring({
     to: { transform: "translateY(0)", opacity: 1 },
     from: { transform: "translateY(2rem)", opacity: 0 },
     config: {
-      speed: "slow",
-      delay: "1000ms",
+      speed: "5sec",
+      delay: "2sec",
     },
   })
 
@@ -63,18 +68,30 @@ const DiPage = ({ data }) => {
     <>
       <Layout>
         <SEO title={frontmatter.title} />
-        <DiColor>
-          {/* <Header landing="/thoughts" /> */}
-          <Navagation />
-          <div class="boxed">
-            <animated.div style={scaleout}>
-              <Title>{frontmatter.title}</Title>
-            </animated.div>
-            <animated.div style={fadeUp}>
-              <Post dangerouslySetInnerHTML={{ __html: html }} />
-            </animated.div>
-          </div>
-        </DiColor>
+        <ImgContainer>
+          <GatsbyImage
+            image={frontmatter.coverImage.childImageSharp.gatsbyImageData}
+          />
+        </ImgContainer>
+        <CaptionContainer>
+          Photo by{" "}
+          <a href="https://unsplash.com/@ianjbattaglia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+            Ian Battaglia
+          </a>{" "}
+          on{" "}
+          <a href="https://unsplash.com/s/photos/server?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+            Unsplash
+          </a>
+        </CaptionContainer>
+        {/* <Header landing="/thoughts" /> */}
+        <Navagation />
+        <animated.div
+          style={fadeUp}
+          className="container mx-auto p-5 pt-1 bg-white lg:rounded-lg block"
+        >
+          <Title>{frontmatter.title}</Title>
+          <Post dangerouslySetInnerHTML={{ __html: html }} />
+        </animated.div>
       </Layout>
     </>
   )
@@ -91,7 +108,15 @@ export const pageQuery = graphql`
         path
         primary
         secondary
-        accent
+        coverImage {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 100
+              layout: CONSTRAINED
+              placeholder: BLURRED
+            )
+          }
+        }
       }
     }
   }
