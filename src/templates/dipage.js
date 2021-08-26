@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../layout/layout"
-import SEO from "../layout/seo"
+import Seo from "../layout/seo"
 import styled from "styled-components"
 import { useSpring, animated } from "react-spring"
 
