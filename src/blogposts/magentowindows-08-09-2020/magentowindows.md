@@ -6,10 +6,9 @@ template: "blog"
 primary: "hsl(290,50%,50%)"
 secondary: "HSL(50, 90%, 30%)"
 coverImage: "./magentoWindows.jpg"
-credit: "Photo by rupixen.com on Unsplash"
+credit: "Background photo by rupixen.com from Unsplash"
+creditURL: "https://unsplash.com/photos/Q59HmzK38eQ"
 ---
-
-## A Introduction to Electronic Commerce
 
 With the trend of online selling on the rise, every company is looking to the digital horizon with hopes to sell the next great thing that will go viral. The hard truth though is that selling online is really, really, hard. There is a reason that [Amazon is larger](http://2oqz471sa19h3vbwa53m33yj.wpengine.netdna-cdn.com/wp-content/uploads/2016/12/chart-size-of-amazon.jpg) than almost every other online company combine, which is because they have something figured out that no there company can figure out quite yet, the brains of selling online.
 
@@ -24,8 +23,6 @@ After searching many different solutions online at [github](https://github.com/s
 ## The Solution
 
 Working with Magento 2 on Windows took me almost a year to find the optimal solution to handle the system and all the custom code and solutions that I was (and am) coding to help our stores work correctly. Even in an optimal environment it still took me quite a bit of time to find all the correct commands to get Windows and Magento to work well together, unfortunately some of these are still manuel commands for the time being as there is not a good way (such as with SSL) to script them into windows.
-
-### From the top
 
 For the base system, I am still using [Docker](https://www.docker.com/) with at least 4GB of ram to power the localized environment.
 
@@ -61,7 +58,7 @@ In another situation, the `vendor` files would not copy back over as docker woul
 docker cp docker_phpfpm_1:/var/www/html/vendor ./vendor
 ```
 
-### 3. SSL is just the best!
+### 3. SSL is just the worst!
 
 This is where the fun stuff begins, Mark Shust’s Docker setup uses [MKcert](https://github.com/FiloSottile/mkcert) and Apple’s Keychain to generate and save key files to trick the browsers into thinking the website is secure. The two problems with windows are 1) no sudo on windows and 2) windows doesn’t have a keychain (well it does, but not remotely the same thing). Because of these problems this was the last feature I got working on Windows
 
@@ -81,9 +78,7 @@ docker cp nginx.xxx $(docker-compose ps -q phpfpm|awk '{print $1}'):/etc/nginx/c
 
 Restart the containers using `bin/restart` and you magically have a secure website.
 
-### One More Thing
-
-One last note: If you plan on creating any custom Dockerfiles in windows, use WSL to create the image or else you will be greeted with permission errors in Git Bash.
+**One last note:** If you plan on creating any custom Dockerfiles in windows, use WSL to create the image or else you will be greeted with permission errors in Git Bash.
 
 ## In Summary
 
