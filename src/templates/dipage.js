@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../layout/layout"
@@ -16,9 +16,11 @@ const DiPage = ({ data }) => {
   const { frontmatter, html } = markdownRemark
 
   const Post = styled.div`
-    h2,
-    h3 {
+    h2 {
       color: ${frontmatter.secondary};
+    }
+    h3 {
+      color: ${frontmatter.primary};
     }
     a {
       color: ${frontmatter.secondary};
@@ -29,7 +31,7 @@ const DiPage = ({ data }) => {
   const ImgContainer = styled.div`
     position: absolute;
     top: 0;
-    height: 70vh;
+    height: 600px;
     overflow: hidden;
     background: ${frontmatter.primary};
     opacity: 1 !important;
@@ -40,15 +42,9 @@ const DiPage = ({ data }) => {
     }
   `
 
-  const CaptionContainer = styled.div`
-    position: absolute;
-    top: 68vh;
-    right: 0;
-
-    padding: 5px;
-
-    font-size: 0.6rem;
-    background: #ffffff;
+  const Credit = styled.p`
+    font-size: 0.8rem;
+    color: ${frontmatter.primary};
   `
 
   const Title = styled.h1`
@@ -67,22 +63,13 @@ const DiPage = ({ data }) => {
   return (
     <>
       <Layout>
-        <SEO title={frontmatter.title} />
+        <Seo title={frontmatter.title} />
         <ImgContainer>
           <GatsbyImage
             image={frontmatter.coverImage.childImageSharp.gatsbyImageData}
           />
         </ImgContainer>
-        <CaptionContainer>
-          Photo by{" "}
-          <a href="https://unsplash.com/@ianjbattaglia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-            Ian Battaglia
-          </a>{" "}
-          on{" "}
-          <a href="https://unsplash.com/s/photos/server?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-            Unsplash
-          </a>
-        </CaptionContainer>
+
         {/* <Header landing="/thoughts" /> */}
         <Navagation />
         <animated.div
@@ -91,6 +78,23 @@ const DiPage = ({ data }) => {
         >
           <Title>{frontmatter.title}</Title>
           <Post dangerouslySetInnerHTML={{ __html: html }} />
+          {frontmatter.credit !== "" ? (
+            frontmatter.creditURL !== "" ? (
+              <Credit>
+                <a
+                  href={frontmatter.creditURL}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {frontmatter.credit}
+                </a>
+              </Credit>
+            ) : (
+              <Credit>{frontmatter.credit}</Credit>
+            )
+          ) : (
+            ""
+          )}
         </animated.div>
       </Layout>
     </>
@@ -108,6 +112,8 @@ export const pageQuery = graphql`
         path
         primary
         secondary
+        credit
+        creditURL
         coverImage {
           childImageSharp {
             gatsbyImageData(
