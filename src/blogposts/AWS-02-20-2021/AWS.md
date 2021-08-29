@@ -1,7 +1,7 @@
 ---
 path: "/thoughts/5-things-I-wish-I-knew-about-aws"
 title: "5 Things I Wish I Knew About AWS"
-date: "02-12-2020"
+date: "August 12th, 2021"
 template: "blog"
 primary: "HSL(36, 100%, 50%)"
 secondary: "HSL(200, 100%, 40%)"

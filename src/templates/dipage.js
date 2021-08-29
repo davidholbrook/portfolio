@@ -51,6 +51,10 @@ const DiPage = ({ data }) => {
     color: ${frontmatter.primary};
   `
 
+  const Date = styled.p`
+    color: ${frontmatter.primary};
+  `
+
   const fadeUp = useSpring({
     to: { transform: "translateY(0)", opacity: 1 },
     from: { transform: "translateY(2rem)", opacity: 0 },
@@ -76,7 +80,10 @@ const DiPage = ({ data }) => {
           style={fadeUp}
           className="container mx-auto p-5 pt-1 bg-white lg:rounded-lg block"
         >
-          <Title>{frontmatter.title}</Title>
+          <div className="flex justify-between items-top">
+            <Title>{frontmatter.title}</Title>
+            <Date className="text-sm">{frontmatter.date}</Date>
+          </div>
           <Post dangerouslySetInnerHTML={{ __html: html }} />
           {frontmatter.credit !== "" ? (
             frontmatter.creditURL !== "" ? (
@@ -109,6 +116,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        date
         path
         primary
         secondary
