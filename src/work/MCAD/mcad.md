@@ -53,7 +53,7 @@ This prototype is being used by the school for future consideration.
 
 ## A Map of Alumni
 
-![Screenshot of Alumni Map](./map.png)
+![Screenshot of Alumni Map](./alumni-map.png)
 
 The cornerstone project of my time at MCAD would be the [Alumni map](http://mcad.edu/alumni/directory/). The Alumni map is a world map which showcases the location of alumni all across the world. My task on this project was researching and initial development of the map.
 
