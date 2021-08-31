@@ -16,14 +16,13 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-sharp",
-    `gatsby-remark-images`,
+    `gatsby-plugin-sharp`,
     "gatsby-transformer-sharp",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src`,
       },
     },
     {
@@ -59,6 +58,12 @@ module.exports = {
                 global: false,
               },
               escapeEntities: {},
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
             },
           },
         ],
