@@ -6,7 +6,7 @@ role: "Designer"
 url: "http://bellagala.com/"
 color: "#8ad3e6"
 sd: "A multi-award-winning full-service wedding provider specializing in Photography, DJ's, Videography, and more."
-template: "work"
+template: "project"
 ---
 
 ## Overview:
