@@ -28,7 +28,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    if (node.frontmatter.template === "project") {
+    if (node.frontmatter.template == "project") {
       createPage({
         path: `${node.frontmatter.path}`,
         component: projectTemplate,
