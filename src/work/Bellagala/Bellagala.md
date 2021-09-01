@@ -4,7 +4,7 @@ path: "/work/bellagala"
 title: "Bellagala"
 role: "Designer"
 url: "http://bellagala.com/"
-color: "#8ad3e6"
+color: "#5b8c99"
 sd: "A multi-award-winning full-service wedding provider specializing in Photography, DJ's, Videography, and more."
 template: "project"
 ---
