@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../layout/layout"
 import Seo from "../layout/seo"
@@ -10,6 +10,27 @@ import "../styles/typography.css"
 const Project = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+
+  const [scrollPosition, setSrollPosition] = useState(0)
+
+  const handleScroll = () => {
+    const companyHeader = document.getElementById("companyHeader")
+    const position = window.pageYOffset
+    setSrollPosition(position)
+
+    if (position >= 135) {
+      companyHeader.classList.add("lg:fixed", "lg:top-5")
+    }
+    if (position <= 135) {
+      companyHeader.classList.remove("lg:fixed", "lg:top-5")
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   const GlobalStyle = createGlobalStyle`
   body {
@@ -37,7 +58,11 @@ const Project = ({ data }) => {
       <Layout>
         <div className="container mx-auto">
           <Navagation />
-          <div className="col-span-1 w-full lg:w-64 lg:fixed lg:bg-white px-10 lg:px-4 py-3 mt-0 rounded-lg">
+
+          <div
+            id="companyHeader"
+            className="col-span-1 w-full lg:w-64 lg:bg-white px-10 lg:float-left lg:px-4 py-3 mt-0 rounded-lg"
+          >
             <Company className="text-5xl lg:text-3xl font-bold mt-3">
               {frontmatter.title}
             </Company>
