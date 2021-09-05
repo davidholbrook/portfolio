@@ -36,3 +36,7 @@ h3 {
   font-size: 1.25em;
   line-height: 1.75em;
 }
+figcaption {
+  text-align: center;
+  font-weight: bolder;
+}

@@ -43,6 +43,9 @@ const Project = ({ data }) => {
       color: ${frontmatter.color};
       border-color: ${frontmatter.color};
     }
+    figcaption {
+      color: ${frontmatter.color};
+    }
   `
 
   const Company = styled.h2`

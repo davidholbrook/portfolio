@@ -1,5 +1,4 @@
 ---
-logo: "./bellagala.png"
 path: "/work/bellagala"
 title: "Bellagala"
 role: "Designer"
@@ -19,7 +18,7 @@ As a Graphic + Web Designer for Bellagala and it’s venues, my role was working
 
 ### Creating Email Campaigns
 
-![Image of an email](./Kansas-City-knot-9-6-185.jpg)
+![Email that I designed](./Kansas-City-knot-9-6-185.jpg)
 
 Most of my time spent with Bellagala was spent on email campaigns. These campaigns were the primary tool that Bellagala used for promotional marketing. My role in this was to create new designs and offers in local and nationwide markets that would bring new couples to Bellagala photography. Most of the email sending was provided by a third-party that the company paid to be apart of their community mailing list, I instead worked with the content strategist in designing the emails themselves creating promotions and codes and applying them to the backend of Bellagala itself.
 
@@ -27,7 +26,7 @@ While most of the promotions were provided to me from the content strategist, I 
 
 ### Designing Print Material
 
-![Image of promotion from the Van Dusen Magazine that was in Minnesota Meetings and Exchanges](./VDM.jpg)
+![Print promotion from the Van Dusen Magazine that was in Minnesota Meetings and Exchanges](./VDM.jpg)
 
 Although Bellagala does not do much in the way of print material, I was responsible for more than a few print ads and promotional items. As Bellagala did not have an established style guide, I found myself mashing together outdated Pantone color schemes with verbal font and style alignments brought to me from others in the marketing department. A few examples of the print materials that I created where updated wedding fair flyers for an upcoming wedding fair that company was going to be at as well a couple of venue ads that were in the Fall 2017 Minnesota Meetings and Events magazine.
 
@@ -35,7 +34,7 @@ In working with these ads, the Van Dusen Mansion had to be entirely redone as it
 
 The A’BULAE was going to be redesign as well, but due to lack of time and content, we decided to rerun the old ad to re-emphasize the meeting possibilities of the beautiful venue.
 
-![Image of promotion from A`BULAE that was in Minnesota Meetings and Exchanges](./AB.jpg)
+![Promotion from A`BULAE that was in Minnesota Meetings and Exchanges](./AB.jpg)
 
 ### New Website Development
 
