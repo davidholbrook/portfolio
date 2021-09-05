@@ -2,6 +2,7 @@ import * as React from "react"
 import styled from "styled-components"
 import Layout from "../layout/layout"
 import Navagation from "../Components/navagation"
+import Seo from "../layout/seo"
 import bgImg from "../images/headerbg.jpg"
 
 import HomepageWork from "../Components/HomepageWork"
@@ -9,6 +10,7 @@ import HomepageWork from "../Components/HomepageWork"
 const IndexPage = () => {
   return (
     <Layout>
+      <Seo title="Welcome" />
       <Header>
         <Navagation />
         <div className="pt-44 pl-20 w-1/2">
