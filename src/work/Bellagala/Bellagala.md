@@ -6,6 +6,7 @@ url: "http://bellagala.com/"
 color: "#5b8c99"
 sd: "A multi-award-winning full-service wedding provider specializing in Photography, DJ's, Videography, and more."
 template: "project"
+frontImage: "./bella-homepage.png"
 ---
 
 ## Overview:

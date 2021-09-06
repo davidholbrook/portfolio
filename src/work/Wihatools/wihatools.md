@@ -6,6 +6,7 @@ url: "https://www.wihatools.com"
 color: "#006892"
 sd: "A leading manufacturer of quality German handtools, since 1939"
 template: "project"
+frontImage: "./wiha-homepage.png"
 ---
 
 ## Overview
