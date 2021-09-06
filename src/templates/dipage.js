@@ -18,13 +18,23 @@ const DiPage = ({ data }) => {
   const Post = styled.div`
     h2 {
       color: ${frontmatter.secondary};
+      @media (prefers-color-scheme: dark) {
+        color: #d3d1d1;
+      }
     }
     h3 {
       color: ${frontmatter.primary};
+      @media (prefers-color-scheme: dark) {
+        color: #d3d1d1;
+      }
     }
     a {
       color: ${frontmatter.secondary};
       border-bottom: 1px solid ${frontmatter.secondary};
+      @media (prefers-color-scheme: dark) {
+        color: #ffffff;
+        border-color: #ffffff;
+      }
     }
   `
 
@@ -45,14 +55,23 @@ const DiPage = ({ data }) => {
   const Credit = styled.p`
     font-size: 0.8rem;
     color: ${frontmatter.primary};
+    @media (prefers-color-scheme: dark) {
+      color: #ffffff;
+    }
   `
 
   const Title = styled.h1`
     color: ${frontmatter.primary};
+    @media (prefers-color-scheme: dark) {
+      color: #ffffff;
+    }
   `
 
   const Date = styled.p`
     color: ${frontmatter.primary};
+    @media (prefers-color-scheme: dark) {
+      color: #ffffff;
+    }
   `
 
   const fadeUp = useSpring({
@@ -78,7 +97,7 @@ const DiPage = ({ data }) => {
         <Navagation />
         <animated.div
           style={fadeUp}
-          className="container mx-auto p-5 pt-1 bg-white lg:rounded-lg block"
+          className="container mx-auto p-5 pt-1 bg-white dark:bg-gray-700 lg:rounded-lg block"
         >
           <div className="flex justify-between items-top">
             <Title>{frontmatter.title}</Title>
