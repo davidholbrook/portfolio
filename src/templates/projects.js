@@ -35,6 +35,9 @@ const Project = ({ data }) => {
   const GlobalStyle = createGlobalStyle`
   body {
     background: ${frontmatter.color};
+    @media (prefers-color-scheme: dark) {
+      background: #333333;
+    }
   }
 `
 
@@ -42,9 +45,16 @@ const Project = ({ data }) => {
     a {
       color: ${frontmatter.color};
       border-color: ${frontmatter.color};
+      @media (prefers-color-scheme: dark) {
+        color: #ffffff;
+        border-color: #ffffff;
+      }
     }
     figcaption {
       color: ${frontmatter.color};
+      @media (prefers-color-scheme: dark) {
+        color: #ffffff;
+      }
     }
   `
 
@@ -64,20 +74,22 @@ const Project = ({ data }) => {
 
           <div
             id="companyHeader"
-            className="col-span-1 w-full lg:w-64 lg:bg-white px-10 lg:float-left lg:px-4 py-3 mt-0 rounded-lg"
+            className="col-span-1 w-full lg:w-64 lg:bg-white lg:dark:bg-gray-700 px-10 lg:float-left lg:px-4 py-3 mt-0 rounded-lg"
           >
             <Company className="text-5xl lg:text-3xl font-bold mt-3">
               {frontmatter.title}
             </Company>
-            <p className="text-sm text-white lg:text-black">{frontmatter.sd}</p>
-            <p className="text-sm text-white lg:text-black">
+            <p className="text-sm text-white lg:text-black lg:dark:text-gray-200">
+              {frontmatter.sd}
+            </p>
+            <p className="text-sm text-white lg:text-black lg:dark:text-gray-200">
               <strong>Role: </strong>
               {frontmatter.role}
             </p>
           </div>
           <Project
             dangerouslySetInnerHTML={{ __html: html }}
-            className="lg:ml-72 block bg-white px-10 py-4 mt-0 lg:mb-10 lg:rounded-lg lg:shadow-lg"
+            className="lg:ml-72 block bg-white dark:bg-gray-700 px-10 py-4 mt-0 lg:mb-10 lg:rounded-lg lg:shadow-lg"
           />
         </div>
       </Layout>
