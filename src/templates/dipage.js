@@ -97,7 +97,7 @@ const DiPage = ({ data }) => {
         <Navagation />
         <animated.div
           style={fadeUp}
-          className="container mx-auto p-5 pt-1 bg-white dark:bg-gray-700 lg:rounded-lg block"
+          className="container mx-auto p-5 pt-1 bg-white dark:bg-gray-700 lg:rounded-lg lg:mb-10 block"
         >
           <div className="flex justify-between items-top">
             <Title>{frontmatter.title}</Title>
