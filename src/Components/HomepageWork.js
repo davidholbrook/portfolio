@@ -1,20 +1,62 @@
 import React from "react"
+import styled from "styled-components"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-export const HomepageWork = () => {
+const HomepageWork = () => {
+  const data = useStaticQuery(graphql`
+    query BigQuery {
+      allMarkdownRemark {
+        totalCount
+        edges {
+          node {
+            frontmatter {
+              path
+              title
+              template
+              color
+              frontImage {
+                childImageSharp {
+                  gatsbyImageData(
+                    quality: 100
+                    layout: CONSTRAINED
+                    placeholder: BLURRED
+                  )
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
   return (
-    <div className="p-10">
-      <h2 className="text-xl uppercase text-pink-600 border-b-2 border-pink-600 mb-7">
+    <>
+      <h2 className="text-xl container mx-auto mt-5 uppercase border-b-2 border-black standardfont font-normal">
         My Work
       </h2>
-      <h3 className="newsfont text-7xl mb-4">Wiha Tools</h3>
-      <p className="w-1/2 text-2xl text-gray-500 leading-relaxed">
-        Wihatools.com is the ecommerce heart of Wiha Tools. Wiha Tools sells
-        quality German hand tools, to the American markets (USA, Canada, and
-        South America). With a strong base of 64,000 users each month, the
-        website brings in about 10% of the company's million dollar plus annual
-        income.
-      </p>
-    </div>
+      <div className="container mx-auto m-10 grid grid-cols-2 gap-8 items-center ">
+        {data.allMarkdownRemark.edges.map(
+          ({ node }) =>
+            node.frontmatter.template === "project" && (
+              <div
+                className="border-8 border-gray-400 text-center"
+                style={{ borderColor: `${node.frontmatter.color}` }}
+              >
+                <Link to={node.frontmatter.path}>
+                  <GatsbyImage
+                    image={
+                      node.frontmatter.frontImage.childImageSharp
+                        .gatsbyImageData
+                    }
+                  />
+                  <h2 className="self-end">{node.frontmatter.title}</h2>
+                </Link>
+              </div>
+            )
+        )}
+      </div>
+    </>
   )
 }
 export default HomepageWork
