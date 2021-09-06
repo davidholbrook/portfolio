@@ -14,7 +14,7 @@ const IndexPage = () => {
       <Header>
         <Navagation />
         <div className="pt-44 pl-20 w-1/2">
-          <h2 className="text-7xl newsfont text-white">Hi, I'm Dave.</h2>
+          <h2 className="text-7xl text-white">Hi, I'm Dave.</h2>
           <p className="pt-6 text-2xl leading-loose text-gray-300">
             A e-commerce developer for Wiha Tools. I have been building websites
             for the last 15 years and have a degree in Entrepreneurial Studies.
