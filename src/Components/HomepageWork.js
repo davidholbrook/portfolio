@@ -14,6 +14,7 @@ const HomepageWork = () => {
               title
               template
               color
+              sd
               frontImage {
                 childImageSharp {
                   gatsbyImageData(
@@ -38,19 +39,28 @@ const HomepageWork = () => {
         {data.allMarkdownRemark.edges.map(
           ({ node }) =>
             node.frontmatter.template === "project" && (
-              <div
-                className="border-8 border-gray-400 text-center"
-                style={{ borderColor: `${node.frontmatter.color}` }}
-              >
-                <Link to={node.frontmatter.path}>
+              <div className="grid grid-cols-2 gap-8">
+                <Link
+                  to={node.frontmatter.path}
+                  className="border-l-2 border-black pl-1"
+                >
                   <GatsbyImage
                     image={
                       node.frontmatter.frontImage.childImageSharp
                         .gatsbyImageData
                     }
                   />
-                  <h2 className="self-end">{node.frontmatter.title}</h2>
                 </Link>
+                <span>
+                  <h2>{node.frontmatter.title}</h2>
+                  <p className="my-0 leading-loose">{node.frontmatter.sd}</p>
+                  <Link
+                    to={node.frontmatter.path}
+                    className="inline-block border-2 border-black p-2 mt-2 uppercase"
+                  >
+                    Read More
+                  </Link>
+                </span>
               </div>
             )
         )}

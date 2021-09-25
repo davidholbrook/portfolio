@@ -28,11 +28,17 @@ const Thoughts = () => {
   return (
     <>
       <Seo title="My Thoughts" />
+      <div className="bg-black">
+        <div className="container mx-auto">
+          <Navagation />
+        </div>
+      </div>
       <div className="container mx-auto">
-        <Navagation />
-        <h2 className="text-xl mt-5 uppercase border-b-2 border-black dark:border-white standardfont font-normal">
-          My Thoughts
-        </h2>
+        <h2 className="text-5xl mt-10">My Thoughts</h2>
+        <p className="text-gray-600 text-xl border-b-2 border-black pb-5">
+          A collection of thoughts and recollections on web development,
+          e-commerce, nerdium, and more.
+        </p>
         <div className="mt-10 ">
           {data.allMarkdownRemark.edges.map(
             ({ node }) =>
@@ -42,9 +48,14 @@ const Thoughts = () => {
                     {node.frontmatter.date}
                   </p>
                   <Link to={node.frontmatter.path}>
-                    <h2 className="text-5xl">{node.frontmatter.title}</h2>
+                    <h2
+                      className="text-3xl"
+                      style={{ color: node.frontmatter.primary }}
+                    >
+                      {node.frontmatter.title}
+                    </h2>
                   </Link>
-                  <p>{node.excerpt}</p>
+                  <p class="leading-loose text-gray-700">{node.excerpt}</p>
                 </div>
               )
           )}
