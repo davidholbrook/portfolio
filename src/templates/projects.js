@@ -10,7 +10,8 @@ import "../styles/typography.css"
 const Project = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-
+  // disabling eslint as varible is not used but is necessary for the effect to work.
+  //eslint-disable-next-line
   const [scrollPosition, setSrollPosition] = useState(0)
 
   const handleScroll = () => {
