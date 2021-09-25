@@ -6,6 +6,7 @@ import Seo from "../layout/seo"
 import bgImg from "../images/headerbg.jpg"
 
 import HomepageWork from "../Components/HomepageWork"
+import HomepageThoughts from "../Components/HomepageThoughts"
 
 const IndexPage = () => {
   return (
@@ -28,6 +29,7 @@ const IndexPage = () => {
         </div>
       </Header>
       <HomepageWork />
+      <HomepageThoughts />
     </Layout>
   )
 }
