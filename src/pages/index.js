@@ -1,12 +1,12 @@
 import * as React from "react"
 import styled from "styled-components"
 import Layout from "../layout/layout"
-import Navagation from "../Components/navagation"
+import Navagation from "../components/navagation"
 import Seo from "../layout/seo"
 import bgImg from "../images/headerbg.jpg"
 
-import HomepageWork from "../Components/HomepageWork"
-import HomepageThoughts from "../Components/HomepageThoughts"
+import HomepageWork from "../components/HomepageWork"
+import HomepageThoughts from "../components/HomepageThoughts"
 
 const IndexPage = () => {
   return (
