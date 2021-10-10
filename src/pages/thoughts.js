@@ -35,7 +35,7 @@ const Thoughts = () => {
       </div>
       <div className="container mx-auto">
         <h2 className="text-5xl mt-10">My Thoughts</h2>
-        <p className="text-gray-600 text-xl border-b-2 border-black pb-5">
+        <p className="text-gray-600 dark:text-gray-300 text-xl border-b-2 border-black pb-5">
           A collection of thoughts and recollections on web development,
           e-commerce, nerdium, and more.
         </p>
@@ -55,7 +55,9 @@ const Thoughts = () => {
                       {node.frontmatter.title}
                     </h2>
                   </Link>
-                  <p class="leading-loose text-gray-700">{node.excerpt}</p>
+                  <p className="leading-loose text-gray-700 dark:text-gray-300">
+                    {node.excerpt}
+                  </p>
                 </div>
               )
           )}

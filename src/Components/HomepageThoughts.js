@@ -41,7 +41,9 @@ const HomepageThoughts = () => {
                 >
                   <h2>{node.frontmatter.title}</h2>
                 </Link>
-                <p className="text-xl leading-relaxed">{node.excerpt}</p>
+                <p className="text-xl leading-relaxed text-gray-700 dark:text-gray-300">
+                  {node.excerpt}
+                </p>
               </>
             )
         )}

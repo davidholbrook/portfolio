@@ -14,7 +14,7 @@ const Thoughts = () => {
       </div>
       <div className="container mx-auto">
         <h2 className="text-5xl mt-10">About Me</h2>
-        <div className="mt-10 ">
+        <div className="mt-10 text-gray-700 dark:text-gray-300">
           <p>
             Hello, I’m David. I am a e-commerce developer currently working for
             Wiha Tools. I love crafting websites that are beautiful, purposeful,

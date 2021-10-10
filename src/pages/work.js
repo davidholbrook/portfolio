@@ -44,7 +44,7 @@ const Work = () => {
       </div>
       <div className="container mx-auto">
         <h2 className="text-5xl mt-10">My Work</h2>
-        <p className="text-gray-600 text-xl border-b-2 border-black pb-5">
+        <p className="text-gray-600 dark:text-gray-300 text-xl border-b-2 border-black pb-5">
           Below is a sample of work that I have done for my past full-time
           positions.
         </p>

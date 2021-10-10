@@ -53,10 +53,12 @@ const HomepageWork = () => {
                 </Link>
                 <span>
                   <h2>{node.frontmatter.title}</h2>
-                  <p className="my-0 leading-loose">{node.frontmatter.sd}</p>
+                  <p className="my-0 leading-loose text-gray-700 dark:text-gray-300">
+                    {node.frontmatter.sd}
+                  </p>
                   <Link
                     to={node.frontmatter.path}
-                    className="inline-block border-2 border-black p-2 mt-2 uppercase"
+                    className="inline-block border-2 border-gray-700 dark:border-gray-300 text-gray-700 dark:text-gray-300 p-2 mt-2 uppercase"
                   >
                     Read More
                   </Link>
