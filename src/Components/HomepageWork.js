@@ -40,10 +40,7 @@ const HomepageWork = () => {
           ({ node }) =>
             node.frontmatter.template === "project" && (
               <div className="grid grid-cols-2 gap-8">
-                <Link
-                  to={node.frontmatter.path}
-                  className="border-l-2 border-black pl-1"
-                >
+                <Link to={node.frontmatter.path}>
                   <GatsbyImage
                     image={
                       node.frontmatter.frontImage.childImageSharp
