@@ -23,10 +23,10 @@ const HomepageThoughts = () => {
   `)
   return (
     <>
-      <h2 className="text-xl container mx-auto mt-5 uppercase border-b-2 border-black standardfont font-normal">
+      <h2 className="text-xl container mx-auto mt-5 uppercase border-b-2 border-black standardfont font-normal mb-0">
         My Thoughts
       </h2>
-      <div className="container mx-auto m-10 ">
+      <div className="container mx-auto m-10 mt-0 ">
         {data.allMarkdownRemark.edges.map(
           ({ node }) =>
             node.frontmatter.template === "blog" && (
@@ -36,12 +36,12 @@ const HomepageThoughts = () => {
                 </p>
                 <Link
                   to={node.frontmatter.path}
-                  className="text-2xl mt-0"
+                  className="text-2xl my-0"
                   style={{ color: node.frontmatter.primary }}
                 >
                   <h2>{node.frontmatter.title}</h2>
                 </Link>
-                <p className="text-xl leading-relaxed text-gray-700 dark:text-gray-300">
+                <p className="text-xl leading-relaxed mt-0 text-gray-700 dark:text-gray-300">
                   {node.excerpt}
                 </p>
               </>
