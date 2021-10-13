@@ -99,9 +99,9 @@ const DiPage = ({ data }) => {
           style={fadeUp}
           className="container mx-auto p-5 pt-1 bg-white dark:bg-gray-700 lg:rounded-lg lg:mb-10 block"
         >
-          <div className="flex justify-between items-top">
-            <Title>{frontmatter.title}</Title>
+          <div className="lg:flex lg:flex-row-reverse lg:justify-between lg:items-top">
             <Date className="text-sm">{frontmatter.date}</Date>
+            <Title>{frontmatter.title}</Title>
           </div>
           <Post dangerouslySetInnerHTML={{ __html: html }} />
           {frontmatter.credit !== "" ? (
