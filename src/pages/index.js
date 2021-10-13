@@ -1,5 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 import Layout from "../layout/layout"
 import Navagation from "../components/navagation"
 import Seo from "../layout/seo"
@@ -28,6 +29,23 @@ const IndexPage = () => {
           <MoreBtn href="#" className="button ">
             Learn More
           </MoreBtn>
+            <Link
+              to="about"
+              style={{
+                color: "#ffffff",
+                fontSize: "1.2rem",
+                textTransform: "uppercase",
+                fontWeight: "medium",
+                display: "inline-block",
+                marginTop: "1rem",
+                padding: "0.5rem",
+                border: "1px solid #ffffff",
+              }}
+              className="button"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
       </Header>
       <HomepageWork />
