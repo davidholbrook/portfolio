@@ -35,7 +35,7 @@ const HomepageWork = () => {
       <h2 className="text-3xl lg:text-xl container mx-auto mt-5 uppercase text-center lg:text-left lg:border-b-2 lg:border-black standardfont lg:font-normal">
         My Work
       </h2>
-      <div className="container mx-auto m-10 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center ">
+      <div className="container mx-auto m-10 p-5 lg:p-0 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center ">
         {data.allMarkdownRemark.edges.map(
           ({ node }) =>
             node.frontmatter.template === "project" && (

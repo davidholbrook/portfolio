@@ -12,7 +12,7 @@ const Thoughts = () => {
           <Navagation />
         </div>
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto p-5 lg:p-0">
         <h2 className="text-5xl mt-10">About Me</h2>
         <div className="mt-10 text-gray-700 dark:text-gray-300">
           <p>
