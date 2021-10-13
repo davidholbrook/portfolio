@@ -42,7 +42,7 @@ const Work = () => {
           <Navagation />
         </div>
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto p-5 lg:p-0">
         <h2 className="text-5xl mt-10">My Work</h2>
         <p className="text-gray-600 dark:text-gray-300 text-xl border-b-2 border-black pb-5">
           Below is a sample of work that I have done for my past full-time
@@ -52,7 +52,7 @@ const Work = () => {
           {data.allMarkdownRemark.edges.map(
             ({ node }) =>
               node.frontmatter.template === "project" && (
-                <div className="mb-2 grid grid-cols-12 gap-5 items-center">
+                <div className="mb-2 md:grid md:grid-cols-12 md:gap-5 items-center">
                   <GatsbyImage
                     image={
                       node.frontmatter.frontImage.childImageSharp

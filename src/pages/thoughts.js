@@ -33,7 +33,7 @@ const Thoughts = () => {
           <Navagation />
         </div>
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto p-5 lg:p-0">
         <h2 className="text-5xl mt-10">My Thoughts</h2>
         <p className="text-gray-600 dark:text-gray-300 text-xl border-b-2 border-black pb-5">
           A collection of thoughts and recollections on web development,
