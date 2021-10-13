@@ -4,9 +4,9 @@ import { Link } from "gatsby"
 
 export const navagation = () => {
   return (
-    <div className="px-10 py-8 flex justify-between align-center">
-      <Link to="/">
-        <img src={Logo} alt="" width="100px" />
+    <div className="flex flex-col md:px-10 py-8 md:flex-row md:justify-between align-center">
+      <Link to="/" className="align-center">
+        <img src={Logo} alt="" width="100px" className="mx-auto mb-5" />
       </Link>
       <nav>
         <ul className="flex">
