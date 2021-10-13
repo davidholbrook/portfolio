@@ -32,14 +32,14 @@ const HomepageWork = () => {
   `)
   return (
     <>
-      <h2 className="text-xl container mx-auto mt-5 uppercase border-b-2 border-black standardfont font-normal">
+      <h2 className="text-3xl lg:text-xl container mx-auto mt-5 uppercase text-center lg:text-left lg:border-b-2 lg:border-black standardfont lg:font-normal">
         My Work
       </h2>
-      <div className="container mx-auto m-10 grid grid-cols-2 gap-8 items-center ">
+      <div className="container mx-auto m-10 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center ">
         {data.allMarkdownRemark.edges.map(
           ({ node }) =>
             node.frontmatter.template === "project" && (
-              <div className="grid grid-cols-2 gap-8">
+              <div className="mb-20 lg:mb-0 md:grid md:grid-cols-2 md:gap-8">
                 <Link to={node.frontmatter.path}>
                   <GatsbyImage
                     image={

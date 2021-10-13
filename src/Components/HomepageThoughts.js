@@ -23,7 +23,7 @@ const HomepageThoughts = () => {
   `)
   return (
     <>
-      <h2 className="text-xl container mx-auto mt-5 uppercase border-b-2 border-black standardfont font-normal mb-0">
+      <h2 className="text-3xl lg:text-xl container mx-auto mt-5 uppercase text-center lg:text-left lg:border-b-2 lg:border-black standardfont lg:font-normal">
         My Thoughts
       </h2>
       <div className="container mx-auto m-10 mt-0 ">
@@ -36,7 +36,7 @@ const HomepageThoughts = () => {
                 </p>
                 <Link
                   to={node.frontmatter.path}
-                  className="text-2xl my-0"
+                  className="text-lg md:text-2xl my-0"
                   style={{ color: node.frontmatter.primary }}
                 >
                   <h2>{node.frontmatter.title}</h2>
