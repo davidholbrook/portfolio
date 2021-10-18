@@ -16,7 +16,7 @@ const IndexPage = () => {
       <Header>
         <div className="container mx-auto">
           <Navagation />
-          <div className="p-5 lg:p-0 lg:pt-44   lg:w-1/2">
+          <div className="p-5 lg:p-0 lg:pt-36 lg:w-1/2">
             <h2 className="text-5xl text-center md:text-left md:text-7xl text-white">
               Hi, I'm Dave.
             </h2>
