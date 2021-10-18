@@ -3,6 +3,7 @@ module.exports = {
     title: `David Holbrook`,
     description: `Web developer for Wiha Tools, also designs things.`,
     author: `@davidholbrook`,
+    siteUrl: `https://davidholbrook.info`,
   },
   plugins: [
     "gatsby-plugin-styled-components",

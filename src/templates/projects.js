@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
-import Layout from "../layout/layout"
-import Seo from "../layout/seo"
+import Layout from "/layout/layout"
+import Seo from "/layout/seo"
 import styled, { createGlobalStyle } from "styled-components"
 
-import Navagation from "../components/navagation"
-import "../styles/typography.css"
+import Navagation from "/components/navagation"
+import "/styles/typography.css"
 
 const Project = ({ data }) => {
   const { markdownRemark } = data

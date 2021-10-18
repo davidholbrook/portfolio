@@ -1,13 +1,13 @@
 import * as React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import Layout from "../layout/layout"
-import Navagation from "../components/navagation"
-import Seo from "../layout/seo"
-import bgImg from "../images/headerbg.jpg"
+import Layout from "/layout/layout"
+import Navagation from "/components/navagation"
+import Seo from "/layout/seo"
+import bgImg from "/images/headerbg.jpg"
 
-import HomepageWork from "../components/HomepageWork"
-import HomepageThoughts from "../components/HomepageThoughts"
+import HomepageWork from "/components/HomepageWork"
+import HomepageThoughts from "/components/HomepageThoughts"
 
 const IndexPage = () => {
   return (

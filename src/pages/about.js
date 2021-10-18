@@ -1,7 +1,7 @@
 import React from "react"
-import Seo from "../layout/seo"
+import Seo from "/layout/seo"
 
-import Navagation from "../components/navagation"
+import Navagation from "/components/navagation"
 
 const Thoughts = () => {
   return (

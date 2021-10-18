@@ -1,15 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import Layout from "../layout/layout"
-import Seo from "../layout/seo"
+import Layout from "/layout/layout"
+import Seo from "/layout/seo"
 import styled from "styled-components"
 import { useSpring, animated } from "react-spring"
 
-import "../styles/typography.css"
-import "../styles/prism.css"
+import "/styles/typography.css"
+import "/styles/prism.css"
 
-import Navagation from "../components/navagation"
+import Navagation from "/components/navagation"
 
 const DiPage = ({ data }) => {
   const { markdownRemark } = data

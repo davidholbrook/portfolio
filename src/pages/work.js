@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import Seo from "../layout/seo"
+import Seo from "/layout/seo"
 
-import Navagation from "../components/navagation"
+import Navagation from "/components/navagation"
 
 const Work = () => {
   const data = useStaticQuery(graphql`
