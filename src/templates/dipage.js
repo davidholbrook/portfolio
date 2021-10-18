@@ -9,7 +9,7 @@ import { useSpring, animated } from "react-spring"
 import "../styles/typography.css"
 import "../styles/prism.css"
 
-import Navagation from "/components/navagation"
+import Navagation from "../components/navagation"
 
 const DiPage = ({ data }) => {
   const { markdownRemark } = data
