@@ -21,10 +21,8 @@ const IndexPage = () => {
               Hi, I'm Dave.
             </h2>
             <p className="lg:pt-6 text-2xl leading-loose text-gray-300">
-              A e-commerce developer for Wiha Tools. I have been building
-              websites for the last 15 years and have a degree in
-              Entrepreneurial Studies. I love to blog about development, the
-              state of e-commerce, and sometimes Star Wars Nerdom.
+              I’m an e-commerce developer for Wiha Tools. I love creating
+              websites and applications to solve the problems of tomorrow.
             </p>
             <Link
               to="about"
