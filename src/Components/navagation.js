@@ -1,5 +1,5 @@
 import React from "react"
-import Logo from "/images/logo_new_white.svg"
+import Logo from "../images/logo_new_white.svg"
 import { Link } from "gatsby"
 
 export const navagation = () => {
