@@ -6,6 +6,7 @@ import styled, { createGlobalStyle } from "styled-components"
 
 import Navagation from "../components/navagation"
 import "../styles/typography.css"
+import { Declaration } from "postcss"
 
 const Project = ({ data }) => {
   const { markdownRemark } = data
@@ -64,7 +65,20 @@ const Project = ({ data }) => {
     @media (min-width: 1024px) {
       color: ${frontmatter.color};
     }
+    @media (prefers-color-scheme: dark) and (min-width: 1024px) {
+      color: #ffffff;
+    }
   `
+
+  const WebsiteLink = styled.a`
+    color: ${frontmatter.color};
+    font-weight: bold;
+    @media (prefers-color-scheme: dark) {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  `
+
   return (
     <>
       <GlobalStyle />
@@ -86,6 +100,16 @@ const Project = ({ data }) => {
             <p className="text-sm text-white lg:text-black lg:dark:text-gray-200">
               <strong>Role: </strong>
               {frontmatter.role}
+            </p>
+            <p className="text-sm text-white lg:text-black lg:dark:text-gray-200">
+              <strong>Website: </strong>
+              <WebsiteLink
+                href={frontmatter.url}
+                target="_blank"
+                rel="noopener"
+              >
+                {frontmatter.url}
+              </WebsiteLink>
             </p>
           </div>
           <Project
