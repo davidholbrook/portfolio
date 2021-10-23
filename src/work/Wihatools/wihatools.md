@@ -11,7 +11,7 @@ frontImage: "./wiha-homepage.png"
 
 ## Overview
 
-Wihatools.com is the e-commerce heart of Wiha Tools USA. Wiha Tools USA sells premium quality German hand tools to the American markets (USA, Canada, and South America). With a strong base of 64,000 users each month, the store brings in about 10% of the company's million dollar plus annual income.
+[Wihatools.com](https://wihatools.com) is the e-commerce heart of Wiha Tools USA. Wiha Tools USA sells premium quality German hand tools to the American markets (USA, Canada, and South America). With a strong base of 64,000 users each month, the store brings in about 10% of the company's million dollar plus annual income.
 
 ## My roles and responsibilities
 

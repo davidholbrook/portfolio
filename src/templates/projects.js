@@ -6,7 +6,6 @@ import styled, { createGlobalStyle } from "styled-components"
 
 import Navagation from "../components/navagation"
 import "../styles/typography.css"
-import { Declaration } from "postcss"
 
 const Project = ({ data }) => {
   const { markdownRemark } = data
