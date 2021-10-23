@@ -46,9 +46,10 @@ const Project = ({ data }) => {
     a {
       color: ${frontmatter.color};
       border-color: ${frontmatter.color};
+      font-weight: bold;
       @media (prefers-color-scheme: dark) {
         color: #ffffff;
-        border-color: #ffffff;
+        text-decoration: underline;
       }
     }
     figcaption {
