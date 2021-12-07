@@ -53,7 +53,7 @@ const HomepageWork = () => {
                   />
                 </Link>
                 <div
-                  className="absolute bottom-5 left-4 w-11/12 mx-2 p-5 "
+                  className="absolute bottom-5 left-4 w-11/12 mx-2 p-5 border-white border-2"
                   style={{ background: node.frontmatter.color }}
                 >
                   <h2>{node.frontmatter.title}</h2>
