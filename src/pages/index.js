@@ -26,17 +26,7 @@ const IndexPage = () => {
             </p>
             <Link
               to="about"
-              style={{
-                color: "#ffffff",
-                fontSize: "1.2rem",
-                textTransform: "uppercase",
-                fontWeight: "medium",
-                display: "inline-block",
-                marginTop: "1rem",
-                padding: "0.5rem",
-                border: "1px solid #ffffff",
-              }}
-              className="button"
+              className="inline-block border-2 border-gray-700 dark:border-gray-300 text-gray-700 dark:text-gray-300 p-2 mt-2 uppercase hover:bg-white hover:text-black hover:border-white"
             >
               Learn More
             </Link>
