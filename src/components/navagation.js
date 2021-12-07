@@ -9,7 +9,7 @@ export const navagation = () => {
         <img src={Logo} alt="" width="100px" className="mx-auto mb-5" />
       </Link>
       <nav>
-        <ul className="flex">
+        <ul className="flex justify-center md:justify-right">
           <li className="ml-5">
             <Link to="/about" className="text-2xl text-white uppercase">
               About
