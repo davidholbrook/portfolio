@@ -40,7 +40,7 @@ const HomepageWork = () => {
           ({ node }) =>
             node.frontmatter.template === "project" && (
               <div
-                className="mb-20 lg:mb-0 relative"
+                className="mb-10 lg:mb-0 relative"
                 style={{ background: node.frontmatter.color }}
               >
                 <Link to={node.frontmatter.path}>
@@ -53,16 +53,16 @@ const HomepageWork = () => {
                   />
                 </Link>
                 <div
-                  className="absolute bottom-5 left-4 w-11/12 mx-2 p-5 border-white border-2"
+                  className="md:absolute md:bottom-5 md:left-4 md:w-11/12 md:mx-2 p-5 md:border-white md:border-2 text-white"
                   style={{ background: node.frontmatter.color }}
                 >
                   <h2>{node.frontmatter.title}</h2>
-                  <p className="my-0 leading-loose text-gray-700 dark:text-gray-300">
+                  <p className="my-0 leading-loose text-white">
                     {node.frontmatter.sd}
                   </p>
                   <Link
                     to={node.frontmatter.path}
-                    className="inline-block border-2 border-gray-700 dark:border-gray-300 text-gray-700 dark:text-gray-300 p-2 mt-2 uppercase hover:bg-white hover:text-black hover:border-white"
+                    className="inline-block border-2 border-white text-white p-2 mt-2 uppercase hover:bg-white hover:text-black hover:border-white"
                   >
                     Read More
                   </Link>
