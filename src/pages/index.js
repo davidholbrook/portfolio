@@ -26,7 +26,7 @@ const IndexPage = () => {
             </p>
             <Link
               to="about"
-              className="inline-block border-2 border-gray-700 dark:border-gray-300 text-gray-700 dark:text-gray-300 p-2 mt-2 uppercase hover:bg-white hover:text-black hover:border-white"
+              className="inline-block border-2 border-white text-white p-2 mt-2 uppercase hover:bg-white hover:text-black hover:border-white"
             >
               Learn More
             </Link>
