@@ -33,7 +33,6 @@ const IndexPage = () => {
           </div>
         </div>
       </Header>
-      <HomepageWork />
       <HomepageThoughts />
     </Layout>
   )
