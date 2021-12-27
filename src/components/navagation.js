@@ -16,11 +16,6 @@ export const navagation = () => {
             </Link>
           </li>
           <li className="ml-5">
-            <Link to="/work" className="text-2xl text-white uppercase">
-              Work
-            </Link>
-          </li>
-          <li className="ml-5">
             <Link to="/thoughts" className="text-2xl text-white uppercase">
               Thoughts
             </Link>
