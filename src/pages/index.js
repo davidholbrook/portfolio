@@ -21,7 +21,7 @@ const IndexPage = () => {
               Hi, I'm Dave.
             </h2>
             <p className="lg:pt-6 text-2xl leading-loose text-gray-300">
-              I’m an e-commerce developer for Wiha Tools. I love creating
+              I’m an front-end developer for Decks Direct. I love creating
               websites and applications to solve the problems of tomorrow.
             </p>
             <Link

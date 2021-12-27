@@ -37,7 +37,7 @@ const Thoughts = () => {
         <h2 className="text-5xl mt-10">My Thoughts</h2>
         <p className="text-gray-600 dark:text-gray-300 text-xl border-b-2 border-black pb-5">
           A collection of thoughts and recollections on web development,
-          e-commerce, nerdium, and more.
+          business, nerdium, and more.
         </p>
         <div className="mt-10 ">
           {data.allMarkdownRemark.edges.map(
