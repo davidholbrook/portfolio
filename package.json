@@ -38,6 +38,9 @@
     "react-spring": "^9.2.4",
     "styled-components": "^5.3.0"
   },
+  "resolutions": {
+    "graphql": "^15.5.1"
+  },
   "devDependencies": {
     "autoprefixer": "^10.3.1",
     "gatsby-plugin-postcss": "^4.11.0",
