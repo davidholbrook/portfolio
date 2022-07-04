@@ -1,9 +1,9 @@
 import React from "react"
 import Seo from "../layout/seo"
 
-import Navagation, { navagation } from "../components/navagation"
+import Navagation from "../components/navagation"
 
-export const Work = () => {
+const Work = () => {
   return (
     <>
       <Seo title="My Work" />

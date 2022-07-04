@@ -16,10 +16,17 @@ const Thoughts = () => {
         <h2 className="text-5xl mt-10">About Me</h2>
         <div className="mt-10 text-gray-700 dark:text-gray-300">
           <p>
-            Hello, I’m David. I am a front-end developer working for Decks
-            Direct. I love crafting websites that are beautiful, purposeful, and
-            above all disirable to be used day-after-day. I have a long history
-            of working with Javascript, Node, GraphQL PHP, and MySQL.
+            Hello, I'm David. I am a front-end developer working for{" "}
+            <a
+              href="https://www.decksdirect.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              DecksDirect
+            </a>
+            . I love crafting websites that are beautiful, purposeful, and above
+            all disirable to be used day-after-day. I have a long history of
+            working with Javascript, Node, GraphQL PHP, and MySQL.
           </p>
           <p>
             As a developer I have worked with many different forms of websites,
