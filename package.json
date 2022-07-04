@@ -8,15 +8,15 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop -p 3500",
-    "start": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop -p 3500",
+    "develop": "gatsby develop -p 3500",
+    "start": "gatsby develop -p 3500",
     "build": "gatsby build",
-    "serve": "cross-env NODE_OPTIONS=\"-r esm\" gatsby serve",
+    "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.13.2",
-    "gatsby": "^3.11.0",
+    "gatsby": "^2.24.63",
     "gatsby-plugin-google-fonts-v2": "^1.0.0",
     "gatsby-plugin-image": "^1.11.0",
     "gatsby-plugin-manifest": "^3.11.0",
