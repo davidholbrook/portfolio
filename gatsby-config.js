@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `David Holbrook`,
-    description: `Web developer for Wiha Tools, also designs things.`,
+    description: `Web developer for DecksDirect, also designs things.`,
     author: `@davidholbrook`,
     siteUrl: `https://davidholbrook.info`,
   },
