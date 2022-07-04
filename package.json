@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
+  "version": "0.3.5",
   "private": true,
   "description": "Portfolio",
   "author": "David Holbrook",
@@ -8,10 +8,10 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop -p 3500",
-    "start": "gatsby develop -p 3500",
+    "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop -p 3500",
+    "start": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop -p 3500",
     "build": "gatsby build",
-    "serve": "gatsby serve",
+    "serve": "cross-env NODE_OPTIONS=\"-r esm\" gatsby serve",
     "clean": "gatsby clean"
   },
   "dependencies": {
@@ -41,6 +41,8 @@
     "autoprefixer": "^10.3.1",
     "gatsby-plugin-postcss": "^4.11.0",
     "postcss": "^8.3.6",
-    "tailwindcss": "^2.2.7"
+    "tailwindcss": "^2.2.7",
+    "esm": "^3.2.25",
+    "cross-env": "^7.0.2"
   }
 }
