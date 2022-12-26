@@ -20,6 +20,11 @@ export const navagation = () => {
               Thoughts
             </Link>
           </li>
+          <li className="ml-5">
+            <Link to="/work" className="text-2xl text-white uppercase">
+              Portfolio
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

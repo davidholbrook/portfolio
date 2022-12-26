@@ -2,7 +2,7 @@ const path = require(`path`)
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const dipage = path.resolve(`src/templates/dipage.js`)
-  // const projectTemplate = path.resolve(`src/templates/projects.js`)
+  const projectTemplate = path.resolve(`src/templates/projects.js`)
   const result = await graphql(`
     {
       allMarkdownRemark(
@@ -29,12 +29,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     if (node.frontmatter.template == "project") {
-      // commented out as I am not looking for work
-      // createPage({
-      //   path: `${node.frontmatter.path}`,
-      //   component: projectTemplate,
-      //   context: {},
-      // })
+      createPage({
+        path: `${node.frontmatter.path}`,
+        component: projectTemplate,
+        context: {},
+      })
     } else {
       createPage({
         path: `${node.frontmatter.path}`,
