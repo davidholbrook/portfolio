@@ -1,8 +1,8 @@
 ---
 path: "/thoughts/magento-development-on-windows"
 title: "Magento 2 Development on Windows"
-date: "August 9th, 2021"
-sortdate: "08-09-2021"
+date: "August 9th, 2023"
+sortdate: "08-09-2023"
 template: "blog"
 primary: "hsl(290,50%,50%)"
 secondary: "HSL(50, 90%, 30%)"

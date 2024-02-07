@@ -1,8 +1,8 @@
 ---
 path: "/thoughts/5-things-I-wish-I-knew-about-aws"
 title: "5 Things I Wish I Knew About AWS"
-date: "August 12th, 2021"
-sortdate: "08-12-2021"
+date: "August 12th, 2023"
+sortdate: "08-12-2023"
 template: "blog"
 primary: "HSL(36, 100%, 50%)"
 secondary: "HSL(200, 100%, 40%)"
@@ -11,7 +11,7 @@ credit: "Photo by Ian Battaglia on Unsplash"
 creditURL: "https://unsplash.com/photos/9drS5E_Rguc"
 ---
 
-AWS (Amazon Web Services) is an advanced service platform with over 240 services being provided by the web giant Amazon. While working with [Wiha Tools](https://wihatools.com) was tasked with creating a new storefront built on the AWS platform. I wanted to share five things that I learned about AWS that would have been super useful from the beginning.
+AWS (Amazon Web Services) is an advanced service platform with over 240 services being provided by the web giant Amazon. When I was working with [Wiha Tools](https://wihatools.com) I was tasked with creating a new storefront built on the AWS platform. I wanted to share five things that I learned about AWS that would have been super useful from the beginning.
 
 **Note** I want to be upfront about this. I am not writing a beginners guide or offering technical advise on how to setup or run any service on AWS. This platform is extremely capable but also dangerous if you are unsure on what you are doing. I would advise hiring an expert (either a person or company) to help setup AWS correctly. Amazon has historically not taken any liability for any security matters, which as we will see, ended poorly for one company.
 
