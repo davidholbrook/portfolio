@@ -1,8 +1,8 @@
 ---
 path: "/thoughts/5-things-I-wish-I-knew-about-aws"
 title: "5 Things I Wish I Knew About AWS"
-date: "August 12th, 2021"
-sortdate: "08-12-2021"
+date: "August 12th, 2023"
+sortdate: "08-12-2023"
 template: "blog"
 primary: "HSL(36, 100%, 50%)"
 secondary: "HSL(200, 100%, 40%)"
