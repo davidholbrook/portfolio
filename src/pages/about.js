@@ -13,44 +13,31 @@ const Thoughts = () => {
         </div>
       </div>
       <div className="container mx-auto p-5 lg:p-0">
-        <h2 className="text-5xl mt-10">About Me</h2>
-        <div className="mt-10 text-gray-700 dark:text-gray-300">
-          <p>
-            Hello, I'm David. I am a front-end developer working for{" "}
-            <a
-              href="https://www.decksdirect.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              DecksDirect
-            </a>
-            . I love crafting websites that are beautiful, purposeful, and above
-            all disirable to be used day-after-day. I have a long history of
-            working with Javascript, Node, GraphQL PHP, and MySQL.
-          </p>
-          <p>
-            As a developer I have worked with many different forms of websites,
-            from simple wordpress designs, to full website stores, to full
-            in-house developed membership systems. I have also have a extensive
-            experience working React for a fast and responsive websites that can
-            be developed using data from slower and less responsive systems.
-          </p>
-          <p>
-            I also have a background in business and marketing, enjoying a
-            degree in Entrepreneurial Studies for Minneapolis College of Art and
-            Design. Having this experience has opened up new opportunities for
-            myself to work with business leaders and marketers to tailor and
-            understand how my work can contribute to the organization as a
-            whole. I also use this background to open up new dialogs in how I
-            can develop code and design systems to help meet the goals and needs
-            of the organization as well.
-          </p>
-          <p>
-            At the end of the day, I am someone who is very passionate in the
-            details creating websites and interfaces that are easy-to-use,
-            maintainable, and again, desirable for use day-after-day for buying
-            that next great idea.
-          </p>
+        <h2 className="text-5xl mt-10">You want to know more? Wonderful!</h2>
+        <div className="mt-10 text-gray-700 dark:text-gray-300 text-2xl">
+         
+         <p>I’m an energetic and strangely upbeat front-end developer with over five years of experience in the field. My passion lies in crafting beautiful, user-friendly interfaces that enhance the digital experience.</p>
+         
+         <h3 class="mb-3">The Technical Bits:</h3>
+         
+         <ul class="ml-7 list-disc">
+           <li class="mb-2"><span class="font-bold">Landing Pages:</span> I have built from simple landing pages for Google Ads campaigns to captivating web experiences</li>
+           <li class="mb-2"><span class="font-bold">React and Vue Applications:</span> I specialize in building dynamic applications using React and Vue. Whether it is scaffolding out an entire website or building a small-use utility.</li>
+           <li class="mb-2"><span class="font-bold">Business Storefronts:</span> I’ve worked extensively with Magento 2 (PHP) and Hyva Themes (Tailwind CSS and Alpine JS) to create robust and visually appealing storefronts for businesses.</li>
+           <li class="mb-3"><span class="font-bold">Other Technologies:</span> I have also used AWS Platform, Docker, and Node. I love exploring new technologies and adapting them to solve real-world challenges.</li>
+         </ul>
+         
+         <h3 class="mb-3">My Education and Unique Perspective: </h3>
+         
+         My educational background is in Entrepreneurial Studies from MCAD (Minneapolis College of Art and Design), which grants me a unique ability to understand business requirements and target my skills to meet the unique needs of each business.
+         
+         <h3 class="my-3">Working with Others:</h3> 
+         
+         I’m not just about code—I also enjoy working with and teaching others. I have collaborated with a vast array of teams, from marketing to technical IT to business development. In each case, I strive to find common ground to ensure that the work I do is understood by each member of the team. Additionally, I aim to teach code and logic straightforwardly, making it accessible for other team members to understand what I do.
+         
+
+         
+         
         </div>
       </div>
     </>

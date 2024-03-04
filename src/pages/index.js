@@ -17,19 +17,10 @@ const IndexPage = () => {
           <Navagation />
           <div className="p-5 lg:p-0 lg:pt-14 lg:w-1/2">
             <h2 className="text-5xl text-center md:text-left md:text-7xl text-white">
-              Hi, I'm Dave.
+              Hey, I'm David.
             </h2>
             <p className="lg:pt-6 text-2xl leading-loose text-gray-300">
-              I'm an front-end developer for{" "}
-              <a
-                href="https://www.decksdirect.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                DecksDirect
-              </a>
-              . I love creating websites and applications to solve the problems
-              of tomorrow.
+              I’m a Front End developer based out of Minneapolis, Minnesota. I have a passion for developing forward-thinking websites that help businesses succeed.
             </p>
             <Link
               to="about"
