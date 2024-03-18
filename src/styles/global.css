@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+  body {
+    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  }
+  
+  :root {
+    --pureblack: #000;
+    --purewhite: #fff;
+    --tint: #d1d5db;
+    --darkgrey: #374151;
+    --portwhite: #fff;
+    --bodytext: #000000;
+  }
+  
+  @media(prefers-color-scheme: dark){
+    :root {
+      --pureblack: #374151;
+      --purewhite: #000000;
+      --tint: #d1d5db;
+      --darkgrey: #374151;
+      --portwhite: #374151;
+      --bodytext: #d1d5db;
+    }
+    body{
+      background: #374151;
+      color: #ffffff;
+    }
+  }
+
+  body[data-theme='neon'] {
+    --pureblack: #bada55;
+    --purewhite: #000000;
+    --tint: #333333;
+    --portwhite: #badc99;
+    --bodytext: #bbd900;
+  }

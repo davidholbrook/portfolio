@@ -40,3 +40,7 @@ figcaption {
   text-align: center;
   font-weight: bolder;
 }
+
+.standardfont {
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+}

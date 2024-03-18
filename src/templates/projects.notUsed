@@ -89,19 +89,19 @@
 
 //           <div
 //             id="companyHeader"
-//             className="col-span-1 w-full lg:w-64 lg:bg-white lg:dark:bg-gray-700 px-10 lg:float-left lg:px-4 py-3 mt-0 rounded-lg"
+//             className="col-span-1 w-full lg:w-64 lg:bg-purewhite px-10 lg:float-left lg:px-4 py-3 mt-0 rounded-lg"
 //           >
 //             <Company className="text-5xl lg:text-3xl font-bold mt-3">
 //               {frontmatter.title}
 //             </Company>
-//             <p className="text-sm text-white lg:text-black lg:dark:text-gray-200">
+//             <p className="text-sm text-white lg:text-black">
 //               {frontmatter.sd}
 //             </p>
-//             <p className="text-sm text-white lg:text-black lg:dark:text-gray-200">
+//             <p className="text-sm text-white lg:text-black">
 //               <strong>Role: </strong>
 //               {frontmatter.role}
 //             </p>
-//             <p className="text-sm text-white lg:text-black lg:dark:text-gray-200">
+//             <p className="text-sm text-white lg:text-black">
 //               <strong>Website: </strong>
 //               <WebsiteLink
 //                 href={frontmatter.url}
@@ -114,7 +114,7 @@
 //           </div>
 //           <Project
 //             dangerouslySetInnerHTML={{ __html: html }}
-//             className="lg:ml-72 block bg-white dark:bg-gray-700 px-10 py-4 mt-0 lg:mb-10 lg:rounded-lg lg:shadow-lg"
+//             className="lg:ml-72 block bg-purewhite px-10 py-4 mt-0 lg:mb-10 lg:rounded-lg lg:shadow-lg"
 //           />
 //         </div>
 //       </Layout>

@@ -1,29 +1,29 @@
 import React from "react"
 import Seo from "../layout/seo"
+import Layout from "../layout/layout"
 
 import Navagation from "../components/navagation"
 
 const Blog = () => {
   return (
-    <>
+    <Layout>
       <Seo title="About Me" />
-      <div className="bg-black">
+      <div className="bg-pureblack">
         <div className="container mx-auto">
           <Navagation />
         </div>
       </div>
-      <div className="container mx-auto p-5 lg:p-0">
+      <div className="container mx-auto p-5 lg:p-0 mb-10">
         <h2 className="text-5xl mt-10">About David Holbrook</h2>
-        <div className="mt-10 text-gray-700 dark:text-gray-300">
-         
-         <p>I’m an energetic and strangely upbeat front-end developer with over five years of experience in the field. My passion lies in crafting beautiful, user-friendly interfaces that enhance the digital experience.</p>
+        <div className="mt-10 bodytext">
+         <p>I'm an energetic and strangely upbeat front-end developer with over five years of experience in the field. My passion lies in crafting beautiful, user-friendly interfaces that enhance the digital experience.</p>
          
          <h3 class="mb-3">The Technical Bits:</h3>
          
          <ul class="ml-7 list-disc">
            <li class="mb-2"><span class="font-bold">Landing Pages:</span> I have built from simple landing pages for Google Ads campaigns to captivating web experiences</li>
            <li class="mb-2"><span class="font-bold">React and Vue Applications:</span> I specialize in building dynamic applications using React and Vue. Whether it is scaffolding out an entire website or building a small-use utility.</li>
-           <li class="mb-2"><span class="font-bold">Business Storefronts:</span> I’ve worked extensively with Magento 2 (PHP) and Hyva Themes (Tailwind CSS and Alpine JS) to create robust and visually appealing storefronts for businesses.</li>
+           <li class="mb-2"><span class="font-bold">Business Storefronts:</span> I've worked extensively with Magento 2 (PHP) and Hyva Themes (Tailwind CSS and Alpine JS) to create robust and visually appealing storefronts for businesses.</li>
            <li class="mb-3"><span class="font-bold">Other Technologies:</span> I have also used AWS Platform, Docker, and Node. I love exploring new technologies and adapting them to solve real-world challenges.</li>
          </ul>
          
@@ -33,14 +33,10 @@ const Blog = () => {
          
          <h3 class="my-3">Working with Others:</h3> 
          
-         I’m not just about code—I also enjoy working with and teaching others. I have collaborated with a vast array of teams, from marketing to technical IT to business development. In each case, I strive to find common ground to ensure that the work I do is understood by each member of the team. Additionally, I aim to teach code and logic straightforwardly, making it accessible for other team members to understand what I do.
-         
-
-         
-         
+         I'm not just about code—I also enjoy working with and teaching others. I have collaborated with a vast array of teams, from marketing to technical IT to business development. In each case, I strive to find common ground to ensure that the work I do is understood by each member of the team. Additionally, I aim to teach code and logic straightforwardly, making it accessible for other team members to understand what I do.
         </div>
       </div>
-    </>
+    </Layout>
   )
 }
 export default Blog

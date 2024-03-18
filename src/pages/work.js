@@ -7,7 +7,7 @@ const Work = () => {
   return (
     <>
       <Seo title="My Work" />
-      <div className="bg-black mb-5">
+      <div className="bg-pureblack mb-5">
         <div className="container mx-auto">
           <Navagation />
         </div>

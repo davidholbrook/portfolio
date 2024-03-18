@@ -6,9 +6,6 @@ import Seo from "../layout/seo"
 import styled from "styled-components"
 import { useSpring, animated } from "react-spring"
 
-import "../styles/typography.css"
-import "../styles/prism.css"
-
 import Navagation from "../components/navagation"
 
 const DiPage = ({ data }) => {
@@ -93,10 +90,12 @@ const ImgContainer = styled.div`
         </ImgContainer>
 
         {/* <Header landing="/Blog" /> */}
-        <Navagation />
+        <div className="container mx-auto">
+          <Navagation />
+        </div>
         <animated.div
           style={fadeUp}
-          className="container mx-auto p-5 pt-1 bg-white dark:bg-gray-700 lg:rounded-lg lg:mb-10 block"
+          className="container mx-auto p-5 pt-1 bg-portwhite lg:rounded-lg lg:mb-10 block"
         >
           <div className="lg:flex lg:flex-row-reverse lg:justify-between lg:items-top">
             <Date className="text-sm">{frontmatter.date}</Date>
