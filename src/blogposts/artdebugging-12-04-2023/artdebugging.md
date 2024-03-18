@@ -1,5 +1,5 @@
 ---
-path: "/thoughts/the-art-of-debugging"
+path: "/blog/the-art-of-debugging"
 title: "The Art of Debugging"
 date: "December 9th, 2023"
 sortdate: "12-09-2023"

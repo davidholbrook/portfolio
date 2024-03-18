@@ -1,5 +1,5 @@
 ---
-path: "/thoughts/magento-development-on-windows"
+path: "/blog/magento-development-on-windows"
 title: "Magento 2 Development on Windows"
 date: "August 9th, 2023"
 sortdate: "08-09-2023"

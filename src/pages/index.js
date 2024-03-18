@@ -6,7 +6,7 @@ import Navagation from "../components/navagation"
 import Seo from "../layout/seo"
 import bgImg from "../images/headerbg.jpg"
 
-import HomepageThoughts from "../components/HomepageThoughts"
+import HomepageBlog from "../components/HomepageBlog"
 
 const IndexPage = () => {
   return (
@@ -20,7 +20,7 @@ const IndexPage = () => {
               Hey, I'm David.
             </h2>
             <p className="lg:pt-6 text-2xl leading-loose text-gray-300">
-              I’m a Front End developer based out of Minneapolis, Minnesota. I have a passion for developing forward-thinking websites that help businesses succeed.
+              I'm a Front End developer based out of Minneapolis, Minnesota. I have a passion for developing forward-thinking websites that help businesses succeed.
             </p>
             <Link
               to="about"
@@ -31,7 +31,7 @@ const IndexPage = () => {
           </div>
         </div>
       </Header>
-      <HomepageThoughts />
+      <HomepageBlog />
     </Layout>
   )
 }

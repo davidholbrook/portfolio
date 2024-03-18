@@ -93,7 +93,7 @@ const DiPage = ({ data }) => {
           />
         </ImgContainer>
 
-        {/* <Header landing="/thoughts" /> */}
+        {/* <Header landing="/Blog" /> */}
         <Navagation />
         <animated.div
           style={fadeUp}

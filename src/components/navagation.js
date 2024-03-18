@@ -16,8 +16,8 @@ export const navagation = () => {
             </Link>
           </li>
           <li className="ml-5">
-            <Link to="/thoughts" className="text-2xl text-white uppercase">
-              Thoughts
+            <Link to="/Blog" className="text-2xl text-white uppercase">
+              Blog
             </Link>
           </li>
         </ul>

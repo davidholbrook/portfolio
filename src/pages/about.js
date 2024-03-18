@@ -3,7 +3,7 @@ import Seo from "../layout/seo"
 
 import Navagation from "../components/navagation"
 
-const Thoughts = () => {
+const Blog = () => {
   return (
     <>
       <Seo title="About Me" />
@@ -43,4 +43,4 @@ const Thoughts = () => {
     </>
   )
 }
-export default Thoughts
+export default Blog

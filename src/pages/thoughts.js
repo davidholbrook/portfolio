@@ -4,7 +4,7 @@ import Seo from "../layout/seo"
 
 import Navagation from "../components/navagation"
 
-const Thoughts = () => {
+const Blog = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -29,14 +29,14 @@ const Thoughts = () => {
 
   return (
     <>
-      <Seo title="My Thoughts" />
+      <Seo title="Blog" />
       <div className="bg-black">
         <div className="container mx-auto">
           <Navagation />
         </div>
       </div>
       <div className="container mx-auto p-5 lg:p-0">
-        <h2 className="text-5xl mt-10">My Thoughts</h2>
+        <h2 className="text-5xl mt-10">Blog</h2>
         <p className="text-gray-600 dark:text-gray-300 text-xl border-b-2 border-black pb-5">
           A collection of thoughts and recollections on web development,
           business, nerdium, and more.
@@ -68,4 +68,4 @@ const Thoughts = () => {
     </>
   )
 }
-export default Thoughts
+export default Blog

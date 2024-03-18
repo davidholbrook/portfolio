@@ -1,5 +1,5 @@
 ---
-path: "/thoughts/5-things-I-wish-I-knew-about-aws"
+path: "/blog/5-things-I-wish-I-knew-about-aws"
 title: "5 Things I Wish I Knew About AWS"
 date: "August 12th, 2023"
 sortdate: "08-12-2023"
