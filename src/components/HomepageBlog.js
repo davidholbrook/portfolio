@@ -27,7 +27,7 @@ const HomepageBlog = () => {
   return (
     <>
       <h2 className="text-3xl lg:text-xl container mx-auto mt-5 uppercase text-center lg:text-left lg:border-b-2 lg:border-black standardfont lg:font-normal">
-        Blog
+        My Blog
       </h2>
       <div className="container mx-auto m-10 mt-0 p-5 lg:p-0">
         {data.allMarkdownRemark.edges.map(
