@@ -7,9 +7,7 @@ import Navagation from "../components/navagation"
 const Blog = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(
-        sort: { fields: [frontmatter___sortdate], order: DESC }
-      ) {
+      allMarkdownRemark(sort: {frontmatter: {sortdate: DESC}}) {
         totalCount
         edges {
           node {

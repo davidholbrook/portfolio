@@ -16,29 +16,28 @@ const DiPage = ({ data }) => {
   const { frontmatter, html } = markdownRemark
 
   const Post = styled.div`
-    h2 {
-      color: ${frontmatter.secondary};
-      @media (prefers-color-scheme: dark) {
-        color: #d3d1d1;
-      }
+  h2 {
+    color: ${frontmatter.secondary};
+    @media (prefers-color-scheme: dark) {
+      color: #d3d1d1;
     }
-    h3 {
-      color: ${frontmatter.primary};
-      @media (prefers-color-scheme: dark) {
-        color: #d3d1d1;
-      }
+  }
+  h3 {
+    color: ${frontmatter.primary};
+    @media (prefers-color-scheme: dark) {
+      color: #d3d1d1;
     }
-    a {
-      color: ${frontmatter.secondary};
-      border-bottom: 1px solid ${frontmatter.secondary};
-      @media (prefers-color-scheme: dark) {
-        color: #ffffff;
-        border-color: #ffffff;
-      }
+  }
+  a {
+    color: ${frontmatter.secondary};
+    border-bottom: 1px solid ${frontmatter.secondary};
+    @media (prefers-color-scheme: dark) {
+      color: #ffffff;
+      border-color: #ffffff;
     }
-  `
-
-  const ImgContainer = styled.div`
+  }
+`
+const ImgContainer = styled.div`
     position: absolute;
     top: 0;
     height: 600px;
@@ -127,11 +126,12 @@ const DiPage = ({ data }) => {
   )
 }
 
+
 export default DiPage
 
 export const pageQuery = graphql`
-  query ($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query ($patheq: String!) {
+    markdownRemark(frontmatter: { path: { eq: $patheq } }) {
       html
       frontmatter {
         title

@@ -73,19 +73,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts-v2`,
+    resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        fonts: [
-          {
-            family: "STIX Two Text",
-            weights: ["400", "600", "700"],
-          },
-          {
-            family: "Open Sans",
-            weights: ["400", "700", "800"],
-          },
-        ],
+        google: {
+          families: ['STIX Two Text:400,600,700', 'Open Sans:400,700,800']
+        },
       },
-    },
+    }
   ],
 }

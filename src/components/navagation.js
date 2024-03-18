@@ -16,7 +16,7 @@ export const navagation = () => {
             </Link>
           </li>
           <li className="ml-5">
-            <Link to="/Blog" className="text-2xl text-white uppercase">
+            <Link to="/blog" className="text-2xl text-white uppercase">
               Blog
             </Link>
           </li>

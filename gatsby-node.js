@@ -4,23 +4,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const dipage = path.resolve(`src/templates/dipage.js`)
   // const projectTemplate = path.resolve(`src/templates/projects.js`)
   const result = await graphql(`
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              path
-              template
-              color
-            }
+  {
+    allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 1000) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            template
+            color
           }
         }
       }
     }
+  }
   `)
   // Handle errors
   if (result.errors) {
@@ -39,7 +36,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       createPage({
         path: `${node.frontmatter.path}`,
         component: dipage,
-        context: {},
+        context: {
+          patheq: node.frontmatter.path,
+        },
       })
     }
   })
