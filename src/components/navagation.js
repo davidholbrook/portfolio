@@ -4,9 +4,9 @@ import LogoWhite from "../images/logo_new_white.svg"
 import { Link } from "gatsby"
 
 export const Navagation = () => {
-    useEffect(() => {
-      document.body.setAttribute('data-theme', 'neon')
-    }, [])
+    // useEffect(() => {
+    //   document.body.setAttribute('data-theme', 'neon')
+    // }, [])
   return (
     <>
     <div className="flex flex-col py-8 md:flex-row md:justify-between align-center">

@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import Layout from "../layout/layout"
@@ -9,9 +9,6 @@ import bgImg from "../images/headerbg.jpg"
 import HomepageBlog from "../components/HomepageBlog"
 
 const IndexPage = () => {
-  // useEffect(() => {
-  //   document.body.setAttribute('data-theme', 'neon')
-  // }, [])
   return (
     <Layout>
       <Seo title="Welcome" />

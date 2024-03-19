@@ -14,21 +14,6 @@
     --portwhite: #fff;
     --bodytext: #000000;
   }
-  
-  @media(prefers-color-scheme: dark){
-    :root {
-      --pureblack: #374151;
-      --purewhite: #000000;
-      --tint: #d1d5db;
-      --darkgrey: #374151;
-      --portwhite: #374151;
-      --bodytext: #d1d5db;
-    }
-    body{
-      background: #374151;
-      color: #ffffff;
-    }
-  }
 
   body[data-theme='neon'] {
     --pureblack: #bada55;
