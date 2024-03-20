@@ -39,9 +39,9 @@ export const Navagation = () => {
     const MobileMenu = () => (
       <OuterModal>
         <InnerModal>
-          {themeToggle ? <button type="button" onClick={switchTheme} className="absolute"> <Lightdarktoggle icon={theme} /></button> : null}
-          <Link to="/" className="flex justify-center"><img src={LogoWhite} alt="my logo" width="120px" /></Link>
-          <button type="button" onClick={toggleMenuButton}><img src={CloseButton} className="absolute top-6 right-6" alt="close" width="35" /></button>
+          {themeToggle ? <button type="button" onClick={switchTheme} className="absolute"> <Lightdarktoggle icon={theme} /><span className="hidden">Toggle light/dark mode</span></button> : null}
+          <Link to="/" className="flex justify-center"><img src={LogoWhite} alt="my logo" width="120" /></Link>
+          <button type="button" onClick={toggleMenuButton}><img src={CloseButton} className="absolute top-6 right-6" alt="close" width="50" /></button>
           <nav className="flex flex-col items-center mt-10">
             <ul className="">
               <li className="text-center">
@@ -66,7 +66,7 @@ export const Navagation = () => {
       <Link to="/" className="align-center">
         <img src={LogoWhite} alt="" width="100px" className="mx-auto mb-5" />
       </Link>
-      <button type="button" className="block md:hidden" onClick={toggleMenuButton}><img src={MenuButton} className="absolute top-8 right-8" width="35" alt="toggle mobile menu" /></button>
+      <button type="button" className="block md:hidden" onClick={toggleMenuButton}><img src={MenuButton} className="absolute top-6 right-8" width="50" alt="toggle mobile menu" /></button>
       <div className="hidden absolute md:static md:flex justify-center md:justify-right md:items-start gap-4">
       <nav>
         <ul className="flex justify-center md:justify-right">
@@ -82,7 +82,7 @@ export const Navagation = () => {
           </li>
         </ul>
       </nav>
-      {themeToggle ? <button type="button" onClick={switchTheme}> <Lightdarktoggle icon={theme} /></button> : null}
+      {themeToggle ? <button type="button" onClick={switchTheme}> <Lightdarktoggle icon={theme} /> <span className="hidden">Toggle light/dark mode</span></button> : null}
       </div>
     </div>
     {mobileMenu ? <MobileMenu /> : null}

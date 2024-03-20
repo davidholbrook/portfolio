@@ -24,7 +24,7 @@ const HomepageBlog = () => {
   `)
   return (
     <>
-      <h2 className="text-3xl text-bodytext lg:text-xl container mx-auto mt-5 uppercase text-center lg:text-left lg:border-b-2 lg:border-bodytext standardfont lg:font-normal">
+      <h2 className="text-3xl text-bodytext lg:text-xl container mx-auto mt-10 lg:mt-5 uppercase text-center lg:text-left lg:border-b-2 lg:border-bodytext standardfont lg:font-normal">
         Blog
       </h2>
       <div className="container mx-auto m-10 mt-0 p-5 lg:p-0">
@@ -40,7 +40,7 @@ const HomepageBlog = () => {
                   className="text-lg md:text-2xl my-0"
                   style={{ color: node.frontmatter.primary }}
                 >
-                  <h2>{node.frontmatter.title}</h2>
+                  <h3 className="text-3xl leading-tight">{node.frontmatter.title}</h3>
                 </Link>
                 <p className="text-xl leading-relaxed mt-0 text-bodytext">
                   {node.excerpt}

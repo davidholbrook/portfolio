@@ -22,12 +22,14 @@ const IndexPage = () => {
             <p className="lg:pt-6 text-2xl leading-loose text-tint">
               I'm a Front End developer based out of Minneapolis, Minnesota. I have a passion for developing forward-thinking websites that help businesses succeed.
             </p>
+            <div className="flex justify-center md:justify-start">
             <Link
               to="about"
               className="inline-block border-2 border-tint text-tint p-2 mt-2 uppercase hover:bg-tint hover:text-black hover:border-tint"
-            >
+              >
               Learn More
             </Link>
+              </div>
           </div>
         </div>
       </Header>
@@ -42,4 +44,13 @@ const Header = styled.header`
   ${document.body.hasAttribute('data-theme') ? 'background: var(--bgblack);' : `background: url(${bgImg}) #000000;`}
   background-size: cover;
   padding-bottom: 5rem;
+  
+  @media screen and  (max-width: 1024px) {
+    padding: 2rem;
+
+    p{
+      text-align: center;
+    }
+  }
+  
 `
