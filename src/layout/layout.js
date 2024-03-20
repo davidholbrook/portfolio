@@ -5,7 +5,7 @@ export default function Layout({ children }) {
     <div className="min-h-[96vh]">
       {children}
     </div>
-      <footer className="text-center bg-bgblack text-white text-xl p-5">
+      <footer className="text-center bg-bgblack text-white text-base p-5">
         Protected under a{" "}
         <a
           href="https://creativecommons.org/licenses/by-sa/4.0/"
