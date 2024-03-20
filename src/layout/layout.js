@@ -2,7 +2,9 @@ import React from "react"
 export default function Layout({ children }) {
   return (
     <>
+    <div className="min-h-[96vh]">
       {children}
+    </div>
       <footer className="text-center bg-bgblack text-white text-xl p-5">
         Protected under a{" "}
         <a
