@@ -1,37 +1,49 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../layout/layout"
 import Seo from "../layout/seo"
-import styled from "styled-components"
+import styled, {createGlobalStyle} from "styled-components"
 import { useSpring, animated } from "react-spring"
 
 import Navagation from "../components/navagation"
 
 const DiPage = ({ data }) => {
+  const [theme, setTheme] = useState('light')
+
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
+  useEffect(() => {
+    const elhtml = document.querySelector('html');
+    const checkTheme = elhtml.dataset.theme === 'light'
+    
+    setTheme(checkTheme)
+
+  }, [theme])
+
+  const GlobalStyles = createGlobalStyle`
+    :root[data-theme="light"] {
+      --text-primary: ${frontmatter.primary};
+      --text-secondary: ${frontmatter.secondary};
+    }
+    :root[data-theme="dark"] {
+      --text-primary: "#ffffff;
+      --text-secondary: "#ffffff;
+    }
+  `;
+
+
   const Post = styled.div`
   h2 {
-    color: ${frontmatter.secondary};
-    @media (prefers-color-scheme: dark) {
-      color: #d3d1d1;
-    }
+    color: var(--text-secondary);
   }
   h3 {
-    color: ${frontmatter.primary};
-    @media (prefers-color-scheme: dark) {
-      color: #d3d1d1;
-    }
+    color: var(--text-primary);
   }
   a {
-    color: ${frontmatter.secondary};
-    border-bottom: 1px solid ${frontmatter.secondary};
-    @media (prefers-color-scheme: dark) {
-      color: #ffffff;
-      border-color: #ffffff;
-    }
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--text-secondary);
   }
 `
 const ImgContainer = styled.div`
@@ -50,24 +62,15 @@ const ImgContainer = styled.div`
 
   const Credit = styled.p`
     font-size: 0.8rem;
-    color: ${frontmatter.primary};
-    @media (prefers-color-scheme: dark) {
-      color: #ffffff;
-    }
+    color: var(--text-primary);
   `
 
   const Title = styled.h1`
-    color: ${frontmatter.primary};
-    @media (prefers-color-scheme: dark) {
-      color: #ffffff;
-    }
+    color: var(--text-primary);
   `
 
   const Date = styled.p`
-    color: ${frontmatter.primary};
-    @media (prefers-color-scheme: dark) {
-      color: #ffffff;
-    }
+    color: var(--text-primary);
   `
 
   const fadeUp = useSpring({
@@ -82,6 +85,7 @@ const ImgContainer = styled.div`
   return (
     <>
       <Layout>
+      <GlobalStyles />
         <Seo title={frontmatter.title} />
         <ImgContainer>
           <GatsbyImage
@@ -95,7 +99,7 @@ const ImgContainer = styled.div`
         </div>
         <animated.div
           style={fadeUp}
-          className="container mx-auto p-5 pt-1 bg-portwhite lg:rounded-lg lg:mb-10 block"
+          className="container mx-auto p-5 pt-1 bg-portbg lg:rounded-lg lg:mb-10 block"
         >
           <div className="lg:flex lg:flex-row-reverse lg:justify-between lg:items-top">
             <Date className="text-sm">{frontmatter.date}</Date>

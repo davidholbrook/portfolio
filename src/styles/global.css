@@ -6,19 +6,31 @@
     font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
   }
   
-  :root {
-    --pureblack: #000;
-    --purewhite: #fff;
+  :root[data-theme="light"] {
+    --bgblack: #000;
+    --bgwhite: #fff;
     --tint: #d1d5db;
-    --darkgrey: #374151;
-    --portwhite: #fff;
+    --portbg: #fff;
     --bodytext: #000000;
   }
 
-  body[data-theme='neon'] {
-    --pureblack: #bada55;
-    --purewhite: #000000;
+  :root[data-theme="dark"] {
+    --bgblack: #121212;
+    --bgwhite: #000;
+    --tint: #d1d5db;
+    --portbg: #374151;
+    --bodytext: #aeaeae;
+  }
+
+  :root[data-theme="neon"] {
+    --bgblack: #bada55;
+    --bgwhite: #000000;
     --tint: #333333;
-    --portwhite: #badc99;
+    --portbg: #badc99;
     --bodytext: #bbd900;
+  } 
+
+  body {
+    background-color: var(--bgwhite);
+    color: var(--bodytext);
   }

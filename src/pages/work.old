@@ -37,7 +37,7 @@ const Work = () => {
   return (
     <>
       <Seo title="My Work" />
-      <div className="bg-pureblack">
+      <div className="bg-bgblack">
         <div className="container mx-auto">
           <Navagation />
         </div>

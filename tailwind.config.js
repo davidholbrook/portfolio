@@ -4,11 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        "pureblack": "var(--pureblack)",
-        "purewhite": "var(--purewhite)",
+        "bgblack": "var(--bgblack)",
+        "bgwhite": "var(--bgwhite)",
         "tint": "var(--tint)",
-        "darkgrey": "var(--darkgrey)",
-        "portwhite": "var(--portwhite)",
+        "portbg": "var(--portbg)",
         "bodytext": "var(--bodytext)",
       }
     },

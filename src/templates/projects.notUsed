@@ -89,7 +89,7 @@
 
 //           <div
 //             id="companyHeader"
-//             className="col-span-1 w-full lg:w-64 lg:bg-purewhite px-10 lg:float-left lg:px-4 py-3 mt-0 rounded-lg"
+//             className="col-span-1 w-full lg:w-64 lg:bg-bgwhite px-10 lg:float-left lg:px-4 py-3 mt-0 rounded-lg"
 //           >
 //             <Company className="text-5xl lg:text-3xl font-bold mt-3">
 //               {frontmatter.title}
@@ -114,7 +114,7 @@
 //           </div>
 //           <Project
 //             dangerouslySetInnerHTML={{ __html: html }}
-//             className="lg:ml-72 block bg-purewhite px-10 py-4 mt-0 lg:mb-10 lg:rounded-lg lg:shadow-lg"
+//             className="lg:ml-72 block bg-bgwhite px-10 py-4 mt-0 lg:mb-10 lg:rounded-lg lg:shadow-lg"
 //           />
 //         </div>
 //       </Layout>

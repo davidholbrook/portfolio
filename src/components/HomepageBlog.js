@@ -24,7 +24,7 @@ const HomepageBlog = () => {
   `)
   return (
     <>
-      <h2 className="text-3xl text-pureblack lg:text-xl container mx-auto mt-5 uppercase text-center lg:text-left lg:border-b-2 lg:border-pureblack standardfont lg:font-normal">
+      <h2 className="text-3xl text-bodytext lg:text-xl container mx-auto mt-5 uppercase text-center lg:text-left lg:border-b-2 lg:border-bodytext standardfont lg:font-normal">
         Blog
       </h2>
       <div className="container mx-auto m-10 mt-0 p-5 lg:p-0">

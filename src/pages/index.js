@@ -39,7 +39,7 @@ const IndexPage = () => {
 export default IndexPage
 
 const Header = styled.header`
-  ${document.body.hasAttribute('data-theme') ? 'background: var(--pureblack);' : `background: url(${bgImg}) #000000;`}
+  ${document.body.hasAttribute('data-theme') ? 'background: var(--bgblack);' : `background: url(${bgImg}) #000000;`}
   background-size: cover;
   padding-bottom: 5rem;
 `

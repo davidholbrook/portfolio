@@ -3,7 +3,7 @@ export default function Layout({ children }) {
   return (
     <>
       {children}
-      <footer className="text-center bg-pureblack text-purewhite text-xl p-5">
+      <footer className="text-center bg-bgblack text-white text-xl p-5">
         Protected under a{" "}
         <a
           href="https://creativecommons.org/licenses/by-sa/4.0/"

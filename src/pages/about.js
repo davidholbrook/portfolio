@@ -8,7 +8,7 @@ const Blog = () => {
   return (
     <Layout>
       <Seo title="About Me" />
-      <div className="bg-pureblack">
+      <div className="bg-bgblack">
         <div className="container mx-auto">
           <Navagation />
         </div>
