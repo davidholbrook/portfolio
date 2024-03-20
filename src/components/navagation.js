@@ -4,7 +4,7 @@ import Lightdarktoggle from "./lightdarktoggle"
 import { Link } from "gatsby"
 
 export const Navagation = () => {
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState()
     const [themeToggle, setThemeToggle] = useState(true)
 
     useEffect(() => {
@@ -12,11 +12,11 @@ export const Navagation = () => {
       const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
 
       if(isDark){
-        setTheme('dark')
         setThemeToggle(false)
       }
 
-      html.dataset.theme = theme;
+      if(html.dataset.theme === "light") setTheme('light')
+      else setTheme('dark')
     }, [theme])
 
     function switchTheme() {

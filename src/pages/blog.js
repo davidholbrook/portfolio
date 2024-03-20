@@ -35,8 +35,8 @@ const Blog = () => {
         </div>
       </div>
       <div className="container mx-auto p-5 lg:p-0">
-        <h2 className="text-5xl mt-10 text-bgblack">Blog</h2>
-        <p className="text-bodytext text-xl border-b-2 border-black pb-5">
+        <h2 className="text-5xl mt-10 text-bodytext">Blog</h2>
+        <p className="text-bodytext text-xl border-b-2 border-bodytext pb-5">
           A collection of thoughts and recollections on web development,
           business, nerdium, and more.
         </p>

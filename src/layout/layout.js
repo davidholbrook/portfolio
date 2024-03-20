@@ -1,5 +1,15 @@
-import React from "react"
+import React, {useEffect} from "react"
 export default function Layout({ children }) {
+
+  useEffect(() => {
+    const html = document.querySelector('html');
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    
+    if(!html.dataset.theme) html.dataset.theme = 'light'
+    if(isDark) html.dataset.theme = 'dark'
+
+  }, [])
+
   return (
     <>
     <div className="min-h-[96vh]">
