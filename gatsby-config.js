@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `David Holbrook`,
-    description: `Web developer for DecksDirect, also designs things.`,
-    author: `@davidholbrook`,
-    siteUrl: `https://davidholbrook.info`,
+    title: "David Holbrook",
+    description: "A Front End developer from Minneapolis.",
+    author: "@davidholbrook",
+    siteUrl: "https://davidholbrook.info",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -15,23 +15,30 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",
+        name: `David Holbrook`,
+        short_name: `davidholbrook`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#000000`,
+        display: `standalone`,
       },
     },
-    `gatsby-plugin-sharp`,
+    "gatsby-plugin-offline",
+    "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `src`,
+        name: "src",
         path: `${__dirname}/src`,
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: "gatsby-remark-prismjs",
             options: {
               classPrefix: "language-",
               inlineCodeMarker: null,
@@ -62,7 +69,7 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-images`,
+            resolve: "gatsby-remark-images",
             options: {
               maxWidth: 800,
               showCaptions: true,
