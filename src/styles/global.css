@@ -19,7 +19,7 @@
     --bgwhite: #000;
     --tint: #d1d5db;
     --portbg: #374151;
-    --bodytext: #aeaeae;
+    --bodytext: #eeeeee;
   }
 
   :root[data-theme="neon"] {
