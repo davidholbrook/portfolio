@@ -20,7 +20,7 @@ const IndexPage = () => {
               Hey, I'm David.
             </h2>
             <p className="lg:pt-6 text-2xl leading-loose text-tint">
-              I'm a Front End developer based out of Minneapolis, Minnesota. I have a passion for developing forward-thinking websites that help businesses succeed.
+            I'm a Minneapolis-based front-end developer with a passion for creating customer-focused websites that drive business success.
             </p>
             <div className="flex justify-center md:justify-start">
             <Link
