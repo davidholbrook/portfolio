@@ -2,6 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Seo from "../layout/seo"
+import Layout from "../layout/layout"
 
 import Navagation from "../components/navagation"
 
@@ -35,7 +36,7 @@ const Work = () => {
   `)
 
   return (
-    <>
+    <Layout>
       <Seo title="My Work" />
       <div className="bg-black">
         <div className="container mx-auto">
@@ -58,7 +59,7 @@ const Work = () => {
                       node.frontmatter.frontImage.childImageSharp
                         .gatsbyImageData
                     }
-                    className="col-span-1"
+                    className="col-span-1 md:mt-4"
                   />
                   <div className="col-span-10">
                     <Link to={node.frontmatter.path}>
@@ -73,7 +74,7 @@ const Work = () => {
           )}
         </div>
       </div>
-    </>
+    </Layout>
   )
 }
 export default Work
