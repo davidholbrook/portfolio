@@ -4,7 +4,7 @@ title: "Wiha Bitfinder"
 role: "Developer"
 url: "http://wihabits.com"
 color: "#004b2c"
-sd: "A service built-in React for finding the right screwdriver or power drill bit for the right job."
+sd: "A service built-in React for finding the right screwdriver or power drill bit for the right job"
 template: "project"
 frontImage: "./bitfinder-homepage.jpg"
 order: 3

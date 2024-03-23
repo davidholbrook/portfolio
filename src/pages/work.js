@@ -37,39 +37,39 @@ const Work = () => {
 
   return (
     <Layout>
-      <Seo title="My Work" />
+      <Seo title="My Portfolio" />
       <div className="bg-black">
         <div className="container mx-auto">
           <Navagation />
         </div>
       </div>
       <div className="container mx-auto p-5 lg:p-0">
-        <h2 className="text-5xl mt-10">My Work</h2>
-        <p className="text-gray-600 dark:text-gray-300 text-xl border-b-2 border-black pb-5">
-          Below is a sample of work that I have done for my past full-time
-          positions.
+        <h2 className="text-5xl mt-10">My Portfolio</h2>
+        <p className="text-bodytext text-xl border-b-2 border-black pb-5">
+        Here is a list of companies and projects that I have worked on in the past
         </p>
-        <div className="mt-5 ">
+        <div className="mt-5 md:grid grid-cols-3 gap-5 mb-8">
           {data.allMarkdownRemark.edges.map(
             ({ node }) =>
               node.frontmatter.template === "project" && (
-                <div className="mb-2 md:grid md:grid-cols-12 md:gap-5 items-center">
-                  <GatsbyImage
-                    image={
-                      node.frontmatter.frontImage.childImageSharp
-                        .gatsbyImageData
-                    }
-                    className="col-span-1 md:mt-4"
-                  />
-                  <div className="col-span-10">
-                    <Link to={node.frontmatter.path}>
-                      <h2 className="text-3xl pt-6">
-                        {node.frontmatter.title}
-                      </h2>
-                    </Link>
-                    <p>{node.frontmatter.sd}</p>
+              <Link to={node.frontmatter.path}>
+                  <div className="mb-5 md:flex flex-col justify-center">
+                    <GatsbyImage
+                      image={
+                        node.frontmatter.frontImage.childImageSharp
+                          .gatsbyImageData
+                      }
+                      className="border border-grey-900 mx-auto"
+                    />
+                    <div className="text-center">
+                      
+                        <h2 className="text-3xl leading-tight mb-1 mt-10">
+                          {node.frontmatter.title}
+                        </h2>
+                      <p className="my-0">{node.frontmatter.sd}</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               )
           )}
         </div>

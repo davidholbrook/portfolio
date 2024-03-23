@@ -4,7 +4,7 @@ title: "DecksDirect"
 role: "Developer"
 color: "#1d4588"
 url: "https://www.decksdirect.com"
-sd: "An online distributor of premium decking products"
+sd: "Online distributor of premium decking products"
 template: "project"
 frontImage: "./trex-cropped.jpeg"
 order: 1
