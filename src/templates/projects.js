@@ -10,72 +10,94 @@ import "../styles/typography.css"
 const Project = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-  // disabling eslint as varible is not used but is necessary for the effect to work.
-  //eslint-disable-next-line
-  const [scrollPosition, setSrollPosition] = useState(0)
 
   const handleScroll = () => {
-    const companyHeader = document.getElementById("companyHeader")
-    const position = window.pageYOffset
-    setSrollPosition(position)
+    const companyHeader = document.querySelector('.companyHeader')
+    const position = window.scrollY
 
     if (position >= 135) {
-      companyHeader.classList.add("lg:fixed", "lg:top-5")
+      companyHeader.classList.add("lg:sticky", "lg:top-3")
     }
     if (position <= 135) {
-      companyHeader.classList.remove("lg:fixed", "lg:top-5")
+      companyHeader.classList.remove("lg:sticky", "lg:top-3")
     }
   }
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true })
+      window.addEventListener("scroll", handleScroll, { passive: true })
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
 
   const GlobalStyle = createGlobalStyle`
-  body {
-    background: ${frontmatter.color};
-    @media (prefers-color-scheme: dark) {
-      background: #333333;
+  
+    :root[data-theme="light"] {
+      --text-primary: ${frontmatter.color};
+      --specbg: ${frontmatter.color};
+      --figcap: #333333;
     }
+    :root[data-theme="dark"] {
+      --text-primary: #ffffff;
+      --specbg: #333333;
+      --figcap: #eeeeee;
+    }
+
+  body {
+    /* need to make important to for theme color to appear */
+    background-color: var(--specbg) !important;
   }
 `
 
   const Project = styled.div`
+    h2, h3, h4, h5 {
+      color: var(--text-primary);
+    }
+    h3{
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+    h4{
+      font-size: 1.4rem;
+      line-height: 1.7;
+      font-weight: 500
+    }
+    h5{
+      font-size: 1.3rem;
+      line-height: 2.25rem;
+    }
     a {
-      color: ${frontmatter.color};
-      border-color: ${frontmatter.color};
+      color: var(--text-primary);
+      border-color: var(--text-primary);
       font-weight: bold;
-      @media (prefers-color-scheme: dark) {
-        color: #ffffff;
-        text-decoration: underline;
-      }
     }
     figcaption {
-      color: ${frontmatter.color};
-      @media (prefers-color-scheme: dark) {
-        color: #ffffff;
-      }
+      color: var(--figcap);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.1rem;
     }
   `
 
   const Company = styled.h2`
     color: #ffffff;
-    @media (min-width: 1024px) {
-      color: ${frontmatter.color};
-    }
-    @media (prefers-color-scheme: dark) and (min-width: 1024px) {
-      color: #ffffff;
+
+    @media (min-width: 1280px){
+      color: var(--text-primary);
     }
   `
 
   const WebsiteLink = styled.a`
-    color: ${frontmatter.color};
+    color: #ffffff;
     font-weight: bold;
-    @media (prefers-color-scheme: dark) {
-      color: #ffffff;
-      text-decoration: underline;
+
+    @media (min-width: 1280px){
+      color: var(--text-primary);
+
+      display:inline-block;
+      width: 10rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   `
 
@@ -86,26 +108,26 @@ const Project = ({ data }) => {
       <Layout>
         <div className="container mx-auto">
           <Navagation />
-
+          <div className="xl:grid grid-cols-12 gap-3 items-start">
           <div
-            id="companyHeader"
-            className="col-span-1 w-full lg:w-64 lg:bg-white lg:dark:bg-gray-700 px-10 lg:float-left lg:px-4 py-3 mt-0 rounded-lg"
+            className="companyHeader col-span-2 w-full xl:bg-portbg px-4 xl:px-4 py-1 my-0 rounded-lg"
           >
             <Company className="text-5xl lg:text-3xl font-bold mt-3">
               {frontmatter.title}
             </Company>
-            <p className="text-sm text-white lg:text-black lg:dark:text-gray-200">
+            <p className="text-sm text-white xl:text-bodytext">
               {frontmatter.sd}
             </p>
-            <p className="text-sm text-white lg:text-black lg:dark:text-gray-200">
+            <p className="text-sm text-white xl:text-bodytext">
               <strong>Role: </strong>
               {frontmatter.role}
             </p>
-            <p className="text-sm text-white lg:text-black lg:dark:text-gray-200">
+            <p className="text-sm text-white xl:text-bodytext">
               <strong>Website: </strong>
               <WebsiteLink
                 href={frontmatter.url}
                 target="_blank"
+                title={frontmatter.url}
                 rel="noopener"
               >
                 {frontmatter.url}
@@ -114,8 +136,9 @@ const Project = ({ data }) => {
           </div>
           <Project
             dangerouslySetInnerHTML={{ __html: html }}
-            className="lg:ml-72 block bg-white dark:bg-gray-700 px-10 py-4 mt-0 lg:mb-10 lg:rounded-lg lg:shadow-lg"
+            className="bg-portbg col-span-9 px-10 py-4 mb-10 lg:rounded-lg lg:shadow-lg"
           />
+        </div>
         </div>
       </Layout>
     </>
@@ -123,8 +146,8 @@ const Project = ({ data }) => {
 }
 export default Project
 export const pageQuery = graphql`
-  query ($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query ($patheq: String!) {
+    markdownRemark(frontmatter: { path: { eq: $patheq } }) {
       html
       frontmatter {
         title

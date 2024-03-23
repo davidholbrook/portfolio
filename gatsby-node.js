@@ -29,7 +29,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       createPage({
         path: `${node.frontmatter.path}`,
         component: projectTemplate,
-        context: {},
+        context: {
+          patheq: node.frontmatter.path,
+        },
       })
     } else {
       createPage({

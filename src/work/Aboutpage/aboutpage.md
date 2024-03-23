@@ -1,37 +1,44 @@
 ---
 path: "/work/decksdirectaboutpage"
-title: "DecksDirect About Page"
+title: "About Page"
 role: "Developer"
 color: "#1d4588"
-url: "https://www.decksdirect.com"
-sd: "A complex brand page to show off the personal level of service within DecksDirect"
+url: "https://www.decksdirect.com/about"
+sd: "A look into the process of creating the About page at DecksDirect"
 template: "project"
 frontImage: "./AboutPage__closeup.jpeg"
 ---
 
-## Overview
-When I started at [DecksDirect](https://www.decksdirect.com), one of the objectives was to show off the company value of “Real People, Real Service” through an about us page. The owner was passionate about having the employees shown on the page, that when you call the company you get a real person, not a robot.
+### Overview
 
-![The full about page circa 2022](./AboutPage__fullpage.jpeg)
+When I started at [DecksDirect](https://www.decksdirect.com), one of the first things that the owner wanted me to do was to show off the company’s “Real People, Real Service” value. This was important to him as it showed our visitors that when you called the company, you were getting a real human being, not a robot.
 
-## My roles and responsibilities
+![The About Page](./AboutPage__fullpage.jpeg)
 
-DecksDirect was using the EOS (Entrepreneurial Operating System) at the time, and one of the components of this system is to have one “rock”, or thing to do that can make the company better outside of you own day-to-day job. My first rock was to update the about page, both in terms of new images and design, but also in a way that employees can be displayed and managed.
+### My Role and Responsibilities
 
-From a page design perspective, I translated the wonderful design that my creative manager at the time created for me, as for the employee management I developed a few [Vue.js](https://vuejs.org) components with some vanilla javascript to make this work.
+My role in this project was vast, it ranged from collecting information from the employees, writing new company-wide rules on how that information was to be handled, and then finally developing the code needed to display this information on the page. This ended up being one of the most comprehensive projects that I have worked on, due to the vast range of work required of me.
 
-![Close up of the people grid](./AboutPage__closeup.jpeg)
+![Close Up of the Employees](./AboutPage__closeup.jpeg)
 
-## Problem and Opportunities
+### The Process
 
-Creating the employee section was a difficult task to come up with in a short amount of time. I had roughly about a week to do most of the coding work. Coming off a custom development project that I created for Wiha Tools, I had some mastery of Vue and I knew that you could use it to create interfaces without loading a whole npm library worth of resources. 
+#### The Groundwork
 
-Using this knowledge to my advantage, I started by creating a huge JSON file with all the employees names that the page would fetch in real time. After that, I used the native javascript fetch utility to load in the JSON file (via try/catch) and then mapped out the html elements to Vue components.
+This process started with the Creative Manager and me going through all the requirements and building out a timetable with all the steps needed for completion. Once we had a timetable in place, the next step was to create an SOP or Standard Operating Procedure which was a document that handled all cases for adding, editing, and deleting employee information to this webpage. This document was created with the intent that it was to be followed by everyone and was created in collaboration with Human Resources and other vital members of the DecksDirect team.
 
-The advantage of using this method is that I was able to make changes to the employee section quickly on demand, this was helpful as there was a influx of incoming and outgoing employees at the time. Also, as this had to be a Magento module, as you could not use Vue in CMS pages, this was before we translated to Hyva, so some aspects had to be hardcoded. This was the not the most optimized way of handing this problem, but it worked.
+#### Content, Design, and Assets
 
-![A detail page of the employee (in this case myself)](./AboutPage__detailed.jpeg)
+Once the rules were approved, a form was created and emailed out to all employees. The photography was handled by the graphic designer who took and edited all employee photographs. When all the content and assets were collected, the Creative Manager had finished the design and it was ready for work.
 
-## Conclusion
+#### Development
 
-Working on this project was very challenging and rewarding for me a developer. It allowed me to stretch out my wings as a developer, but also create something meaningful to the company as a whole. The fact that there is so much personalization in every fun fact and description of each person ended up in is truly amazing. Unfortunately, due to so much change this module eventually needed to be scraped for a more efficient CMS approach, but it was still an amazing project for the time.
+At this point in the process, I had roughly about two weeks left before the entire project was due. With this in mind, I compiled all the information and asset locations into a massive JSON document and stored it on the company's servers. I then built a custom module that parsed the large JSON file and mapped it into a grid using [Vue.js](https://vuejs.org/). Finally, with the development complete, all the documentation was uploaded and archived on the company's servers and the final approval by the owner was given.
+
+![Expanded Employee Card](./AboutPage__detailed.jpeg)
+
+### Conclusion
+
+This was one of the most challenging yet rewarding projects that I have ever been a part of. It required collaboration with multiple departments, following strict guidelines and timetables, and finally a tight turnaround window to complete the final code. I did however learn quite a bit as it required me to step out of my comfort zone and learn skills that I normally did not use. It was a success for the employees, as it not only showed off their individual personalities but also the strength of the company. Finally, when customers called in, they could be comforted that there were real people on the other end of the line, not just digital robots.
+
+Unfortunately, the code deployed for this project no longer exists, it has since been reduced to a simpler page for editing reasons. The same guidelines though are still in place and are still followed to this day.

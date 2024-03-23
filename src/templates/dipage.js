@@ -28,8 +28,8 @@ const DiPage = ({ data }) => {
       --text-secondary: ${frontmatter.secondary};
     }
     :root[data-theme="dark"] {
-      --text-primary: "#ffffff;
-      --text-secondary: "#ffffff;
+      --text-primary: #ffffff;
+      --text-secondary: #ffffff;
     }
   `;
 
