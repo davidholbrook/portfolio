@@ -80,6 +80,11 @@ export const Navagation = () => {
               Blog
             </Link>
           </li>
+          <li className="ml-5">
+            <Link to="/work" className="text-2xl text-white uppercase">
+              Portfolio
+            </Link>
+          </li>
         </ul>
       </nav>
       {themeToggle ? <button type="button" onClick={switchTheme}> <Lightdarktoggle icon={theme} /> <span className="hidden">Toggle light/dark mode</span></button> : null}
