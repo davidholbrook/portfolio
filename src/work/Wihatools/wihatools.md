@@ -7,6 +7,7 @@ color: "#006892"
 sd: "A leading manufacturer of quality German handtools, since 1939"
 template: "project"
 frontImage: "./wiha-homepage.png"
+order: 4
 ---
 
 ## Overview

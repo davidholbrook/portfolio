@@ -7,6 +7,7 @@ url: "https://www.decksdirect.com"
 sd: "An online distributor of premium decking products"
 template: "project"
 frontImage: "./trex-cropped.jpeg"
+order: 1
 ---
 
 DecksDirect is an online distributor of premium decking products, they specialize in helping customers build their dream decks with expert advice and premium decking products. This job gave me the unique opportunity to work in many diverse roles with the ultimate goal of helping people build better decks.
