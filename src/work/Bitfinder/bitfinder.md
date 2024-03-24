@@ -22,7 +22,7 @@ Using a JSON file that was outputted from Magento, we were able to fill in the p
 
 ## Reactive
 
-I was able to help choose React for the backbone of this service, primarily as I had prior knowledge of it and could implement it quickly. Using `Create-React-App`, we were able to quickly spin up a base framework and create all the basic pages and functions needed to run the website. Once this was done, we could start using React to its fullest creating and swapping out components.
+I was able to help choose React for the backbone of this service, primarily as I had prior knowledge of it and could implement it quickly. Using [Create React App](https://create-react-app.dev/), we were able to quickly spin up a base framework and create all the basic pages and functions needed to run the website. Once this was done, we could start using React to its fullest creating and swapping out components.
 
 Using the core concept of React, Components, and State, we were able to allow for context changes for the service, based on the inputs of the customers. Using State along with the JSON data, we were able to create on-the-fly selections for the customer based on what style and material they want the bit to be. Next, using this context, we were able to show results that are relevant and accurate for the customers' needs.
 

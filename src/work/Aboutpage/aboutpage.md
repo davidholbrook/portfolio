@@ -2,7 +2,7 @@
 path: "/work/decksdirectaboutpage"
 title: "About Page"
 role: "Developer"
-color: "#1d4588"
+color: "#ad8f59"
 url: "https://www.decksdirect.com/about"
 sd: "A look into the process of creating the About page at DecksDirect"
 template: "project"
