@@ -7,6 +7,7 @@ import Seo from "../layout/seo"
 import bgImg from "../images/headerbg.jpg"
 
 import HomepageBlog from "../components/HomepageBlog"
+import HomepageWork from "../components/HomepageWork"
 
 const IndexPage = () => {
   return (
@@ -33,6 +34,7 @@ const IndexPage = () => {
           </div>
         </div>
       </Header>
+      <HomepageWork />
       <HomepageBlog />
     </Layout>
   )

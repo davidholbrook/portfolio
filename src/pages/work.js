@@ -9,7 +9,7 @@ import Navagation from "../components/navagation"
 const Work = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___order] }) {
+      allMarkdownRemark(sort: {frontmatter: {order: ASC}}) {
         totalCount
         edges {
           node {
