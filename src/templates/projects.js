@@ -64,6 +64,7 @@ const Project = ({ data }) => {
     h5{
       font-size: 1.3rem;
       line-height: 2.25rem;
+      margin-top: 1rem;
     }
     a {
       color: var(--text-primary);
