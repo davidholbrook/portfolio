@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
 import styled, { createGlobalStyle } from 'styled-components'
@@ -48,7 +49,7 @@ const Project = ({ data }) => {
   }
 `
 
-  const Project = styled.div`
+  const ProjectDiv = styled.div`
     h2,
     h3,
     h4,
@@ -136,7 +137,7 @@ const Project = ({ data }) => {
                 </WebsiteLink>
               </p>
             </div>
-            <Project
+            <ProjectDiv
               dangerouslySetInnerHTML={{ __html: html }}
               className="bg-portbg col-span-9 px-10 py-4 mb-10 lg:rounded-lg lg:shadow-lg"
             />

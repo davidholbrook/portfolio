@@ -32,48 +32,9 @@ export const Navagation = () => {
     }
   }
 
-  const toggleMenuButton = (e) => {
+  const toggleMenuButton = () => {
     mobileMenu ? setMobileMenu(false) : setMobileMenu(true)
   }
-
-  const MobileMenu = () => (
-    <OuterModal>
-      <InnerModal>
-        {themeToggle ? (
-          <button type="button" onClick={switchTheme} className="absolute">
-            {' '}
-            <Lightdarktoggle icon={theme} />
-            <span className="hidden">Toggle light/dark mode</span>
-          </button>
-        ) : null}
-        <Link to="/" className="flex justify-center">
-          <img src={LogoWhite} alt="my logo" width="120" />
-        </Link>
-        <button type="button" onClick={toggleMenuButton}>
-          <img
-            src={CloseButton}
-            className="absolute top-6 right-6"
-            alt="close"
-            width="50"
-          />
-        </button>
-        <nav className="flex flex-col items-center mt-10">
-          <ul className="">
-            <li className="text-center">
-              <Link to="/about" className="text-4xl text-white uppercase">
-                About
-              </Link>
-            </li>
-            <li className="text-center mt-8">
-              <Link to="/blog" className="text-4xl text-white uppercase">
-                Blog
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </InnerModal>
-    </OuterModal>
-  )
 
   return (
     <>
@@ -122,7 +83,49 @@ export const Navagation = () => {
           ) : null}
         </div>
       </div>
-      {mobileMenu ? <MobileMenu /> : null}
+      {mobileMenu ? (
+        <OuterModal>
+          <InnerModal>
+            {themeToggle ? (
+              <button type="button" onClick={switchTheme} className="absolute">
+                {' '}
+                <Lightdarktoggle icon={theme} />
+                <span className="hidden">Toggle light/dark mode</span>
+              </button>
+            ) : null}
+            <Link to="/" className="flex justify-center">
+              <img src={LogoWhite} alt="my logo" width="120" />
+            </Link>
+            <button type="button" onClick={toggleMenuButton}>
+              <img
+                src={CloseButton}
+                className="absolute top-6 right-6"
+                alt="close"
+                width="50"
+              />
+            </button>
+            <nav className="flex flex-col items-center mt-10">
+              <ul className="">
+                <li className="text-center">
+                  <Link to="/about" className="text-4xl text-white uppercase">
+                    About
+                  </Link>
+                </li>
+                <li className="text-center mt-8">
+                  <Link to="/blog" className="text-4xl text-white uppercase">
+                    Blog
+                  </Link>
+                </li>
+                <li className="text-center mt-8">
+                  <Link to="/work" className="text-4xl text-white uppercase">
+                    Portfolio
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </InnerModal>
+        </OuterModal>
+      ) : null}
     </>
   )
 }
@@ -137,9 +140,12 @@ const OuterModal = styled.div`
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+
+  padding-top: 1rem;
 
   pointer-events: none;
+  overflow-y: hidden;
 
   z-index: 3;
 `
@@ -150,7 +156,7 @@ const InnerModal = styled.div`
   border-radius: 1rem;
 
   min-width: 90vw;
-  min-height: 90vh;
+  /* min-height: 90vh; */
 
   position: relative;
   pointer-events: auto;
