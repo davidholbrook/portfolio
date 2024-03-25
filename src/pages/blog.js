@@ -1,14 +1,14 @@
-import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-import Seo from "../layout/seo"
-import Layout from "../layout/layout"
+import React from 'react'
+import { Link, useStaticQuery, graphql } from 'gatsby'
+import Seo from '../layout/seo'
+import Layout from '../layout/layout'
 
-import Navagation from "../components/navagation"
+import Navagation from '../components/navagation'
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: {frontmatter: {sortdate: DESC}}) {
+      allMarkdownRemark(sort: { frontmatter: { sortdate: DESC } }) {
         totalCount
         edges {
           node {
@@ -43,7 +43,7 @@ const Blog = () => {
         <div className="mt-10 ">
           {data.allMarkdownRemark.edges.map(
             ({ node }) =>
-              node.frontmatter.template === "blog" && (
+              node.frontmatter.template === 'blog' && (
                 <div className="mb-2">
                   <p className="pt-6 text-xs uppercase">
                     {node.frontmatter.date}
@@ -56,9 +56,7 @@ const Blog = () => {
                       {node.frontmatter.title}
                     </h2>
                   </Link>
-                  <p className="leading-loose text-bodytext">
-                    {node.excerpt}
-                  </p>
+                  <p className="leading-loose text-bodytext">{node.excerpt}</p>
                 </div>
               )
           )}

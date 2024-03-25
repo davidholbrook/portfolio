@@ -1,11 +1,11 @@
-import React, { useEffect } from "react"
-import { graphql } from "gatsby"
-import Layout from "../layout/layout"
-import Seo from "../layout/seo"
-import styled, { createGlobalStyle } from "styled-components"
+import React, { useEffect } from 'react'
+import { graphql } from 'gatsby'
+import styled, { createGlobalStyle } from 'styled-components'
+import Layout from '../layout/layout'
+import Seo from '../layout/seo'
 
-import Navagation from "../components/navagation"
-import "../styles/typography.css"
+import Navagation from '../components/navagation'
+import '../styles/typography.css'
 
 const Project = ({ data }) => {
   const { markdownRemark } = data
@@ -16,16 +16,16 @@ const Project = ({ data }) => {
     const position = window.scrollY
 
     if (position >= 135) {
-      companyHeader.classList.add("lg:sticky", "lg:top-3")
+      companyHeader.classList.add('lg:sticky', 'lg:top-3')
     }
     if (position <= 135) {
-      companyHeader.classList.remove("lg:sticky", "lg:top-3")
+      companyHeader.classList.remove('lg:sticky', 'lg:top-3')
     }
   }
   useEffect(() => {
-      window.addEventListener("scroll", handleScroll, { passive: true })
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => {
-      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener('scroll', handleScroll)
     }
   }, [])
 
@@ -49,19 +49,22 @@ const Project = ({ data }) => {
 `
 
   const Project = styled.div`
-    h2, h3, h4, h5 {
+    h2,
+    h3,
+    h4,
+    h5 {
       color: var(--text-primary);
     }
-    h3{
+    h3 {
       font-size: 1.875rem;
       line-height: 2.25rem;
     }
-    h4{
+    h4 {
       font-size: 1.4rem;
       line-height: 1.7;
-      font-weight: 500
+      font-weight: 500;
     }
-    h5{
+    h5 {
       font-size: 1.3rem;
       line-height: 2.25rem;
       margin-top: 1rem;
@@ -82,7 +85,7 @@ const Project = ({ data }) => {
   const Company = styled.h2`
     color: #ffffff;
 
-    @media (min-width: 1280px){
+    @media (min-width: 1280px) {
       color: var(--text-primary);
     }
   `
@@ -91,10 +94,10 @@ const Project = ({ data }) => {
     color: #ffffff;
     font-weight: bold;
 
-    @media (min-width: 1280px){
+    @media (min-width: 1280px) {
       color: var(--text-primary);
 
-      display:inline-block;
+      display: inline-block;
       width: 10rem;
       overflow: hidden;
       white-space: nowrap;
@@ -110,36 +113,34 @@ const Project = ({ data }) => {
         <div className="container mx-auto">
           <Navagation />
           <div className="xl:grid grid-cols-12 gap-3 items-start">
-          <div
-            className="companyHeader col-span-2 w-full xl:bg-portbg px-4 xl:px-4 py-1 my-0 rounded-lg"
-          >
-            <Company className="text-5xl lg:text-3xl font-bold mt-3">
-              {frontmatter.title}
-            </Company>
-            <p className="text-sm text-white xl:text-bodytext">
-              {frontmatter.sd}
-            </p>
-            <p className="text-sm text-white xl:text-bodytext">
-              <strong>Role: </strong>
-              {frontmatter.role}
-            </p>
-            <p className="text-sm text-white xl:text-bodytext">
-              <strong>Website: </strong>
-              <WebsiteLink
-                href={frontmatter.url}
-                target="_blank"
-                title={frontmatter.url}
-                rel="noopener"
-              >
-                {frontmatter.url}
-              </WebsiteLink>
-            </p>
+            <div className="companyHeader col-span-2 w-full xl:bg-portbg px-4 xl:px-4 py-1 my-0 rounded-lg">
+              <Company className="text-5xl lg:text-3xl font-bold mt-3">
+                {frontmatter.title}
+              </Company>
+              <p className="text-sm text-white xl:text-bodytext">
+                {frontmatter.sd}
+              </p>
+              <p className="text-sm text-white xl:text-bodytext">
+                <strong>Role: </strong>
+                {frontmatter.role}
+              </p>
+              <p className="text-sm text-white xl:text-bodytext">
+                <strong>Website: </strong>
+                <WebsiteLink
+                  href={frontmatter.url}
+                  target="_blank"
+                  title={frontmatter.url}
+                  rel="noopener"
+                >
+                  {frontmatter.url}
+                </WebsiteLink>
+              </p>
+            </div>
+            <Project
+              dangerouslySetInnerHTML={{ __html: html }}
+              className="bg-portbg col-span-9 px-10 py-4 mb-10 lg:rounded-lg lg:shadow-lg"
+            />
           </div>
-          <Project
-            dangerouslySetInnerHTML={{ __html: html }}
-            className="bg-portbg col-span-9 px-10 py-4 mb-10 lg:rounded-lg lg:shadow-lg"
-          />
-        </div>
         </div>
       </Layout>
     </>

@@ -1,0 +1,14 @@
+{
+	"extends": [
+	  "wesbos"
+	],
+	"plugins": [
+		"nova"
+	],
+	"rules": {
+	  "no-console": "off",
+	},
+	"env": {
+		"commonjs": true
+	}
+  }
