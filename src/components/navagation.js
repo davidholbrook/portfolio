@@ -1,137 +1,77 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import LogoWhite from '../images/logo_new_white.svg'
-import CloseButton from '../images/close.svg'
-import MenuButton from '../images/menu.svg'
-import Lightdarktoggle from './lightdarktoggle'
+import React, { useEffect, useState } from "react"
+import LogoWhite from "../images/logo_new_white.svg"
+import CloseButton from "../images/close.svg"
+import MenuButton from "../images/menu.svg"
+import Lightdarktoggle from "./lightdarktoggle"
+import { Link } from "gatsby"
+import styled from 'styled-components';
 
 export const Navagation = () => {
-  const [theme, setTheme] = useState()
-  const [themeToggle, setThemeToggle] = useState(true)
-  const [mobileMenu, setMobileMenu] = useState(false)
+    const [theme, setTheme] = useState()
+    const [themeToggle, setThemeToggle] = useState(true)
+    const [mobileMenu, setMobileMenu] = useState(false)
 
-  useEffect(() => {
-    const html = document.querySelector('html')
-    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    useEffect(() => {
+      const html = document.querySelector('html');
+      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
 
-    if (isDark) setThemeToggle(false)
+      if(isDark) setThemeToggle(false)
 
-    if (html.dataset.theme === 'light') setTheme('light')
-    else setTheme('dark')
-  }, [theme])
+      if(html.dataset.theme === "light") setTheme('light')
+      else setTheme('dark')
+    }, [theme])
 
-  function switchTheme() {
-    const html = document.querySelector('html')
-    if (theme === 'light') {
-      html.dataset.theme = `dark`
-      setTheme('dark')
-    } else {
-      html.dataset.theme = `light`
-      setTheme('light')
+    function switchTheme() {
+      const html = document.querySelector('html');
+      if(theme === "light"){
+        html.dataset.theme = `dark`;
+        setTheme('dark')
+      } else {
+        html.dataset.theme = `light`;
+        setTheme('light')
+      }
     }
-  }
 
-  const toggleMenuButton = () => {
-    mobileMenu ? setMobileMenu(false) : setMobileMenu(true)
-  }
+    const toggleMenuButton = (e) => {
+      mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
+    }
 
   return (
     <>
-      <div className="flex flex-col py-8 md:flex-row md:justify-between align-center">
-        <Link to="/" className="align-center">
-          <img src={LogoWhite} alt="" width="100px" className="mx-auto mb-5" />
-        </Link>
-        <button
-          type="button"
-          className="block md:hidden"
-          onClick={toggleMenuButton}
-        >
-          <img
-            src={MenuButton}
-            className="absolute top-6 right-8"
-            width="50"
-            alt="toggle mobile menu"
-          />
-        </button>
-        <div className="hidden absolute md:static md:flex justify-center md:justify-right md:items-start gap-4">
-          <nav>
-            <ul className="flex justify-center md:justify-right">
-              <li className="ml-5">
-                <Link to="/about" className="text-2xl text-white uppercase">
-                  About
-                </Link>
-              </li>
-              <li className="ml-5">
-                <Link to="/blog" className="text-2xl text-white uppercase">
-                  Blog
-                </Link>
-              </li>
-              <li className="ml-5">
-                <Link to="/work" className="text-2xl text-white uppercase">
-                  Portfolio
-                </Link>
-              </li>
-            </ul>
-          </nav>
-          {themeToggle ? (
-            <button type="button" onClick={switchTheme}>
-              {' '}
-              <Lightdarktoggle icon={theme} />{' '}
-              <span className="hidden">Toggle light/dark mode</span>
-            </button>
-          ) : null}
-        </div>
-      </div>
-      {mobileMenu ? (
-        <OuterModal>
-          <InnerModal>
-            {themeToggle ? (
-              <button type="button" onClick={switchTheme} className="absolute">
-                {' '}
-                <Lightdarktoggle icon={theme} />
-                <span className="hidden">Toggle light/dark mode</span>
-              </button>
-            ) : null}
-            <Link to="/" className="flex justify-center">
-              <img src={LogoWhite} alt="my logo" width="120" />
+    <div className="flex flex-col pt-10 pb-0 md:py-8 md:flex-row md:justify-between align-center">
+      <Link to="/" className="align-center">
+        <img src={LogoWhite} alt="" width="100px" className="mx-auto mb-5" />
+      </Link>
+      <div className="md:flex justify-center md:justify-right md:items-start gap-4">
+      <nav>
+        <ul className="flex justify-center md:justify-right">
+          <li className="ml-5">
+            <Link to="/about" className="text-2xl text-white uppercase">
+              About
             </Link>
-            <button type="button" onClick={toggleMenuButton}>
-              <img
-                src={CloseButton}
-                className="absolute top-6 right-6"
-                alt="close"
-                width="50"
-              />
-            </button>
-            <nav className="flex flex-col items-center mt-10">
-              <ul className="">
-                <li className="text-center">
-                  <Link to="/about" className="text-4xl text-white uppercase">
-                    About
-                  </Link>
-                </li>
-                <li className="text-center mt-8">
-                  <Link to="/blog" className="text-4xl text-white uppercase">
-                    Blog
-                  </Link>
-                </li>
-                <li className="text-center mt-8">
-                  <Link to="/work" className="text-4xl text-white uppercase">
-                    Portfolio
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </InnerModal>
-        </OuterModal>
-      ) : null}
+          </li>
+          <li className="ml-5">
+            <Link to="/blog" className="text-2xl text-white uppercase">
+              Blog
+            </Link>
+          </li>
+          <li className="ml-5">
+            <Link to="/work" className="text-2xl text-white uppercase">
+              Portfolio
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      {themeToggle ? <button type="button" onClick={switchTheme}> <Lightdarktoggle icon={theme} /> <span className="hidden">Toggle light/dark mode</span></button> : null}
+      </div>
+    </div>
+    
     </>
   )
 }
 
 const OuterModal = styled.div`
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0,0,0,0.7);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -140,23 +80,20 @@ const OuterModal = styled.div`
 
   display: flex;
   justify-content: center;
-  align-items: start;
-
-  padding-top: 1rem;
+  align-items: center;
 
   pointer-events: none;
-  overflow-y: hidden;
 
   z-index: 3;
-`
+  `
 
 const InnerModal = styled.div`
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0,0,0,0.8);
   padding: 2rem;
   border-radius: 1rem;
 
   min-width: 90vw;
-  /* min-height: 90vh; */
+  min-height: 90vh;
 
   position: relative;
   pointer-events: auto;
