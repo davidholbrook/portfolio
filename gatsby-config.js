@@ -1,42 +1,42 @@
 module.exports = {
   siteMetadata: {
-    title: "David Holbrook",
-    description: "A Front End developer from Minneapolis.",
-    author: "@davidholbrook",
-    siteUrl: "https://davidholbrook.info",
+    title: 'David Holbrook',
+    description: 'A Front End developer from Minneapolis.',
+    author: '@davidholbrook',
+    siteUrl: 'https://davidholbrook.info',
   },
   plugins: [
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-postcss",
-    "gatsby-plugin-offline",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-image',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "src",
+        name: 'src',
         path: `${__dirname}/src`,
       },
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-prismjs",
+            resolve: 'gatsby-remark-prismjs',
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
               noInlineHighlight: false,
               languageExtensions: [
                 {
-                  language: "superscript",
-                  extend: "javascript",
+                  language: 'superscript',
+                  extend: 'javascript',
                   definition: {
                     superscript_types: /(SuperType)/,
                   },
@@ -49,15 +49,15 @@ module.exports = {
               ],
 
               prompt: {
-                user: "root",
-                host: "localhost",
+                user: 'root',
+                host: 'localhost',
                 global: false,
               },
               escapeEntities: {},
             },
           },
           {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 800,
               showCaptions: true,
@@ -68,12 +68,12 @@ module.exports = {
       },
     },
     {
-    resolve: 'gatsby-plugin-web-font-loader',
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['STIX Two Text:400,600,700', 'Open Sans:400,700,800']
+          families: ['STIX Two Text:400,600,700', 'Open Sans:400,700,800'],
         },
       },
-    }
+    },
   ],
 }
