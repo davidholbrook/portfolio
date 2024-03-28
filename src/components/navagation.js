@@ -36,38 +36,13 @@ export const Navagation = () => {
       mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
     }
 
-    const MobileMenu = () => (
-      <OuterModal>
-        <InnerModal>
-          {themeToggle ? <button type="button" onClick={switchTheme} className="absolute"> <Lightdarktoggle icon={theme} /><span className="hidden">Toggle light/dark mode</span></button> : null}
-          <Link to="/" className="flex justify-center"><img src={LogoWhite} alt="my logo" width="120" /></Link>
-          <button type="button" onClick={toggleMenuButton}><img src={CloseButton} className="absolute top-6 right-6" alt="close" width="50" /></button>
-          <nav className="flex flex-col items-center mt-10">
-            <ul className="">
-              <li className="text-center">
-                <Link to="/about" className="text-4xl text-white uppercase">
-                  About
-                </Link>
-              </li>
-              <li className="text-center mt-8">
-                <Link to="/blog" className="text-4xl text-white uppercase">
-                  Blog
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </InnerModal>
-      </OuterModal>
-    )
-
   return (
     <>
-    <div className="flex flex-col py-8 md:flex-row md:justify-between align-center">
+    <div className="flex flex-col pt-10 pb-0 md:py-8 md:flex-row md:justify-between align-center">
       <Link to="/" className="align-center">
         <img src={LogoWhite} alt="" width="100px" className="mx-auto mb-5" />
       </Link>
-      <button type="button" className="block md:hidden" onClick={toggleMenuButton}><img src={MenuButton} className="absolute top-6 right-8" width="50" alt="toggle mobile menu" /></button>
-      <div className="hidden absolute md:static md:flex justify-center md:justify-right md:items-start gap-4">
+      <div className="md:flex justify-center md:justify-right md:items-start gap-4">
       <nav>
         <ul className="flex justify-center md:justify-right">
           <li className="ml-5">
@@ -90,7 +65,7 @@ export const Navagation = () => {
       {themeToggle ? <button type="button" onClick={switchTheme}> <Lightdarktoggle icon={theme} /> <span className="hidden">Toggle light/dark mode</span></button> : null}
       </div>
     </div>
-    {mobileMenu ? <MobileMenu /> : null}
+    
     </>
   )
 }

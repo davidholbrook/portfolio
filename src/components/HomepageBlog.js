@@ -31,7 +31,7 @@ const HomepageBlog = () => {
         {data.allMarkdownRemark.edges.map(
           ({ node }) =>
             node.frontmatter.template === "blog" && (
-              <>
+              <div key={node.frontmatter.path}>
                 <p className="pt-6 mb-0 text-xs uppercase">
                   {node.frontmatter.date}
                 </p>
@@ -45,7 +45,7 @@ const HomepageBlog = () => {
                 <p className="text-xl leading-relaxed mt-0 text-bodytext">
                   {node.excerpt}
                 </p>
-              </>
+              </div>
             )
         )}
       </div>
