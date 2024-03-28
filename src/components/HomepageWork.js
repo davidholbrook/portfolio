@@ -38,6 +38,7 @@ const HomepageWork = () => {
               <div
                 className="mb-10 lg:mb-0 relative"
                 style={{ background: node.frontmatter.color }}
+                key={node.frontmatter.path}
               >
                   <GatsbyImage
                     image={
@@ -45,6 +46,7 @@ const HomepageWork = () => {
                         .gatsbyImageData
                     }
                     className="w-full h-full opacity-50"
+                    alt={`screenshot of ${node.frontmatter.title}`}
                   />
                   <Link to={node.frontmatter.path} >
                 <div
