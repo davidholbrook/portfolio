@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react"
 import LogoWhite from "../images/logo_new_white.svg"
-import CloseButton from "../images/close.svg"
-import MenuButton from "../images/menu.svg"
 import Lightdarktoggle from "./lightdarktoggle"
 import { Link } from "gatsby"
 import styled from 'styled-components';
@@ -69,36 +67,5 @@ export const Navagation = () => {
     </>
   )
 }
-
-const OuterModal = styled.div`
-  background: rgba(0,0,0,0.7);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  pointer-events: none;
-
-  z-index: 3;
-  `
-
-const InnerModal = styled.div`
-  background: rgba(0,0,0,0.8);
-  padding: 2rem;
-  border-radius: 1rem;
-
-  min-width: 90vw;
-  min-height: 90vh;
-
-  position: relative;
-  pointer-events: auto;
-
-  z-index: 5;
-`
 
 export default Navagation
