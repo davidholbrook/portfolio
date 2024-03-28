@@ -1,13 +1,12 @@
 ---
 path: "/sideproject/level-money"
-title: "About Page"
-role: "Developer"
-color: "#bada55"
+title: "Level Money"
+color: "#B6C549"
 url: "https://github.com/davidholbrook/level-money"
 sd: "A better way to track finances"
+tags: ["React", "Electron"]
 template: "sideproject"
 frontImage: "./monthly.png"
-order: 2
 ---
 
 Level Money is a free application created in Electron, it helps track your expenses and keeps you in line with your goals and dreams.

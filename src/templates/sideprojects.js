@@ -131,6 +131,12 @@ const Project = ({ data }) => {
                 >
                   {frontmatter.url}
                 </WebsiteLink>
+                <strong>Tags:</strong>
+                <ul className="flex pt-2">
+                {frontmatter.tags.map(item => {
+                  return <li className={`mr-2 border-2 border-[var(--text-primary)] p-2 uppercase font-bold rounded-lg`}>{item}</li>
+                })}
+                </ul>
               </p>
             </div>
             <ProjectDiv
@@ -154,6 +160,7 @@ export const pageQuery = graphql`
         color
         url
         sd
+        tags
       }
     }
   }
