@@ -7,6 +7,7 @@ url: "https://www.decksdirect.com"
 sd: "Online distributor of premium decking products"
 template: "project"
 frontImage: "./trex-cropped.jpeg"
+tags: ["Company", "Magento 2", "Tailwind CSS"]
 order: 1
 ---
 

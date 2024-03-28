@@ -7,6 +7,7 @@ color: "#006892"
 sd: "Leading manufacturer of quality German handtools"
 template: "project"
 frontImage: "./wiha-homepage.png"
+tags: ["Company", "Magento 2", "AWS"]
 order: 4
 ---
 

@@ -20,6 +20,7 @@ const Work = () => {
               template
               color
               sd
+              tags
               frontImage {
                 childImageSharp {
                   gatsbyImageData(
@@ -55,7 +56,7 @@ const Work = () => {
             ({ node }) =>
               node.frontmatter.template === 'project' && (
                 <Link to={node.frontmatter.path}>
-                  <div className="mb-5 md:flex flex-col justify-center">
+                  <div className="md:flex flex-col justify-center">
                     <GatsbyImage
                       image={
                         node.frontmatter.frontImage.childImageSharp
@@ -69,7 +70,12 @@ const Work = () => {
                       </h2>
                       <p className="my-0">{node.frontmatter.sd}</p>
                     </div>
-                  </div>
+                  </div>  
+                  <ul className="flex justify-center flex-wrap pt-2 mb-2">
+                    {node.frontmatter.tags.map(item => {
+                        return <li className={`text-sm mr-2 mb-3 border-2 border-gray-400 py-1 px-2 uppercase font-bold rounded-lg`}>{item}</li>
+                    })}
+                  </ul>
                 </Link>
               )
           )}

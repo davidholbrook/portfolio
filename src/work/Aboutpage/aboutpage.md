@@ -7,6 +7,7 @@ url: "https://www.decksdirect.com/about"
 sd: "A look into the process of creating the About page at DecksDirect"
 template: "project"
 frontImage: "./AboutPage__closeup.jpeg"
+tags: ["Project", "Vue", "Magento 2"]
 order: 2
 ---
 
