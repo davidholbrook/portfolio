@@ -40,7 +40,7 @@ Using Tailwind’s class-based approach simplifies writing styles as all you nee
 
 Another way Tailwinds is helpful is that it has a [global configuration file](https://tailwindcss.com/docs/configuration) (normally found at `tailwind.config.js`) which can hold extra variables, such as fonts, custom colors, breakpoints, and a whole lot more. All these variables are stored in one place and can be used throughout the project by just typing `bg-primary`, where the `primary` is the custom color defined in the configuration file.
 
-### The cons of Tailwind.
+### The Cons of Tailwind.
 
 While everything that I laid out above seems great, there are some downfalls to Tailwind. The first major downfall is that it can be difficult to install, depending on what you use, which I will cover in the next section. The other is that while Tailwind covers most common styles and patterns it does not cover everything you might need.
 
@@ -48,7 +48,7 @@ Tailwind is what I consider to be an opinionated framework, while not the worst 
 
 The other major downside of Tailwind is that it doesn’t support new or experimental features of CSS. While this is more of an edge case, there are times that I want to use a new feature under the `@supports` flag, new browsers would be greeted with a nicer experience while older browsers would not be affected. Tailwinds does not currently allow for this, so I am still stuck in writing normal CSS styles for these kinds of styles. This is sort of an edge case, but there are still times that you will need to write traditional CSS and thankfully Tailwind allows you to do this.
 
-### How does Tailwind work?
+### How Does Tailwind work?
 
 While you can use Tailwind as a [hotlink-able script](https://cdn.tailwindcss.com/3.4.3) (something I did not know before researching for this article), the far better and preferred way to use Tailwind is through its dynamic class compiler. Tailwind is a huge library, the CDN version coming in at around 50ms, this is because of all the classes needed to write your code. To help with file size, the framework uses a little neat trick, a compiler, which works in the background to read the class names that you writing and then create only those styles and nothing else. 
 
