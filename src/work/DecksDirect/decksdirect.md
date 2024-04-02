@@ -34,22 +34,22 @@ Below is a sample of some of the pages that I worked on for DecksDirect, I have 
 
 These are designed to promote a single brand; all of these pages use the same design patterns with different assets or layouts.
 
-- [https://www.decksdirect.com/brands/keylink](https://www.decksdirect.com/brands/keylink)
-- [https://www.decksdirect.com/brands/timbertech-by-azek-building-products](https://www.decksdirect.com/brands/timbertech-by-azek-building-products)
-- [https://www.decksdirect.com/brands/trex](https://www.decksdirect.com/brands/trex)
-- [https://www.decksdirect.com/brands/fortress](https://www.decksdirect.com/brands/fortress)
-- [https://www.decksdirect.com/brands/feeney-cablerail](https://www.decksdirect.com/brands/feeney-cablerail)
+- [Keylink Brand Page](https://www.decksdirect.com/brands/keylink)
+- [TimberTech Brand Page](https://www.decksdirect.com/brands/timbertech-by-azek-building-products)
+- [Trex Brand Page](https://www.decksdirect.com/brands/trex)
+- [Fortress Brand Page](https://www.decksdirect.com/brands/fortress)
+- [Feeney Brand Page](https://www.decksdirect.com/brands/feeney-cablerail)
 
 ##### Promotional Pages:
 
 These highlight the experience and services you will receive when working with DecksDirect.
 
-- [https://www.decksdirect.com/complete-deck-packages](https://www.decksdirect.com/complete-deck-packages)
-- [https://www.decksdirect.com/free-project-planning](https://www.decksdirect.com/free-project-planning)
-- [https://www.decksdirect.com/instant-patio-transformation](https://www.decksdirect.com/instant-patio-transformation)
-- [https://www.decksdirect.com/deck-planning-guide](https://www.decksdirect.com/deck-planning-guide)
-- [https://www.decksdirect.com/decksdirect-pro](https://www.decksdirect.com/decksdirect-pro)
-- [https://www.decksdirect.com/composite-decking-buying-guide](https://www.decksdirect.com/composite-decking-buying-guide)
+- [Complete Deck Packages](https://www.decksdirect.com/complete-deck-packages)
+- [Free Project Planning](https://www.decksdirect.com/free-project-planning)
+- [Instant Patio Transformation](https://www.decksdirect.com/instant-patio-transformation)
+- [Deck Planning Guide](https://www.decksdirect.com/deck-planning-guide)
+- [DecksDirect For The Pro](https://www.decksdirect.com/decksdirect-pro)
+- [Composite Decking Buying Guide](https://www.decksdirect.com/composite-decking-buying-guide)
 
 ##### Website Realignment
 
