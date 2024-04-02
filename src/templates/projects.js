@@ -66,6 +66,13 @@ const Project = ({ data }) => {
       line-height: 2.25rem;
       margin-top: 1rem;
     }
+    ul{
+      list-style-type: disc;
+      margin-left: 1.2rem;
+    }
+    li{
+      margin-bottom: 0.6rem;
+    }
     a {
       color: var(--text-primary);
       border-color: var(--text-primary);
