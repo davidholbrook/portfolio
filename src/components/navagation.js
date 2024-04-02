@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react"
 import LogoWhite from "../images/logo_new_white.svg"
 import Lightdarktoggle from "./lightdarktoggle"
 import { Link } from "gatsby"
-import styled from 'styled-components';
 
 export const Navagation = () => {
     const [theme, setTheme] = useState()
     const [themeToggle, setThemeToggle] = useState(true)
-    const [mobileMenu, setMobileMenu] = useState(false)
 
     useEffect(() => {
       const html = document.querySelector('html');
@@ -28,10 +26,6 @@ export const Navagation = () => {
         html.dataset.theme = `light`;
         setTheme('light')
       }
-    }
-
-    const toggleMenuButton = (e) => {
-      mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
     }
 
   return (
