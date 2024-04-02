@@ -2,7 +2,7 @@
 path: "/blog/the-art-of-debugging"
 title: "The Art of Debugging"
 date: "December 9th, 2023"
-sortdate: "12-09-2023"
+issue: "3"
 template: "blog"
 primary: "HSL(333, 55%, 50%)"
 secondary: "HSL(900, 50%, 40%)"
