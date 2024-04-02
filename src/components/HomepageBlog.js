@@ -4,7 +4,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 const HomepageBlog = () => {
   const data = useStaticQuery(graphql`
     query ThoughtQuery {
-      allMarkdownRemark(sort: {frontmatter: {sortdate: DESC}}) {
+      allMarkdownRemark(sort: {frontmatter: {issue: DESC}}) {
         totalCount
         edges {
           node {
@@ -12,7 +12,6 @@ const HomepageBlog = () => {
               path
               title
               template
-              sortdate
               date
               primary
             }
