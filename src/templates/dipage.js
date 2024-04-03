@@ -29,8 +29,8 @@ const DiPage = ({ data }) => {
       --precode: #fdf6e3;
     }
     :root[data-theme="dark"] {
-      --text-primary: "#ffffff;
-      --text-secondary: "#ffffff;
+      --text-primary: #ffffff;
+      --text-secondary: #ffffff;
       --precode: #222222;
     }
   `;
