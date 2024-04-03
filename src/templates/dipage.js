@@ -1,14 +1,12 @@
-/* eslint-disable no-nested-ternary */
-/* eslint-disable react/prop-types */
-import React, { useState, useEffect } from 'react'
-import { graphql } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
-import styled, { createGlobalStyle } from 'styled-components'
-import { useSpring, animated } from 'react-spring'
-import Layout from '../layout/layout'
-import Seo from '../layout/seo'
+import React, {useState, useEffect} from "react"
+import { graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
+import Layout from "../layout/layout"
+import Seo from "../layout/seo"
+import styled, {createGlobalStyle} from "styled-components"
+import { useSpring, animated } from "react-spring"
 
-import Navagation from '../components/navagation'
+import Navagation from "../components/navagation"
 
 const DiPage = ({ data }) => {
   const [theme, setTheme] = useState('light')
@@ -17,36 +15,49 @@ const DiPage = ({ data }) => {
   const { frontmatter, html } = markdownRemark
 
   useEffect(() => {
-    const elhtml = document.querySelector('html')
+    const elhtml = document.querySelector('html');
     const checkTheme = elhtml.dataset.theme === 'light'
-
+    
     setTheme(checkTheme)
+
   }, [theme])
 
   const GlobalStyles = createGlobalStyle`
     :root[data-theme="light"] {
       --text-primary: ${frontmatter.primary};
       --text-secondary: ${frontmatter.secondary};
+      --precode: #fdf6e3;
     }
     :root[data-theme="dark"] {
       --text-primary: #ffffff;
       --text-secondary: #ffffff;
+      --precode: #222222;
     }
-  `
+  `;
+
 
   const Post = styled.div`
-    h2 {
-      color: var(--text-secondary);
-    }
-    h3 {
-      color: var(--text-primary);
-    }
-    a {
-      color: var(--text-secondary);
-      border-bottom: 1px solid var(--text-secondary);
-    }
-  `
-  const ImgContainer = styled.div`
+  h2 {
+    color: var(--text-secondary);
+  }
+  h3 {
+    color: var(--text-primary);
+  }
+  a {
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--text-secondary);
+  }
+  figcaption {
+      color: var(--figcap);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.1rem;
+  }
+  :not(pre)>code[class*=language-], pre[class*=language-] {
+       background-color: var(--precode);
+  }
+`
+const ImgContainer = styled.div`
     position: absolute;
     top: 0;
     height: 600px;
@@ -74,54 +85,61 @@ const DiPage = ({ data }) => {
   `
 
   const fadeUp = useSpring({
-    to: { transform: 'translateY(0)', opacity: 1 },
-    from: { transform: 'translateY(2rem)', opacity: 0 },
+    to: { transform: "translateY(0)", opacity: 1 },
+    from: { transform: "translateY(2rem)", opacity: 0 },
     config: {
-      speed: '5sec',
-      delay: '2sec',
+      speed: "5sec",
+      delay: "2sec",
     },
   })
 
   return (
-    <Layout>
+    <>
+      <Layout>
       <GlobalStyles />
-      <Seo title={frontmatter.title} />
-      <ImgContainer>
-        <GatsbyImage
-          image={frontmatter.coverImage.childImageSharp.gatsbyImageData}
-        />
-      </ImgContainer>
+        <Seo title={frontmatter.title} />
+        <ImgContainer>
+          <GatsbyImage
+            image={frontmatter.coverImage.childImageSharp.gatsbyImageData}
+          />
+        </ImgContainer>
 
-      {/* <Header landing="/Blog" /> */}
-      <div className="container mx-auto">
-        <Navagation />
-      </div>
-      <animated.div
-        style={fadeUp}
-        className="container mx-auto p-5 pt-1 bg-portbg lg:rounded-lg lg:mb-10 block"
-      >
-        <div className="lg:flex lg:flex-row-reverse lg:justify-between lg:items-top">
-          <Date className="text-sm">{frontmatter.date}</Date>
-          <Title>{frontmatter.title}</Title>
+        {/* <Header landing="/Blog" /> */}
+        <div className="container mx-auto">
+          <Navagation />
         </div>
-        <Post dangerouslySetInnerHTML={{ __html: html }} />
-        {frontmatter.credit !== '' ? (
-          frontmatter.creditURL !== '' ? (
-            <Credit>
-              <a href={frontmatter.creditURL} target="_blank" rel="noreferrer">
-                {frontmatter.credit}
-              </a>
-            </Credit>
+        <animated.div
+          style={fadeUp}
+          className="container mx-auto p-5 pt-1 bg-portbg lg:rounded-lg lg:mb-10 block"
+        >
+          <div className="lg:flex lg:flex-row-reverse lg:justify-between lg:items-top">
+            <Date className="text-sm">{frontmatter.date}</Date>
+            <Title>{frontmatter.title}</Title>
+          </div>
+          <Post dangerouslySetInnerHTML={{ __html: html }} />
+          {frontmatter.credit !== "" ? (
+            frontmatter.creditURL !== "" ? (
+              <Credit>
+                <a
+                  href={frontmatter.creditURL}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {frontmatter.credit}
+                </a>
+              </Credit>
+            ) : (
+              <Credit>{frontmatter.credit}</Credit>
+            )
           ) : (
-            <Credit>{frontmatter.credit}</Credit>
-          )
-        ) : (
-          ''
-        )}
-      </animated.div>
-    </Layout>
+            ""
+          )}
+        </animated.div>
+      </Layout>
+    </>
   )
 }
+
 
 export default DiPage
 
