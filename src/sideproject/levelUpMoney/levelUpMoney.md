@@ -1,7 +1,7 @@
 ---
 path: "/sideproject/level-money"
 title: "Level Money"
-color: "#B6C549"
+color: "#3D6167"
 url: "https://github.com/davidholbrook/level-money"
 sd: "A better way to track finances"
 tags: ["React", "Electron"]
