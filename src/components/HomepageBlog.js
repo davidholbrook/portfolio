@@ -1,10 +1,10 @@
-import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 const HomepageBlog = () => {
   const data = useStaticQuery(graphql`
     query ThoughtQuery {
-      allMarkdownRemark(sort: {frontmatter: {issue: DESC}}) {
+      allMarkdownRemark(sort: { frontmatter: { issue: DESC } }) {
         totalCount
         edges {
           node {
@@ -29,7 +29,7 @@ const HomepageBlog = () => {
       <div className="container mx-auto m-10 mt-0 p-5 lg:p-0">
         {data.allMarkdownRemark.edges.map(
           ({ node }) =>
-            node.frontmatter.template === "blog" && (
+            node.frontmatter.template === 'blog' && (
               <div key={node.frontmatter.path}>
                 <p className="pt-6 mb-0 text-xs uppercase">
                   {node.frontmatter.date}
@@ -39,7 +39,9 @@ const HomepageBlog = () => {
                   className="text-lg md:text-2xl my-0"
                   style={{ color: node.frontmatter.primary }}
                 >
-                  <h3 className="text-3xl leading-tight">{node.frontmatter.title}</h3>
+                  <h3 className="text-3xl leading-tight">
+                    {node.frontmatter.title}
+                  </h3>
                 </Link>
                 <p className="text-xl leading-relaxed mt-0 text-bodytext">
                   {node.excerpt}
