@@ -3,7 +3,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const dipage = path.resolve(`src/templates/dipage.js`)
   const projectTemplate = path.resolve(`src/templates/projects.js`)
-  const sideprojectTemplate = path.resolve(`src/templates/sideprojects.js`)
+  const sideprojectTemplate = path.resolve(`src/templates/sideproject.js`)
   const result = await graphql(`
     {
       allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 1000) {
@@ -27,7 +27,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     // eslint-disable-next-line eqeqeq
-    if (node.frontmatter.template == 'project') {
+    if (node.frontmatter.template === 'project') {
       createPage({
         path: `${node.frontmatter.path}`,
         component: projectTemplate,
@@ -37,7 +37,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       })
     }
     // eslint-disable-next-line eqeqeq
-    else if (node.frontmatter.template == 'sideproject') {
+    else if (node.frontmatter.template === 'sideproject') {
       createPage({
         path: `${node.frontmatter.path}`,
         component: sideprojectTemplate,
