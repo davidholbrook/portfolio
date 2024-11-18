@@ -21,7 +21,7 @@ I wanted a money manager that just “worked” for me. Most money managers eith
 
 This application is loosely based on Kakaibo, the Japanese way of saving money. This approach takes in your income minus any fixed expenses and money you want to save, then creates a spending goal based on these parameters for the month. This goal is then shown prominently in the monthly section and a separate section shows how much you have left to spend for the month. The idea is almost like a video game, to spend your money but near zero at any time in the month.
 
-**NOTE: **This application is still in progress and not all features are ready yet. Currently, there are no ways in the application to create a spending income/special income, monthly expenses do not auto-clear, and other small tasks are not ready yet. Both features are noted for active development.
+**NOTE:** This application is still in progress and not all features are ready yet. Currently, there are no ways in the application to create a spending income/special income, monthly expenses do not auto-clear, and other small tasks are not ready yet. Both features are noted for active development.
 
 The other ledger in this application is called “Special”. You can think of “Special” as being for financial situations that are out of your control, such as large unplanned business/personal costs, medical or auto bills, or any other need that arises. This ledger has a larger per diem assigned to it at around $1,000 or more and resets quarterly (every three months). While this is not strictly a Kaikabo feature, it is one that I find is needed in most financial situations.
 
