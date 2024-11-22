@@ -1,59 +1,41 @@
 import React from "react"
 import Seo from "../layout/seo"
+import Layout from "../layout/layout"
 
 import Navagation from "../components/navagation"
 
-const Thoughts = () => {
+const About = () => {
   return (
-    <>
+    <Layout>
       <Seo title="About Me" />
-      <div className="bg-black">
+      <div className="bg-bgblack">
         <div className="container mx-auto">
           <Navagation />
         </div>
       </div>
-      <div className="container mx-auto p-5 lg:p-0">
-        <h2 className="text-5xl mt-10">About Me</h2>
-        <div className="mt-10 text-gray-700 dark:text-gray-300">
-          <p>
-            Hello, I'm David. I am a front-end developer working for{" "}
-            <a
-              href="https://www.decksdirect.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              DecksDirect
-            </a>
-            . I love crafting websites that are beautiful, purposeful, and above
-            all disirable to be used day-after-day. I have a long history of
-            working with Javascript, Node, GraphQL PHP, and MySQL.
-          </p>
-          <p>
-            As a developer I have worked with many different forms of websites,
-            from simple wordpress designs, to full website stores, to full
-            in-house developed membership systems. I have also have a extensive
-            experience working React for a fast and responsive websites that can
-            be developed using data from slower and less responsive systems.
-          </p>
-          <p>
-            I also have a background in business and marketing, enjoying a
-            degree in Entrepreneurial Studies for Minneapolis College of Art and
-            Design. Having this experience has opened up new opportunities for
-            myself to work with business leaders and marketers to tailor and
-            understand how my work can contribute to the organization as a
-            whole. I also use this background to open up new dialogs in how I
-            can develop code and design systems to help meet the goals and needs
-            of the organization as well.
-          </p>
-          <p>
-            At the end of the day, I am someone who is very passionate in the
-            details creating websites and interfaces that are easy-to-use,
-            maintainable, and again, desirable for use day-after-day for buying
-            that next great idea.
-          </p>
+      <div className="container mx-auto w-1/2 p-5 lg:p-0 mb-10 ">
+        <h2 className="text-5xl mt-10 text-center">About David Holbrook</h2>
+        <div className="mt-10 bodytext">
+          <p>I’m an upbeat and enthusiastic website developer with twenty years of experience. I have experience with
+            everything from server-side logic to client-side interactivity.</p>
+
+          <h3>Entrepreneurial from the Start</h3>
+
+          <p>From a young age, I have always been interested in how business works in the digital landscape. My
+            background includes a degree in Entrepreneurial Studies from MCAD (Minneapolis College of Art and Design).
+            All of this allows me to think uniquely through problems from more than just a technical standpoint but also
+            from a human and business perspective, allowing me to understand issues better and find innovative ways to
+            fix them.</p>
+
+          <h3>Technical know-how</h3>
+
+          <p>I started with PHP and MySQL and later added Javascript to my roster of programming languages. I have built
+            multiple themes and plugins for content management systems such as WordPress, Magneto, Drupal, Expression
+            Engine, Joomla, and many others. I am always learning new systems while keeping an eye on how to fix the
+            problems in front of me.</p>
         </div>
       </div>
-    </>
+    </Layout>
   )
 }
-export default Thoughts
+export default About

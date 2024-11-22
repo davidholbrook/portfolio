@@ -1,44 +1,63 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Layout from "../layout/layout"
 import Seo from "../layout/seo"
-import styled from "styled-components"
+import styled, {createGlobalStyle} from "styled-components"
 import { useSpring, animated } from "react-spring"
-
-import "../styles/typography.css"
-import "../styles/prism.css"
 
 import Navagation from "../components/navagation"
 
 const DiPage = ({ data }) => {
+  const [theme, setTheme] = useState('light')
+
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
-  const Post = styled.div`
-    h2 {
-      color: ${frontmatter.secondary};
-      @media (prefers-color-scheme: dark) {
-        color: #d3d1d1;
-      }
-    }
-    h3 {
-      color: ${frontmatter.primary};
-      @media (prefers-color-scheme: dark) {
-        color: #d3d1d1;
-      }
-    }
-    a {
-      color: ${frontmatter.secondary};
-      border-bottom: 1px solid ${frontmatter.secondary};
-      @media (prefers-color-scheme: dark) {
-        color: #ffffff;
-        border-color: #ffffff;
-      }
-    }
-  `
+  useEffect(() => {
+    const elhtml = document.querySelector('html');
+    const checkTheme = elhtml.dataset.theme === 'light'
+    
+    setTheme(checkTheme)
 
-  const ImgContainer = styled.div`
+  }, [theme])
+
+  const GlobalStyles = createGlobalStyle`
+    :root[data-theme="light"] {
+      --text-primary: ${frontmatter.primary};
+      --text-secondary: ${frontmatter.secondary};
+      --precode: #fdf6e3;
+    }
+    :root[data-theme="dark"] {
+      --text-primary: #ffffff;
+      --text-secondary: #ffffff;
+      --precode: #222222;
+    }
+  `;
+
+
+  const Post = styled.div`
+  h2 {
+    color: var(--text-secondary);
+  }
+  h3 {
+    color: var(--text-primary);
+  }
+  a {
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--text-secondary);
+  }
+  figcaption {
+      color: var(--figcap);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.1rem;
+  }
+  :not(pre)>code[class*=language-], pre[class*=language-] {
+       background-color: var(--precode);
+  }
+`
+const ImgContainer = styled.div`
     position: absolute;
     top: 0;
     height: 600px;
@@ -54,24 +73,15 @@ const DiPage = ({ data }) => {
 
   const Credit = styled.p`
     font-size: 0.8rem;
-    color: ${frontmatter.primary};
-    @media (prefers-color-scheme: dark) {
-      color: #ffffff;
-    }
+    color: var(--text-primary);
   `
 
   const Title = styled.h1`
-    color: ${frontmatter.primary};
-    @media (prefers-color-scheme: dark) {
-      color: #ffffff;
-    }
+    color: var(--text-primary);
   `
 
   const Date = styled.p`
-    color: ${frontmatter.primary};
-    @media (prefers-color-scheme: dark) {
-      color: #ffffff;
-    }
+    color: var(--text-primary);
   `
 
   const fadeUp = useSpring({
@@ -86,6 +96,7 @@ const DiPage = ({ data }) => {
   return (
     <>
       <Layout>
+      <GlobalStyles />
         <Seo title={frontmatter.title} />
         <ImgContainer>
           <GatsbyImage
@@ -93,11 +104,13 @@ const DiPage = ({ data }) => {
           />
         </ImgContainer>
 
-        {/* <Header landing="/thoughts" /> */}
-        <Navagation />
+        {/* <Header landing="/Blog" /> */}
+        <div className="container mx-auto">
+          <Navagation />
+        </div>
         <animated.div
           style={fadeUp}
-          className="container mx-auto p-5 pt-1 bg-white dark:bg-gray-700 lg:rounded-lg lg:mb-10 block"
+          className="container mx-auto p-5 pt-1 bg-portbg lg:rounded-lg lg:mb-10 block"
         >
           <div className="lg:flex lg:flex-row-reverse lg:justify-between lg:items-top">
             <Date className="text-sm">{frontmatter.date}</Date>
@@ -127,11 +140,12 @@ const DiPage = ({ data }) => {
   )
 }
 
+
 export default DiPage
 
 export const pageQuery = graphql`
-  query ($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query ($patheq: String!) {
+    markdownRemark(frontmatter: { path: { eq: $patheq } }) {
       html
       frontmatter {
         title
