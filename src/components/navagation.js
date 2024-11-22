@@ -32,7 +32,7 @@ export const Navagation = () => {
       }
     }
 
-    const toggleMenuButton = (e) => {
+    const toggleMenuButton = () => {
       mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
     }
 
