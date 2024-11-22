@@ -16,10 +16,10 @@ const Project = ({ data }) => {
     const position = window.scrollY
 
     if (position >= 135) {
-      companyHeader.classList.add("lg:sticky", "lg:top-3")
+      companyHeader.classList.add("xl:sticky", "xl:top-3")
     }
     if (position <= 135) {
-      companyHeader.classList.remove("lg:sticky", "lg:top-3")
+      companyHeader.classList.remove("xl:sticky", "xl:top-3")
     }
   }
   useEffect(() => {
@@ -43,71 +43,84 @@ const Project = ({ data }) => {
     }
 
   body {
-    /* need to make important to for theme color to appear */
-    background-color: var(--specbg) !important;
+      /* need to make important to for theme color to appear */
+      background-color: var(--specbg) !important;
+
+      .blogpost {
+          h2, h3, h4, h5 {
+              color: var(--text-primary);
+          }
+
+          h3 {
+              font-size: 1.875rem;
+              line-height: 2.25rem;
+          }
+
+          h4 {
+              font-size: 1.4rem;
+              line-height: 1.7;
+              font-weight: 500
+          }
+
+          h5 {
+              font-size: 1.3rem;
+              line-height: 2.25rem;
+              margin-top: 1rem;
+          }
+
+          ul {
+              list-style-type: disc;
+              margin-left: 1.2rem;
+          }
+
+          li {
+              font-size: 1rem;
+              margin-bottom: 0.6rem;
+
+              a {
+                  font-weight: normal;
+                  text-decoration: underline;
+              }
+          }
+
+          a {
+              color: var(--text-primary);
+              border-color: var(--text-primary);
+              font-weight: bold;
+          }
+
+          figcaption {
+              color: var(--figcap);
+              font-style: italic;
+              font-weight: 300;
+              font-size: 1.1rem;
+          }
+
+          .company {
+              color: #ffffff;
+
+              @media (min-width: 1280px) {
+                  color: var(--text-primary);
+              }
+          }
+
+          .websiteLink {
+              color: #ffffff;
+              font-weight: bold;
+
+              @media (min-width: 1280px) {
+                  color: var(--text-primary);
+
+                  display: inline-block;
+                  width: 10rem;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+              }
+          }
+      }
   }
 `
-
-  const Project = styled.div`
-    h2, h3, h4, h5 {
-      color: var(--text-primary);
-    }
-    h3{
-      font-size: 1.875rem;
-      line-height: 2.25rem;
-    }
-    h4{
-      font-size: 1.4rem;
-      line-height: 1.7;
-      font-weight: 500
-    }
-    h5{
-      font-size: 1.3rem;
-      line-height: 2.25rem;
-      margin-top: 1rem;
-    }
-    ul{
-      list-style-type: disc;
-      margin-left: 1.2rem;
-    }
-    li{
-      margin-bottom: 0.6rem;
-    }
-    a {
-      color: var(--text-primary);
-      border-color: var(--text-primary);
-      font-weight: bold;
-    }
-    figcaption {
-      color: var(--figcap);
-      font-style: italic;
-      font-weight: 300;
-      font-size: 1.1rem;
-    }
-  `
-
-  const Company = styled.h2`
-    color: #ffffff;
-
-    @media (min-width: 1280px){
-      color: var(--text-primary);
-    }
-  `
-
-  const WebsiteLink = styled.a`
-    color: #ffffff;
-    font-weight: bold;
-
-    @media (min-width: 1280px){
-      color: var(--text-primary);
-
-      display:inline-block;
-      width: 10rem;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-  `
 
   return (
     <>
@@ -116,13 +129,13 @@ const Project = ({ data }) => {
       <Layout>
         <div className="container mx-auto">
           <Navagation />
-          <div className="xl:grid grid-cols-12 gap-3 items-start">
+          <div className="xl:grid grid-cols-12 gap-3 items-start blogpost">
           <div
             className="companyHeader col-span-2 w-full xl:bg-portbg px-4 xl:px-4 py-1 my-0 rounded-lg"
           >
-            <Company className="text-5xl lg:text-3xl font-bold mt-3">
+            <h2 className="company text-5xl lg:text-3xl font-bold mt-3">
               {frontmatter.title}
-            </Company>
+            </h2>
             <p className="text-sm text-white xl:text-bodytext">
               {frontmatter.sd}
             </p>
@@ -132,21 +145,22 @@ const Project = ({ data }) => {
             </p>
             <p className="text-sm text-white xl:text-bodytext">
               <strong>Website: </strong>
-              <WebsiteLink
+              <a
+                className="websiteLink"
                 href={frontmatter.url}
                 target="_blank"
                 title={frontmatter.url}
                 rel="noopener"
               >
                 {frontmatter.url}
-              </WebsiteLink>
+              </a>
             </p>
           </div>
-          <Project
+          <div
             dangerouslySetInnerHTML={{ __html: html }}
             className="bg-portbg col-span-9 px-10 py-4 mb-10 lg:rounded-lg lg:shadow-lg"
           />
-        </div>
+          </div>
         </div>
       </Layout>
     </>
