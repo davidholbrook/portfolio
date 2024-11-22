@@ -56,6 +56,7 @@ const Work = () => {
                         node.frontmatter.frontImage.childImageSharp
                           .gatsbyImageData
                       }
+                      alt={node.frontmatter.title}
                       className="border border-grey-900"
                     />
                     <div className="ml-5">
