@@ -62,9 +62,9 @@ export const Navagation = () => {
 
   return (
     <>
-    <div className="flex flex-col py-8 md:flex-row md:justify-between align-center">
+    <div className="flex flex-col py-4 md:flex-row md:justify-between items-center">
       <Link to="/" className="align-center">
-        <img src={LogoWhite} alt="" width="100px" className="mx-auto mb-5" />
+        <img src={LogoWhite} alt="" width="80px" className="mx-auto" />
       </Link>
       <button type="button" className="block md:hidden" onClick={toggleMenuButton}><img src={MenuButton} className="absolute top-6 right-8" width="50" alt="toggle mobile menu" /></button>
       <div className="hidden absolute md:static md:flex justify-center md:justify-right md:items-start gap-4">
