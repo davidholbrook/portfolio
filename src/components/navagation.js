@@ -39,7 +39,7 @@ export const Navagation = () => {
     const MobileMenu = () => (
       <OuterModal>
         <InnerModal>
-          {themeToggle ? <button type="button" onClick={switchTheme} className="absolute"> <Lightdarktoggle icon={theme} /><span className="hidden">Toggle light/dark mode</span></button> : null}
+          {themeToggle ? <button type="button" onClick={switchTheme} className="absolute ml-10 -mt-7"> <Lightdarktoggle icon={theme} /><span className="hidden">Toggle light/dark mode</span></button> : null}
           <Link to="/" className="flex justify-center"><img src={LogoWhite} alt="my logo" width="120" /></Link>
           <button type="button" onClick={toggleMenuButton}><img src={CloseButton} className="absolute top-6 right-6" alt="close" width="50" /></button>
           <nav className="flex flex-col items-center mt-10">
@@ -52,6 +52,11 @@ export const Navagation = () => {
               <li className="text-center mt-8">
                 <Link to="/blog" className="text-4xl text-white uppercase">
                   Blog
+                </Link>
+              </li>
+              <li className="text-center mt-8">
+                <Link to="/work" className="text-4xl text-white uppercase">
+                  Portfolio
                 </Link>
               </li>
             </ul>
@@ -78,6 +83,11 @@ export const Navagation = () => {
           <li className="ml-5">
             <Link to="/blog" className="text-2xl text-white uppercase">
               Blog
+            </Link>
+          </li>
+          <li className="ml-5">
+            <Link to="/work" className="text-2xl text-white uppercase">
+              Portfolio
             </Link>
           </li>
         </ul>
