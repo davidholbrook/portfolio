@@ -4,7 +4,7 @@ import Layout from "../layout/layout"
 
 import Navagation from "../components/navagation"
 
-const Blog = () => {
+const About = () => {
   return (
     <Layout>
       <Seo title="About Me" />
@@ -13,17 +13,29 @@ const Blog = () => {
           <Navagation />
         </div>
       </div>
-      <div className="container mx-auto p-5 lg:p-0 mb-10">
-        <h2 className="text-5xl mt-10">About David Holbrook</h2>
+      <div className="container mx-auto w-1/2 p-5 lg:p-0 mb-10 ">
+        <h2 className="text-5xl mt-10 text-center">About David Holbrook</h2>
         <div className="mt-10 bodytext">
-        <p>I am an energetic (and strangely upbeat) developer with over five years of experience working in the front-end scope. Having worked with multiple different departments and people I have developed everything from simple landing pages for Google ads targeting, to full-scale React and Vue-based applications for dynamically filtering and displaying information in real-time.</p>
+          <p>I’m an upbeat and enthusiastic website developer with twenty years of experience. I have experience with
+            everything from server-side logic to client-side interactivity.</p>
 
-        <p>My educational background is in Entrepreneurial Studies from MCAD (Minneapolis College of Art and Design), which grants me a unique ability to understand business requirements and target my skills to the unique needs of each business. This also allows me to mentor and teach co-workers about simple coding logic and how applications can work in a simple yet easy-to-understand manner.</p>
+          <h3>Entrepreneurial from the Start</h3>
 
-        <p>On a technical level, my experience includes Magento 2 (PHP) and Hyva Themes (Tailwind CSS and Alpine JS) for business storefronts, React and Vue for developing dynamic applications for filtering and displaying data on demand, and a bunch of other technologies (AWS Platform, Docker, Node) for various uses as they come up.</p>
+          <p>From a young age, I have always been interested in how business works in the digital landscape. My
+            background includes a degree in Entrepreneurial Studies from MCAD (Minneapolis College of Art and Design).
+            All of this allows me to think uniquely through problems from more than just a technical standpoint but also
+            from a human and business perspective, allowing me to understand issues better and find innovative ways to
+            fix them.</p>
+
+          <h3>Technical know-how</h3>
+
+          <p>I started with PHP and MySQL and later added Javascript to my roster of programming languages. I have built
+            multiple themes and plugins for content management systems such as WordPress, Magneto, Drupal, Expression
+            Engine, Joomla, and many others. I am always learning new systems while keeping an eye on how to fix the
+            problems in front of me.</p>
         </div>
       </div>
     </Layout>
   )
 }
-export default Blog
+export default About
