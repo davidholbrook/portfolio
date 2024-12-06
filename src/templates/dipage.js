@@ -26,10 +26,12 @@ const DiPage = ({ data }) => {
     :root[data-theme="light"] {
       --text-primary: ${frontmatter.primary};
       --text-secondary: ${frontmatter.secondary};
+      --precode: #fdf6e3;
     }
     :root[data-theme="dark"] {
-      --text-primary: "#ffffff;
-      --text-secondary: "#ffffff;
+      --text-primary: #ffffff;
+      --text-secondary: #ffffff;
+      --precode: #222222;
     }
   `;
 
@@ -44,6 +46,15 @@ const DiPage = ({ data }) => {
   a {
     color: var(--text-secondary);
     border-bottom: 1px solid var(--text-secondary);
+  }
+  figcaption {
+      color: var(--figcap);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.1rem;
+  }
+  :not(pre)>code[class*=language-], pre[class*=language-] {
+       background-color: var(--precode);
   }
 `
 const ImgContainer = styled.div`
