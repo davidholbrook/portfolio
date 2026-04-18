@@ -1,38 +1,24 @@
 import React from "react"
 import Seo from "../layout/seo"
 import Layout from "../layout/layout"
+import { Link } from "gatsby"
 
-import Navagation from "../components/navagation"
+import Navagation from "../components/navagation-about"
 
 const About = () => {
   return (
     <Layout>
       <Seo title="About Me" />
-      <div className="bg-bgblack">
-        <div className="container mx-auto">
+      <div className="bg-bgblack w-3/4 md:w-1/2 m-auto mt-10 rounded-md">
           <Navagation />
-        </div>
       </div>
-      <div className="container mx-auto w-1/2 p-5 lg:p-0 mb-10 ">
-        <h2 className="text-5xl mt-10 text-center">About David Holbrook</h2>
+      <div className="container mx-auto w-3/4 md:w-1/2 p-5 lg:p-0 mb-10 ">
+
         <div className="mt-10 bodytext">
-          <p>I’m an upbeat and enthusiastic website developer with twenty years of experience. I have experience with
-            everything from server-side logic to client-side interactivity.</p>
-
-          <h3>Entrepreneurial from the Start</h3>
-
-          <p>From a young age, I have always been interested in how business works in the digital landscape. My
-            background includes a degree in Entrepreneurial Studies from MCAD (Minneapolis College of Art and Design).
-            All of this allows me to think uniquely through problems from more than just a technical standpoint but also
-            from a human and business perspective, allowing me to understand issues better and find innovative ways to
-            fix them.</p>
-
-          <h3>Technical know-how</h3>
-
-          <p>I started with PHP and MySQL and later added Javascript to my roster of programming languages. I have built
-            multiple themes and plugins for content management systems such as WordPress, Magneto, Drupal, Expression
-            Engine, Joomla, and many others. I am always learning new systems while keeping an eye on how to fix the
-            problems in front of me.</p>
+          <p>I’m primarily a PHP e‑commerce developer, which means I spend a lot of time maintaining and building solutions for complex, high‑traffic systems. When I’m not doing that, I’m usually working on side projects in JavaScript and React (including the website you’re reading right now), reading a book, or watching an unreasonable amount of YouTube, to which I confess.</p>
+          <p>My background is a blend of business and development. I earned a degree in Entrepreneurial Studies from MCAD (Minneapolis College of Art and Design), which helps me approach problems from multiple angles: as a developer, a designer, and a business‑minded thinker. I hope that comes through in my blog posts, where I try to take complicated challenges and turn them into simple, useful explanations — along with a few warnings about the pitfalls I fell into along the way.</p>
+          <p>I’ll admit this site is a bit of a mess at the moment, but I’m working on cleaning it up and adding new posts soon, including showcases of the side projects I’ve been tinkering with. Thanks for being patient with me in the meantime, and I hope you enjoy the ride.</p>
+          <p>Visit the <Link to={"/blog"} className="underline">Blog</Link></p>
         </div>
       </div>
     </Layout>
