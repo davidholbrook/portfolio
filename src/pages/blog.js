@@ -28,7 +28,6 @@ const Blog = () => {
 
   return (
     <Layout>
-      <Seo title="Blog" />
       <div className="bg-bgblack">
         <div className="container mx-auto">
           <Navagation />
@@ -68,3 +67,7 @@ const Blog = () => {
   )
 }
 export default Blog
+
+export function Head() {
+  return <Seo title="Blog" />
+}

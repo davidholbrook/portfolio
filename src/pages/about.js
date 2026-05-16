@@ -7,7 +7,6 @@ import Navagation from "../components/navagation"
 const About = () => {
   return (
     <Layout>
-      <Seo title="About Me" />
       <div className="bg-bgblack">
         <div className="container mx-auto">
           <Navagation />
@@ -39,3 +38,7 @@ const About = () => {
   )
 }
 export default About
+
+export function Head() {
+  return <Seo title="About Me" />
+}

@@ -8,35 +8,20 @@ import { useSpring, animated } from "react-spring"
 
 import Navagation from "../components/navagation"
 
-const DiPage = ({ data }) => {
-  const [theme, setTheme] = useState('light')
+const GlobalStyles = createGlobalStyle`
+  :root[data-theme="light"] {
+    --text-primary: ${props => props.$primary};
+    --text-secondary: ${props => props.$secondary};
+    --precode: #fdf6e3;
+  }
+  :root[data-theme="dark"] {
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --precode: #222222;
+  }
+`
 
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
-
-  useEffect(() => {
-    const elhtml = document.querySelector('html');
-    const checkTheme = elhtml.dataset.theme === 'light'
-    
-    setTheme(checkTheme)
-
-  }, [theme])
-
-  const GlobalStyles = createGlobalStyle`
-    :root[data-theme="light"] {
-      --text-primary: ${frontmatter.primary};
-      --text-secondary: ${frontmatter.secondary};
-      --precode: #fdf6e3;
-    }
-    :root[data-theme="dark"] {
-      --text-primary: #ffffff;
-      --text-secondary: #ffffff;
-      --precode: #222222;
-    }
-  `;
-
-
-  const Post = styled.div`
+const Post = styled.div`
   h2 {
     color: var(--text-secondary);
   }
@@ -48,41 +33,56 @@ const DiPage = ({ data }) => {
     border-bottom: 1px solid var(--text-secondary);
   }
   figcaption {
-      color: var(--figcap);
-      font-style: italic;
-      font-weight: 300;
-      font-size: 1.1rem;
+    color: var(--figcap);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.1rem;
   }
   :not(pre)>code[class*=language-], pre[class*=language-] {
-       background-color: var(--precode);
+    background-color: var(--precode);
   }
 `
+
 const ImgContainer = styled.div`
-    position: absolute;
-    top: 0;
-    height: 600px;
-    overflow: hidden;
-    background: ${frontmatter.primary};
-    opacity: 1 !important;
-    z-index: -1;
-    img {
-      mix-blend-mode: hard-light;
-      opacity: 0.2 !important;
-    }
-  `
+  position: absolute;
+  top: 0;
+  height: 600px;
+  overflow: hidden;
+  background: ${props => props.$color};
+  opacity: 1 !important;
+  z-index: -1;
+  img {
+    mix-blend-mode: hard-light;
+    opacity: 0.2 !important;
+  }
+`
 
-  const Credit = styled.p`
-    font-size: 0.8rem;
-    color: var(--text-primary);
-  `
+const Credit = styled.p`
+  font-size: 0.8rem;
+  color: var(--text-primary);
+`
 
-  const Title = styled.h1`
-    color: var(--text-primary);
-  `
+const Title = styled.h1`
+  color: var(--text-primary);
+`
 
-  const Date = styled.p`
-    color: var(--text-primary);
-  `
+const Date = styled.p`
+  color: var(--text-primary);
+`
+
+const DiPage = ({ data }) => {
+  const [theme, setTheme] = useState('light')
+
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark
+
+  useEffect(() => {
+    const elhtml = document.querySelector('html');
+    const checkTheme = elhtml.dataset.theme === 'light'
+
+    setTheme(checkTheme)
+
+  }, [theme])
 
   const fadeUp = useSpring({
     to: { transform: "translateY(0)", opacity: 1 },
@@ -96,9 +96,8 @@ const ImgContainer = styled.div`
   return (
     <>
       <Layout>
-      <GlobalStyles />
-        <Seo title={frontmatter.title} />
-        <ImgContainer>
+      <GlobalStyles $primary={frontmatter.primary} $secondary={frontmatter.secondary} />
+        <ImgContainer $color={frontmatter.primary}>
           <GatsbyImage
             image={frontmatter.coverImage.childImageSharp.gatsbyImageData}
           />
@@ -140,8 +139,12 @@ const ImgContainer = styled.div`
   )
 }
 
-
 export default DiPage
+
+export function Head({ data }) {
+  const { frontmatter } = data.markdownRemark
+  return <Seo title={frontmatter.title} />
+}
 
 export const pageQuery = graphql`
   query ($patheq: String!) {
