@@ -11,7 +11,6 @@ import HomepageBlog from "../components/HomepageBlog"
 const IndexPage = () => {
   return (
     <Layout>
-      <Seo title="Welcome" />
       <Header>
         <div className="container mx-auto">
           <Navagation />
@@ -39,6 +38,10 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export function Head() {
+  return <Seo title="Welcome" />
+}
 
 const Header = styled.header`
   background: url(${bgImg}) #000000;
