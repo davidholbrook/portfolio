@@ -46,3 +46,7 @@ figcaption {
 .standardfont {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
 }
+
+.fancyfont {
+  font-family: "STIX Two Text", serif;
+}
