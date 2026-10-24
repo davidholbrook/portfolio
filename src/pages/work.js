@@ -6,7 +6,6 @@ import Navagation from "../components/navagation"
 const Work = () => {
   return (
     <>
-      <Seo title="My Work" />
       <div className="bg-bgblack mb-5">
         <div className="container mx-auto">
           <Navagation />
@@ -20,3 +19,7 @@ const Work = () => {
 }
 
 export default Work
+
+export function Head() {
+  return <Seo title="My Work" />
+}
